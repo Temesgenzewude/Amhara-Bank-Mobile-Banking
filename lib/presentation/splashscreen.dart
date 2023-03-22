@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:amhara_bank_mobile_banking/presentation/onboarding.dart';
 import 'package:flutter/material.dart';
+
 class SplashScreen extends StatefulWidget {
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -12,46 +13,55 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(const Duration(seconds: 3), () {
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => const Home()));
+          context, MaterialPageRoute(builder: (context) => const onboarding()));
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topRight,
-              end: Alignment.bottomRight,
-              colors: [
-                Color(0xFF005EA6),
-                Color(0xFF005EA6).withOpacity(0.8),
-                Color(0xFFFECF0D)
-              ]),
+          color: Color(0xFF005EA6),
         ),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(60.0),
-                child: Image.asset('assets/images/amhara_bank_logo.png',
-                    height: 300, width: 300),
-              ),
-              Text(
-                "ከባንክ ባሻገር",
-                style: TextStyle(
-                  color: Color(0xFF143B58),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            SizedBox(
+              height: size.height * 0.18,
+            ),
+            Column(
+              children: [
+                SizedBox(
+                  height: size.height * 0.35,
+                  width: size.width * 0.6,
+                  child: Image.asset(
+                    'assets/images/amhara_bank_logo.png',
+                  ),
+                ),
+                Image.asset(
+                  'assets/images/yellow_logo.png',
+                ),
+              ],
+            ),
+            SizedBox(
+              height: size.height * 0.05,
+            ),
+            const Text(
+              "ከባንክ ባሻገር",
+              style: TextStyle(
+                  color: Color(0xFFFFFFFF),
                   fontWeight: FontWeight.w600,
                   fontSize: 25,
-                  fontFamily: "Ethiopia"
-                ),
-              )
-            ],
-          ),
+                  fontFamily: "Ethiopia"),
+            ),
+            SizedBox(
+              height: size.height * 0.08,
+            )
+          ],
         ),
       ),
     );
