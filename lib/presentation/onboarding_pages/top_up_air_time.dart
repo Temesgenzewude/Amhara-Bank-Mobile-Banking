@@ -24,7 +24,7 @@ class _top_up_airState extends State<top_up_air> {
               SvgPicture.asset("assets/images/air_time.svg",height: 250,width: 250),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical:5.0),
-                child: Text("Buy Air Time",
+                child: Text("Top-up Air time",
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontFamily: 'axioforma',
