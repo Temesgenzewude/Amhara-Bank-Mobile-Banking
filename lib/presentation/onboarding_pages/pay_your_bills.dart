@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class pay_your_bills extends StatelessWidget {
   const pay_your_bills({Key? key}) : super(key: key);
@@ -11,7 +12,7 @@ class pay_your_bills extends StatelessWidget {
         
         children: [
           
-          Image.asset("assets/images/pay_your_bills.png",height: 250,width: 250),
+          SvgPicture.asset("assets/images/pay_your_bill.svg",height: 250,width: 250),
           Padding(
             padding: const EdgeInsets.symmetric(vertical:15.0),
             child: Text("Pay Your Bills",

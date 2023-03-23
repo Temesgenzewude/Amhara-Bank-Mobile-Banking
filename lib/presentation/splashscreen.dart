@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:amhara_bank_mobile_banking/presentation/onboarding.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -42,8 +43,8 @@ class _SplashScreenState extends State<SplashScreen> {
                     'assets/images/amhara_bank_logo.png',
                   ),
                 ),
-                Image.asset(
-                  'assets/images/yellow_logo.png',
+                SvgPicture.asset(
+                  'assets/images/yellow_full.svg',
                 ),
               ],
             ),
@@ -55,7 +56,7 @@ class _SplashScreenState extends State<SplashScreen> {
               style: TextStyle(
                   color: Color(0xFFFFFFFF),
                   fontWeight: FontWeight.w600,
-                  fontSize: 25,
+                  fontSize: 30,
                   fontFamily: "Ethiopia"),
             ),
             SizedBox(
