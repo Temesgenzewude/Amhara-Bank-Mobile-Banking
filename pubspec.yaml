@@ -38,6 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   smooth_page_indicator: ^1.0.1
   flutter_svg: ^1.1.6
+  carousel_slider: ^4.2.1
 
 dev_dependencies:
   flutter_test:
@@ -79,8 +80,8 @@ flutter:
     - family: Ethiopia
       fonts:
         - asset: assets/fonts/jiret/jiret.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
+    #       - asset: fonts/Schyler-Italic.ttf
+    #         style: italic
     - family: axiforma
       fonts:
         - asset: assets/fonts/axi/axiforma.ttf
