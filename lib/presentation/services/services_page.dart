@@ -22,7 +22,7 @@ class _ServicePageState extends State<ServicePage> {
       body: Column(
         children: [
           Container(
-            margin: EdgeInsets.only(bottom: 5, left: 20, right: 20),
+            margin: EdgeInsets.only(left: 20, right: 20, top: 30),
             color: Colors.white,
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -38,10 +38,10 @@ class _ServicePageState extends State<ServicePage> {
                         color: Color(
                           0xFF143B58,
                         ),
-                        size: 50,
+                        size: 30,
                       ),
                       SizedBox(
-                        width: 20,
+                        width: 10,
                       ),
                       Stack(
                         children: [
@@ -50,7 +50,7 @@ class _ServicePageState extends State<ServicePage> {
                             color: Color(
                               0xFF143B58,
                             ),
-                            size: 50,
+                            size: 30,
                           ),
                           Positioned(
                             top: 9,
@@ -85,7 +85,7 @@ class _ServicePageState extends State<ServicePage> {
             indent: 0,
           ),
           Container(
-            margin: EdgeInsets.only(bottom: 10, top: 10, left: 20, right: 20),
+            margin: EdgeInsets.only(bottom: 10, top: 5, left: 20, right: 20),
             child: Column(children: [
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -97,7 +97,7 @@ class _ServicePageState extends State<ServicePage> {
                         color: Color(0xFF191919), fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 5,
                   ),
                   Text(
                     "Your Account Balance",
@@ -108,11 +108,11 @@ class _ServicePageState extends State<ServicePage> {
                     height: 10,
                   ),
                   Container(
-                    height: 80,
+                    height: 70,
                     padding: EdgeInsets.only(
-                        left: 20, right: 20, top: 10, bottom: 10),
+                        left: 20, right: 20, top: 5, bottom: 10),
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(10),
                         gradient: LinearGradient(
                             begin: Alignment.centerLeft,
                             end: Alignment.centerRight,
@@ -125,7 +125,6 @@ class _ServicePageState extends State<ServicePage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
@@ -140,6 +139,7 @@ class _ServicePageState extends State<ServicePage> {
                                 ),
                               ],
                             ),
+                            // SizedBox(height: 10,),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.baseline,
                               textBaseline: TextBaseline.alphabetic,
@@ -147,17 +147,17 @@ class _ServicePageState extends State<ServicePage> {
                                 Text(
                                   "12,600",
                                   style: TextStyle(
-                                      height: 1.8,
+                                      height: 1.4,
                                       color: Colors.white,
-                                      fontSize: 20,
+                                      fontSize: 18,
                                       fontWeight: FontWeight.w600),
                                 ),
                                 Text(
                                   "ETB",
                                   style: TextStyle(
-                                    height: 1.2,
-                                    color: Color(0xFFEBEBEB),
-                                  ),
+                                      height: 1.2,
+                                      color: Color(0xFFEBEBEB),
+                                      fontSize: 10),
                                 )
                               ],
                             )
@@ -176,21 +176,21 @@ class _ServicePageState extends State<ServicePage> {
                     style: TextStyle(color: Color(0xFF2F2E41), fontSize: 17),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 4,
                   ),
                   Divider(
                     thickness: 1,
                     color: Color(0xFFDBD9D9),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 5,
                   ),
                   Container(
-                    height: 150,
+                    height: 120,
                     width: double.maxFinite,
                     child: CarouselSlider.builder(
                       options: CarouselOptions(
-                        height: 150,
+                        height: 120,
                         viewportFraction: 1,
                         autoPlay: true,
                         enableInfiniteScroll: true,
@@ -205,7 +205,7 @@ class _ServicePageState extends State<ServicePage> {
                         return Stack(
                           children: [
                             Container(
-                              height: 150,
+                              height: 120,
                               decoration: BoxDecoration(
                                 gradient: LinearGradient(
                                   begin: Alignment.topCenter,
@@ -215,7 +215,7 @@ class _ServicePageState extends State<ServicePage> {
                                     Color(0xFF000000),
                                   ],
                                 ),
-                                borderRadius: BorderRadius.circular(20),
+                                borderRadius: BorderRadius.circular(15),
                                 image: DecorationImage(
                                     image:
                                         AssetImage("assets/images/family1.png"),
@@ -223,8 +223,8 @@ class _ServicePageState extends State<ServicePage> {
                               ),
                             ),
                             Positioned(
-                              top: 100,
-                              left: 150,
+                              top: 80,
+                              left: 120,
                               child: Text(
                                 "Pay Your Bills",
                                 style: TextStyle(
@@ -235,8 +235,8 @@ class _ServicePageState extends State<ServicePage> {
                               height: 10,
                             ),
                             Positioned(
-                              top: 120,
-                              left: 160,
+                              top: 100,
+                              left: 130,
                               child: Container(
                                 margin: EdgeInsets.only(
                                   bottom: 20,
@@ -260,6 +260,173 @@ class _ServicePageState extends State<ServicePage> {
                     ),
                   ),
                   // Container(
+                ],
+              ),
+              SizedBox(height: 10),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        height: 70,
+                        width: 130,
+                        padding: EdgeInsets.only(
+                          left: 20,
+                          right: 20,
+                        ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color(0xFFE6E6E6),
+                        ),
+                        child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Container(
+                                height: 40,
+                                width: 30,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        fit: BoxFit.cover,
+                                        image: AssetImage(
+                                            'assets/images/transfer_service.png'))),
+                              ),
+                              Container(
+                                padding: EdgeInsets.only(top: 20, bottom: 20),
+                                child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text("Transfer"),
+                                      Text("Services")
+                                    ]),
+                              )
+                            ]),
+                      ),
+                      Container(
+                        height: 70,
+                        width: 130,
+                        padding: EdgeInsets.only(
+                          left: 20,
+                          right: 20,
+                        ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color(0xFFE6E6E6),
+                        ),
+                        child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Container(
+                                height: 40,
+                                width: 30,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        fit: BoxFit.cover,
+                                        image: AssetImage(
+                                            'assets/images/pay_for_bills.png'))),
+                              ),
+                              Container(
+                                padding: EdgeInsets.only(top: 20, bottom: 20),
+                                child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text("Pay Your"),
+                                      Text("Bills")
+                                    ]),
+                              )
+                            ]),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        height: 70,
+                        width: 130,
+                        padding: EdgeInsets.only(
+                          left: 20,
+                          right: 20,
+                        ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color(0xFFE6E6E6),
+                        ),
+                        child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Container(
+                                height: 40,
+                                width: 30,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        fit: BoxFit.cover,
+                                        image: AssetImage(
+                                            'assets/images/airtime.png'))),
+                              ),
+                              Container(
+                                padding: EdgeInsets.only(top: 20, bottom: 20),
+                                child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text("Buy"),
+                                      Text("Airtime")
+                                    ]),
+                              )
+                            ]),
+                      ),
+                      Container(
+                        height: 70,
+                        width: 130,
+                        padding: EdgeInsets.only(
+                          left: 20,
+                          right: 20,
+                        ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color(0xFFE6E6E6),
+                        ),
+                        child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Container(
+                                height: 40,
+                                width: 30,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        fit: BoxFit.cover,
+                                        image: AssetImage(
+                                            'assets/images/other_bank_services.png'))),
+                              ),
+                              Container(
+                                padding: EdgeInsets.only(top: 20, bottom: 20),
+                                child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text("Other Bank"),
+                                      Text("Service")
+                                    ]),
+                              )
+                            ]),
+                      ),
+                    ],
+                  ),
                 ],
               )
             ]),
