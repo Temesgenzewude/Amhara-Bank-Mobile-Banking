@@ -1,6 +1,5 @@
-import 'package:amhara_bank_mobile_banking/presentation/services/services_home_page.dart';
-
-import './presentation/services/services_page.dart';
+import 'package:amhara_bank_mobile_banking/presentation/profile.dart';
+import 'package:amhara_bank_mobile_banking/presentation/splashscreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +12,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ServiceHomePage(),
+
+      
+      home: profile(),
     );
   }
 }
