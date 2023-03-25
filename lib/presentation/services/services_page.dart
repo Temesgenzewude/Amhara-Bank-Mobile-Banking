@@ -1,7 +1,9 @@
+import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../widgets/services/service_page_custom_app_bar.dart';
 import '../widgets/services/services_page_container.dart';
 
 class ServicePage extends StatefulWidget {
@@ -28,99 +30,50 @@ class _ServicePageState extends State<ServicePage> {
       backgroundColor: Colors.white,
       body: Column(
         children: [
-          Container(
-            margin: EdgeInsets.only(left: 20, right: 20, top: 30),
-            color: Colors.white,
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    children: [],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Icon(
-                        Icons.refresh,
-                        color: Color(
-                          0xFF143B58,
-                        ),
-                        size: 30,
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Stack(
-                        children: [
-                          Icon(
-                            Icons.notifications_outlined,
-                            color: Color(
-                              0xFF143B58,
-                            ),
-                            size: 30,
-                          ),
-                          Positioned(
-                            top: 9,
-                            right: 5,
-                            child: Container(
-                              height: 15,
-                              width: 15,
-                              decoration: BoxDecoration(
-                                color: Color(0xFFC90101),
-                                borderRadius: BorderRadius.circular(7.5),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  "2",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                ]),
-          ),
-          Divider(
+          const ServicePageCustomAppBar(),
+          const Divider(
             thickness: 1,
             color: Color(0xFFDBD9D9),
             indent: 0,
           ),
           Container(
-            margin: EdgeInsets.only(bottom: 10, top: 5, left: 20, right: 20),
+            margin: EdgeInsets.only(
+                bottom: AppDimension.height10,
+                top: AppDimension.height5,
+                left: AppDimension.width20,
+                right: AppDimension.width20),
             child: Column(children: [
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Balance",
                     style: TextStyle(
                         color: Color(0xFF191919), fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
-                    height: 5,
+                    height: AppDimension.height5,
                   ),
-                  Text(
+                  const Text(
                     "Your Account Balance",
                     style: TextStyle(
                         color: Color(0xFF969696), fontWeight: FontWeight.w400),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: AppDimension.height10,
                   ),
                   Container(
-                    height: 70,
+                    height: AppDimension.height25 + AppDimension.height45,
                     padding: EdgeInsets.only(
-                        left: 20, right: 20, top: 5, bottom: 10),
+                        left: AppDimension.width20,
+                        right: AppDimension.width20,
+                        top: AppDimension.height5,
+                        bottom: AppDimension.height10),
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        gradient: LinearGradient(
+                        borderRadius:
+                            BorderRadius.circular(AppDimension.radius10),
+                        gradient: const LinearGradient(
                             begin: Alignment.centerLeft,
                             end: Alignment.centerRight,
                             colors: [
@@ -135,7 +88,7 @@ class _ServicePageState extends State<ServicePage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
-                              children: [
+                              children: const [
                                 Text(
                                   "Abebe Bikila - 99******110",
                                   style: TextStyle(color: Color(0xFFC4CACE)),
@@ -152,19 +105,19 @@ class _ServicePageState extends State<ServicePage> {
                               textBaseline: TextBaseline.alphabetic,
                               children: [
                                 Text(
-                                  !_isVisible ? "12,600" : "********",
+                                  _isVisible ? "12,600" : "********",
                                   style: TextStyle(
                                       height: 1.6,
                                       color: Colors.white,
-                                      fontSize: 20,
+                                      fontSize: AppDimension.font20,
                                       fontWeight: FontWeight.w600),
                                 ),
                                 Text(
                                   "ETB",
                                   style: TextStyle(
                                       height: 1.2,
-                                      color: Color(0xFFEBEBEB),
-                                      fontSize: 10),
+                                      color: const Color(0xFFEBEBEB),
+                                      fontSize: AppDimension.font10),
                                 )
                               ],
                             )
@@ -176,41 +129,43 @@ class _ServicePageState extends State<ServicePage> {
                           },
                           child: Icon(
                               _isVisible
-                                  ? Icons.visibility
-                                  : Icons.visibility_off,
-                              size: 30,
-                              color: Color(0xFFAAC9E0)),
+                                  ? Icons.visibility_off_outlined
+                                  : Icons.visibility_outlined,
+                              size: AppDimension.iconSize30,
+                              color: const Color(0xFFAAC9E0)),
                         ),
                       ],
                     ),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: AppDimension.height10,
                   ),
                   Text(
                     "Services",
-                    style: TextStyle(color: Color(0xFF2F2E41), fontSize: 17),
+                    style: TextStyle(
+                        color: const Color(0xFF2F2E41),
+                        fontSize: AppDimension.font18),
                   ),
                   SizedBox(
-                    height: 4,
+                    height: AppDimension.height5 -2,
                   ),
-                  Divider(
+                  const Divider(
                     thickness: 1,
                     color: Color(0xFFDBD9D9),
                   ),
                   SizedBox(
-                    height: 5,
+                    height: AppDimension.height5,
                   ),
                   Container(
-                    height: 120,
+                    height: AppDimension.promoContHeight120,
                     width: double.maxFinite,
                     child: CarouselSlider.builder(
                       options: CarouselOptions(
-                        height: 120,
+                        height: AppDimension.promoContHeight120,
                         viewportFraction: 1,
                         autoPlay: true,
                         enableInfiniteScroll: true,
-                        autoPlayAnimationDuration: Duration(milliseconds: 600),
+                        autoPlayAnimationDuration: const Duration(milliseconds: 600),
                         onPageChanged: (index, reason) {
                           setState(() {
                             _activeDotIndex = index;
@@ -221,51 +176,49 @@ class _ServicePageState extends State<ServicePage> {
                         return Stack(
                           children: [
                             Container(
-                              height: 120,
+                              height: AppDimension.promoContHeight120,
                               decoration: BoxDecoration(
-                                gradient: LinearGradient(
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter,
-                                  colors: [
-                                    Color(0xFF000000).withOpacity(0.5),
-                                    Color(0xFF000000),
-                                  ],
-                                ),
-                                borderRadius: BorderRadius.circular(15),
-                                image: DecorationImage(
-                                    image:
-                                        AssetImage("assets/images/family1.png"),
-                                    fit: BoxFit.cover),
-                              ),
+                                  gradient: LinearGradient(
+                                    begin: Alignment.topCenter,
+                                    end: Alignment.bottomCenter,
+                                    colors: [
+                                      const Color(0xFF000000).withOpacity(0.5),
+                                      const Color(0xFF000000),
+                                    ],
+                                  ),
+                                  borderRadius: BorderRadius.circular(
+                                      AppDimension.radius15),
+                                  image: const DecorationImage(
+                                    fit: BoxFit.cover,
+                                    image: AssetImage(
+                                      "assets/images/promo_img1.png",
+                                    ),
+                                  )),
                             ),
                             Positioned(
-                              top: 80,
-                              left: 120,
+                              top: AppDimension.promoTextTopShift80,
+                              left: AppDimension.promoTextLeftShift120,
                               child: Text(
                                 "Pay Your Bills",
                                 style: TextStyle(
-                                    color: Colors.white, fontSize: 16),
+                                    color: Colors.white,
+                                    fontSize: AppDimension.font16),
                               ),
                             ),
                             SizedBox(
-                              height: 10,
+                              height: AppDimension.height10,
                             ),
                             Positioned(
-                              top: 100,
-                              left: 130,
+                              top: AppDimension.dotIndTopShift100,
+                              left: AppDimension.dotIndLeftShift130,
                               child: Container(
                                 margin: EdgeInsets.only(
-                                  bottom: 20,
+                                  bottom: AppDimension.height20,
                                 ),
                                 child: AnimatedSmoothIndicator(
                                   activeIndex: _activeDotIndex,
                                   count: 4,
-                                  effect: CustomizableEffect(
-                                    // activeDotColor: Color(0xFF0D6DC4),
-                                    // dotColor: Colors.white,
-                                    // radius: 0,
-                                    // dotHeight: 10,
-                                    // dotWidth: 10,
+                                  effect: const CustomizableEffect(
                                     activeDotDecoration: DotDecoration(
                                         color: Color(0xFF0D6DC4),
                                         rotationAngle: 45.0),
@@ -286,19 +239,22 @@ class _ServicePageState extends State<ServicePage> {
                   // Container(
                 ],
               ),
-              SizedBox(height: 10),
+              SizedBox(height: AppDimension.height10),
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      ServicesPageContainer(
-                        image: "assets/images/transfer_service.svg",
+                      const ServicesPageContainer(
+                        image: "assets/images/transfer_services.svg",
                         text1: "Transfer",
                         text2: "Services",
                       ),
-                      ServicesPageContainer(
+                      SizedBox(
+                        width: AppDimension.height10,
+                      ),
+                      const ServicesPageContainer(
                         image: "assets/images/pay_for_bills.svg",
                         text1: "Pay Your",
                         text2: "Bills",
@@ -306,17 +262,20 @@ class _ServicePageState extends State<ServicePage> {
                     ],
                   ),
                   SizedBox(
-                    height: 10,
+                    height: AppDimension.height10,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      ServicesPageContainer(
+                      const ServicesPageContainer(
                         image: "assets/images/airtime.svg",
                         text1: "Buy",
                         text2: "Airtime",
                       ),
-                      ServicesPageContainer(
+                      SizedBox(
+                        width: AppDimension.width10,
+                      ),
+                      const ServicesPageContainer(
                         image: "assets/images/other_bank_services.svg",
                         text1: "Other Bank",
                         text2: "Services",
