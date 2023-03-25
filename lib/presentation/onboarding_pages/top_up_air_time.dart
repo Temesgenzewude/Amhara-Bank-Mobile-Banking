@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class top_up_air extends StatefulWidget {
   const top_up_air({Key? key}) : super(key: key);
@@ -19,13 +20,11 @@ class _top_up_airState extends State<top_up_air> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Image.asset(
-                      "assets/images/blue_with_yello_logo.png",
-                    ),
-              Image.asset("assets/images/air_time.png",height: 250,width: 250),
+             SvgPicture.asset("assets/images/blue_with_yellow.svg"),
+              SvgPicture.asset("assets/images/air_time.svg",height: 250,width: 250),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical:5.0),
-                child: Text("Buy Air Time",
+                child: Text("Top-up Air time",
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontFamily: 'axioforma',

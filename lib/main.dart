@@ -1,3 +1,4 @@
+import 'package:amhara_bank_mobile_banking/presentation/profile.dart';
 import 'package:amhara_bank_mobile_banking/presentation/splashscreen.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       
-      home: SplashScreen(),
+      home: profile(),
     );
   }
 }

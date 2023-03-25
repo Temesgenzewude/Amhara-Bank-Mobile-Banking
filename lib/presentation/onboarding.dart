@@ -2,6 +2,7 @@ import 'package:amhara_bank_mobile_banking/presentation/onboarding_pages/manage_
 import 'package:amhara_bank_mobile_banking/presentation/onboarding_pages/pay_your_bills.dart';
 import 'package:amhara_bank_mobile_banking/presentation/onboarding_pages/top_up_air_time.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class onboarding extends StatefulWidget {
@@ -27,9 +28,7 @@ class _onboardingState extends State<onboarding> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(
-                  "assets/images/blue_with_yello_logo.png",
-                ),
+                SvgPicture.asset("assets/images/blue_with_yellow.svg")
               ],
             ),
           ),
