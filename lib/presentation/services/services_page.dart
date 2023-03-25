@@ -2,6 +2,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../widgets/services/services_page_container.dart';
+
 class ServicePage extends StatefulWidget {
   const ServicePage({super.key});
 
@@ -10,10 +12,15 @@ class ServicePage extends StatefulWidget {
 }
 
 class _ServicePageState extends State<ServicePage> {
-  var activeDotIndex = 0;
-  final controller = PageController(
-    viewportFraction: 1,
-  );
+  var _activeDotIndex = 0;
+
+  bool _isVisible = true;
+
+  void handleVisibilityChange() {
+    setState(() {
+      _isVisible = !_isVisible;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -145,11 +152,11 @@ class _ServicePageState extends State<ServicePage> {
                               textBaseline: TextBaseline.alphabetic,
                               children: [
                                 Text(
-                                  "12,600",
+                                  !_isVisible ? "12,600" : "********",
                                   style: TextStyle(
-                                      height: 1.4,
+                                      height: 1.6,
                                       color: Colors.white,
-                                      fontSize: 18,
+                                      fontSize: 20,
                                       fontWeight: FontWeight.w600),
                                 ),
                                 Text(
@@ -163,8 +170,17 @@ class _ServicePageState extends State<ServicePage> {
                             )
                           ],
                         ),
-                        Icon(Icons.remove_red_eye_outlined,
-                            size: 30, color: Color(0xFFAAC9E0)),
+                        GestureDetector(
+                          onTap: () {
+                            handleVisibilityChange();
+                          },
+                          child: Icon(
+                              _isVisible
+                                  ? Icons.visibility
+                                  : Icons.visibility_off,
+                              size: 30,
+                              color: Color(0xFFAAC9E0)),
+                        ),
                       ],
                     ),
                   ),
@@ -197,7 +213,7 @@ class _ServicePageState extends State<ServicePage> {
                         autoPlayAnimationDuration: Duration(milliseconds: 600),
                         onPageChanged: (index, reason) {
                           setState(() {
-                            activeDotIndex = index;
+                            _activeDotIndex = index;
                           });
                         },
                       ),
@@ -242,14 +258,22 @@ class _ServicePageState extends State<ServicePage> {
                                   bottom: 20,
                                 ),
                                 child: AnimatedSmoothIndicator(
-                                  activeIndex: activeDotIndex,
+                                  activeIndex: _activeDotIndex,
                                   count: 4,
-                                  effect: SlideEffect(
-                                      activeDotColor: Color(0xFF0D6DC4),
-                                      dotColor: Colors.white,
-                                      radius: 0,
-                                      dotHeight: 10,
-                                      dotWidth: 10),
+                                  effect: CustomizableEffect(
+                                    // activeDotColor: Color(0xFF0D6DC4),
+                                    // dotColor: Colors.white,
+                                    // radius: 0,
+                                    // dotHeight: 10,
+                                    // dotWidth: 10,
+                                    activeDotDecoration: DotDecoration(
+                                        color: Color(0xFF0D6DC4),
+                                        rotationAngle: 45.0),
+                                    dotDecoration: DotDecoration(
+                                      rotationAngle: 45.0,
+                                      color: Color(0xFFFFFFFF),
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
@@ -269,79 +293,15 @@ class _ServicePageState extends State<ServicePage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        height: 70,
-                        width: 130,
-                        padding: EdgeInsets.only(
-                          left: 20,
-                          right: 20,
-                        ),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Color(0xFFE6E6E6),
-                        ),
-                        child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              Container(
-                                height: 40,
-                                width: 30,
-                                decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                        fit: BoxFit.cover,
-                                        image: AssetImage(
-                                            'assets/images/transfer_service.png'))),
-                              ),
-                              Container(
-                                padding: EdgeInsets.only(top: 20, bottom: 20),
-                                child: Column(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Text("Transfer"),
-                                      Text("Services")
-                                    ]),
-                              )
-                            ]),
+                      ServicesPageContainer(
+                        image: "assets/images/transfer_service.png",
+                        text1: "Transfer",
+                        text2: "Services",
                       ),
-                      Container(
-                        height: 70,
-                        width: 130,
-                        padding: EdgeInsets.only(
-                          left: 20,
-                          right: 20,
-                        ),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Color(0xFFE6E6E6),
-                        ),
-                        child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              Container(
-                                height: 40,
-                                width: 30,
-                                decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                        fit: BoxFit.cover,
-                                        image: AssetImage(
-                                            'assets/images/pay_for_bills.png'))),
-                              ),
-                              Container(
-                                padding: EdgeInsets.only(top: 20, bottom: 20),
-                                child: Column(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Text("Pay Your"),
-                                      Text("Bills")
-                                    ]),
-                              )
-                            ]),
+                      ServicesPageContainer(
+                        image: "assets/images/pay_for_bills.png",
+                        text1: "Pay Your",
+                        text2: "Bills",
                       ),
                     ],
                   ),
@@ -351,79 +311,15 @@ class _ServicePageState extends State<ServicePage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        height: 70,
-                        width: 130,
-                        padding: EdgeInsets.only(
-                          left: 20,
-                          right: 20,
-                        ),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Color(0xFFE6E6E6),
-                        ),
-                        child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              Container(
-                                height: 40,
-                                width: 30,
-                                decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                        fit: BoxFit.cover,
-                                        image: AssetImage(
-                                            'assets/images/airtime.png'))),
-                              ),
-                              Container(
-                                padding: EdgeInsets.only(top: 20, bottom: 20),
-                                child: Column(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Text("Buy"),
-                                      Text("Airtime")
-                                    ]),
-                              )
-                            ]),
+                      ServicesPageContainer(
+                        image: "assets/images/airtime.png",
+                        text1: "Buy",
+                        text2: "Airtime",
                       ),
-                      Container(
-                        height: 70,
-                        width: 130,
-                        padding: EdgeInsets.only(
-                          left: 20,
-                          right: 20,
-                        ),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Color(0xFFE6E6E6),
-                        ),
-                        child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              Container(
-                                height: 40,
-                                width: 30,
-                                decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                        fit: BoxFit.cover,
-                                        image: AssetImage(
-                                            'assets/images/other_bank_services.png'))),
-                              ),
-                              Container(
-                                padding: EdgeInsets.only(top: 20, bottom: 20),
-                                child: Column(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Text("Other Bank"),
-                                      Text("Service")
-                                    ]),
-                              )
-                            ]),
+                      ServicesPageContainer(
+                        image: "assets/images/other_bank_services.png",
+                        text1: "Other Bank",
+                        text2: "Services",
                       ),
                     ],
                   ),
