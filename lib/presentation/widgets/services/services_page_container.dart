@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class ServicesPageContainer extends StatelessWidget {
   const ServicesPageContainer({
@@ -29,12 +30,8 @@ class ServicesPageContainer extends StatelessWidget {
         Container(
           height: 50,
           width: 40,
-          decoration: BoxDecoration(
-           
-              image: DecorationImage(
-                
-                  fit: BoxFit.cover,
-                  image: AssetImage(image))),
+          child: SvgPicture.asset(image, fit: BoxFit.cover,),
+
         ),
         Container(
           

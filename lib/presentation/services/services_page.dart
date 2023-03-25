@@ -294,12 +294,12 @@ class _ServicePageState extends State<ServicePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       ServicesPageContainer(
-                        image: "assets/images/transfer_service.png",
+                        image: "assets/images/transfer_service.svg",
                         text1: "Transfer",
                         text2: "Services",
                       ),
                       ServicesPageContainer(
-                        image: "assets/images/pay_for_bills.png",
+                        image: "assets/images/pay_for_bills.svg",
                         text1: "Pay Your",
                         text2: "Bills",
                       ),
@@ -312,12 +312,12 @@ class _ServicePageState extends State<ServicePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       ServicesPageContainer(
-                        image: "assets/images/airtime.png",
+                        image: "assets/images/airtime.svg",
                         text1: "Buy",
                         text2: "Airtime",
                       ),
                       ServicesPageContainer(
-                        image: "assets/images/other_bank_services.png",
+                        image: "assets/images/other_bank_services.svg",
                         text1: "Other Bank",
                         text2: "Services",
                       ),
