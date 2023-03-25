@@ -1,9 +1,11 @@
 import 'package:amhara_bank_mobile_banking/presentation/onboarding_pages/manage_account.dart';
 import 'package:amhara_bank_mobile_banking/presentation/onboarding_pages/pay_your_bills.dart';
 import 'package:amhara_bank_mobile_banking/presentation/onboarding_pages/top_up_air_time.dart';
+import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:get/get.dart';
 
 class profile extends StatefulWidget {
   const profile({Key? key}) : super(key: key);
@@ -18,7 +20,16 @@ class _profileState extends State<profile> {
   bool onpagechange = false;
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+
+    void handleLogout() {
+      Get.defaultDialog(
+        title: "Are you sure to log out",
+        content: Container(),
+        confirm: Text("Confirm"),
+        cancel: Text("Cancel"),
+        confirmTextColor: Colors.white,
+      );
+    }
 
     return Scaffold(
         backgroundColor: Color(0xFFEBEBEB),
@@ -123,9 +134,7 @@ class _profileState extends State<profile> {
                 ),
               ),
               GestureDetector(
-                onTap: () {
-      
-                },
+                onTap: () {},
                 child: Container(
                   decoration: BoxDecoration(color: Color(0xFFE5F2FC)),
                   child: Row(
@@ -136,7 +145,7 @@ class _profileState extends State<profile> {
                         child: Row(children: [
                           Padding(
                             padding: const EdgeInsets.only(right: 25.0),
-                            child: Icon(Icons.question_mark),
+                            child: Icon(Icons.help_outline),
                           ),
                           Text("FAQ")
                         ]),
@@ -158,7 +167,7 @@ class _profileState extends State<profile> {
                         child: Row(children: [
                           Padding(
                             padding: const EdgeInsets.only(right: 25.0),
-                            child: Icon(Icons.more),
+                            child: Icon(Icons.info,color: Color(0xFF143B58),),
                           ),
                           Text("About")
                         ]),
@@ -168,6 +177,22 @@ class _profileState extends State<profile> {
                   ),
                 ),
               ),
+              GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: () {
+                  
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(right: 20),
+                      child: SvgPicture.asset("assets/images/Logout.svg"),
+                    ),
+                    Text("Logout")
+                  ],
+                ),
+              )
             ],
           ),
         ));
