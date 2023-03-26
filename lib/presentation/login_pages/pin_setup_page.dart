@@ -3,13 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class PinSetUpPage extends StatefulWidget {
-  const PinSetUpPage({super.key});
+  
+  PinSetUpPage({super.key});
 
   @override
   State<PinSetUpPage> createState() => _PinSetUpPageState();
 }
 
 class _PinSetUpPageState extends State<PinSetUpPage> {
+  TextEditingController newPinController = TextEditingController();
+  TextEditingController confirmPinController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
@@ -56,28 +60,31 @@ class _PinSetUpPageState extends State<PinSetUpPage> {
                     height: screenSize.height * 0.1,
                   ),
                   SizedBox(
-                    width: screenSize.width*0.6,
-                    child: const TextField(
-                      decoration: InputDecoration(
+                    width: screenSize.width * 0.6,
+                    child: TextField(
+                      controller: newPinController,
+                      keyboardType: TextInputType.number,
+                      decoration: const InputDecoration(
                         border: UnderlineInputBorder(
                           borderSide: BorderSide(
                             color: Color.fromRGBO(0, 94, 166, 1),
                             width: 1.0,
                           ),
                         ),
-                        hintText:'New PIN', 
+                        hintText: 'New PIN',
                         labelText: '',
                         contentPadding: EdgeInsets.zero,
                       ),
                     ),
                   ),
                   SizedBox(
-                    height: screenSize.height*0.099,
+                    height: screenSize.height * 0.099,
                   ),
                   SizedBox(
                     width: screenSize.width * 0.6,
-                    child: const TextField(
-                      decoration: InputDecoration(
+                    child: TextField(
+                      controller: confirmPinController,
+                      decoration: const InputDecoration(
                         border: UnderlineInputBorder(
                           borderSide: BorderSide(
                             color: Color.fromRGBO(0, 94, 166, 1),
@@ -91,9 +98,11 @@ class _PinSetUpPageState extends State<PinSetUpPage> {
                     ),
                   ),
                   SizedBox(
-                    height: screenSize.height*0.17,
+                    height: screenSize.height * 0.17,
                   ),
-                  const LoginButton(),
+                  const LoginButton(
+                    routeName: '/login',
+                  ),
                 ],
               ),
             ),

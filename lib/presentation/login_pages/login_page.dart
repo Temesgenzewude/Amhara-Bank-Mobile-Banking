@@ -79,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
                   SizedBox(
                     height: screenSize.height * 0.15,
                   ),
-                  const LoginButton()
+                  const LoginButton(routeName: '/activation-page',)
                 ],
               ),
             ),

@@ -1,14 +1,11 @@
+import 'package:amhara_bank_mobile_banking/presentation/login_pages/pin_setup_page.dart';
 import 'package:flutter/material.dart';
 
+class LoginButton extends StatelessWidget {
+  final String routeName;
 
-class LoginButton extends StatefulWidget {
-  const LoginButton({super.key});
+  const LoginButton({super.key, required this.routeName});
 
-  @override
-  State<LoginButton> createState() => _LoginButtonState();
-}
-
-class _LoginButtonState extends State<LoginButton> {
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
@@ -16,7 +13,9 @@ class _LoginButtonState extends State<LoginButton> {
       height: screenSize.height * 0.06,
       width: screenSize.width * 0.4,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, routeName);
+        },
         style: ElevatedButton.styleFrom(
             backgroundColor: const Color(0xFF005EA6),
             textStyle:

@@ -65,6 +65,8 @@ class _ActivationPageState extends State<ActivationPage> {
                   SizedBox(
                     width: screenSize.width * 0.6,
                     child:  TextField(
+                      
+                      keyboardType: TextInputType.number,
                       controller: activationController,
                       decoration:const InputDecoration(
                         border: UnderlineInputBorder(
@@ -82,7 +84,7 @@ class _ActivationPageState extends State<ActivationPage> {
                   SizedBox(
                     height: screenSize.height * 0.15,
                   ),
-                  const LoginButton()
+                  const LoginButton(routeName: '/pin-setup',)
                 ],
               ),
             ),
