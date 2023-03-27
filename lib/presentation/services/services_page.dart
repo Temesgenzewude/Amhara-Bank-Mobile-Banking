@@ -1,6 +1,8 @@
 import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../widgets/services/service_page_custom_app_bar.dart';
@@ -30,7 +32,12 @@ class _ServicePageState extends State<ServicePage> {
       backgroundColor: Colors.white,
       body: Column(
         children: [
-          const ServicePageCustomAppBar(),
+          ServicePageCustomAppBar(
+            appBarLeftSideWidget: SvgPicture.asset(
+              "assets/images/amhara_bank_logo_yellow.svg",
+              height: AppDimension.height30,
+            ),
+          ),
           const Divider(
             thickness: 1,
             color: Color(0xFFDBD9D9),
@@ -88,14 +95,21 @@ class _ServicePageState extends State<ServicePage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
-                              children: const [
+                              children: [
                                 Text(
-                                  "Abebe Bikila - 99******110",
+                                  _isVisible
+                                      ? "Abebe Bikila - 99098563110"
+                                      : "Abebe Bikila - 99******110",
                                   style: TextStyle(color: Color(0xFFC4CACE)),
                                 ),
-                                Icon(
-                                  Icons.arrow_drop_down_outlined,
-                                  color: Color(0xFFC4CACE),
+                                GestureDetector(
+                                  onTap: () {
+                                    Get.defaultDialog();
+                                  },
+                                  child: Icon(
+                                    Icons.arrow_drop_down_outlined,
+                                    color: Color(0xFFC4CACE),
+                                  ),
                                 ),
                               ],
                             ),
@@ -147,7 +161,7 @@ class _ServicePageState extends State<ServicePage> {
                         fontSize: AppDimension.font18),
                   ),
                   SizedBox(
-                    height: AppDimension.height5 -2,
+                    height: AppDimension.height5 - 2,
                   ),
                   const Divider(
                     thickness: 1,
@@ -156,27 +170,28 @@ class _ServicePageState extends State<ServicePage> {
                   SizedBox(
                     height: AppDimension.height5,
                   ),
-                  Container(
-                    height: AppDimension.promoContHeight120,
-                    width: double.maxFinite,
-                    child: CarouselSlider.builder(
-                      options: CarouselOptions(
-                        height: AppDimension.promoContHeight120,
-                        viewportFraction: 1,
-                        autoPlay: true,
-                        enableInfiniteScroll: true,
-                        autoPlayAnimationDuration: const Duration(milliseconds: 600),
-                        onPageChanged: (index, reason) {
-                          setState(() {
-                            _activeDotIndex = index;
-                          });
-                        },
-                      ),
-                      itemBuilder: (_, index, realIndex) {
-                        return Stack(
-                          children: [
-                            Container(
-                              height: AppDimension.promoContHeight120,
+                  Stack(
+                    children: [
+                      Container(
+                        height: AppDimension.contHeight120,
+                        width: double.maxFinite,
+                        child: CarouselSlider.builder(
+                          options: CarouselOptions(
+                            height: AppDimension.contHeight120,
+                            viewportFraction: 1,
+                            autoPlay: true,
+                            enableInfiniteScroll: true,
+                            autoPlayAnimationDuration:
+                                const Duration(milliseconds: 600),
+                            onPageChanged: (index, reason) {
+                              setState(() {
+                                _activeDotIndex = index;
+                              });
+                            },
+                          ),
+                          itemBuilder: (_, index, realIndex) {
+                            return Container(
+                              height: AppDimension.contHeight120,
                               decoration: BoxDecoration(
                                   gradient: LinearGradient(
                                     begin: Alignment.topCenter,
@@ -194,47 +209,47 @@ class _ServicePageState extends State<ServicePage> {
                                       "assets/images/promo_img1.png",
                                     ),
                                   )),
-                            ),
-                            Positioned(
-                              top: AppDimension.promoTextTopShift80,
-                              left: AppDimension.promoTextLeftShift120,
-                              child: Text(
-                                "Pay Your Bills",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: AppDimension.font16),
+                            );
+                          },
+                          itemCount: 4,
+                        ),
+                      ),
+                      Positioned(
+                        top: AppDimension.promoTextTopShift80,
+                        left: AppDimension.promoTextLeftShift110,
+                        child: Text(
+                          "Pay Your Bills",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: AppDimension.font16),
+                        ),
+                      ),
+                      SizedBox(
+                        height: AppDimension.height10,
+                      ),
+                      Positioned(
+                        top: AppDimension.dotIndTopShift100,
+                        left: AppDimension.dotIndLeftShift120,
+                        child: Container(
+                          margin: EdgeInsets.only(
+                            bottom: AppDimension.height20,
+                          ),
+                          child: AnimatedSmoothIndicator(
+                            activeIndex: _activeDotIndex,
+                            count: 4,
+                            effect: const CustomizableEffect(
+                              activeDotDecoration: DotDecoration(
+                                  color: Color(0xFF0D6DC4),
+                                  rotationAngle: 45.0),
+                              dotDecoration: DotDecoration(
+                                rotationAngle: 45.0,
+                                color: Color(0xFFFFFFFF),
                               ),
                             ),
-                            SizedBox(
-                              height: AppDimension.height10,
-                            ),
-                            Positioned(
-                              top: AppDimension.dotIndTopShift100,
-                              left: AppDimension.dotIndLeftShift130,
-                              child: Container(
-                                margin: EdgeInsets.only(
-                                  bottom: AppDimension.height20,
-                                ),
-                                child: AnimatedSmoothIndicator(
-                                  activeIndex: _activeDotIndex,
-                                  count: 4,
-                                  effect: const CustomizableEffect(
-                                    activeDotDecoration: DotDecoration(
-                                        color: Color(0xFF0D6DC4),
-                                        rotationAngle: 45.0),
-                                    dotDecoration: DotDecoration(
-                                      rotationAngle: 45.0,
-                                      color: Color(0xFFFFFFFF),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        );
-                      },
-                      itemCount: 4,
-                    ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                   // Container(
                 ],

@@ -58,23 +58,37 @@ class AppDimension {
   static double iconSize24 = screenHeight / (myDeviceHeight / 24);
   static double iconSize30 = screenHeight / (myDeviceHeight / 30);
 
-
   // promotion image container dimensions
-  static double promoContHeight120 = screenHeight / (myDeviceHeight / 120);
-  static double promoTextTopShift80 =
-      screenHeight / (myDeviceHeight / 80);
+  static double promoTextTopShift80 = screenHeight / (myDeviceHeight / 80);
   static double promoTextLeftShift120 = screenWidth / (myDeviceWidth / 120);
+  static double promoTextLeftShift110 = screenWidth / (myDeviceWidth / 110);
 
-
-    // dots indicator container dimensions
+  // dots indicator container dimensions
   static double dotIndTopShift100 = screenHeight / (myDeviceHeight / 100);
-  static double dotIndLeftShift130 = screenWidth / (myDeviceWidth / 130);
+  static double dotIndLeftShift120 = screenWidth / (myDeviceWidth / 120);
 
+  // dynamic container dimensions
+  static double contHeight30 = screenHeight / (myDeviceHeight / 30);
+  static double contWid30 = screenWidth / (myDeviceWidth / 30);
 
-  // services page container dimensions
-  static double servicePageContHeight70 = screenHeight / (myDeviceHeight / 70);
-  static double servicePageContWid130 = screenWidth / (myDeviceWidth / 130);
-  static double servicePageImgContHeight50 =
-      screenHeight / (myDeviceHeight / 50);
-  static double servicePageImgContWid40 = screenWidth / (myDeviceWidth / 40);
+  static double contHeight40 = screenHeight / (myDeviceHeight / 40);
+  static double contWid40 = screenWidth / (myDeviceWidth / 40);
+
+  static double contHeight50 = screenHeight / (myDeviceHeight / 50);
+  static double contWid50 = screenWidth / (myDeviceWidth / 50);
+
+  static double contWid60 = screenWidth / (myDeviceWidth / 60);
+  static double contHeight60 = screenHeight / (myDeviceHeight / 60);
+
+  static double contHeight70 = screenHeight / (myDeviceHeight / 70);
+  static double contHeight80 = screenHeight / (myDeviceHeight / 80);
+  static double contWid80 = screenWidth / (myDeviceWidth / 80);
+
+  static double contHeight100 = screenHeight / (myDeviceHeight / 100);
+  static double contWid100 = screenWidth / (myDeviceWidth / 100);
+
+  static double contHeight120 = screenHeight / (myDeviceHeight / 120);
+  static double contWid120 = screenWidth / (myDeviceWidth / 120);
+
+  static double contWid130 = screenWidth / (myDeviceWidth / 130);
 }
