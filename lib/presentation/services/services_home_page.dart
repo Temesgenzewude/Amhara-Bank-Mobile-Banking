@@ -1,5 +1,7 @@
+import 'package:amhara_bank_mobile_banking/presentation/profile.dart';
 import 'package:amhara_bank_mobile_banking/presentation/services/services_page.dart';
 import 'package:flutter/material.dart';
+
 
 
 
@@ -22,13 +24,7 @@ class _ServiceHomePageState extends State<ServiceHomePage> {
         ),
       ),
     ),
-    Container(
-      child: Center(
-        child: Text(
-          "Profile",
-        ),
-      ),
-    ),
+   profile()
   ];
 
   void handleBottomNavTap(int index) {
@@ -39,6 +35,7 @@ class _ServiceHomePageState extends State<ServiceHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       
       

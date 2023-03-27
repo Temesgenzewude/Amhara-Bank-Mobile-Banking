@@ -225,8 +225,8 @@ class _profileState extends State<profile> {
           textAlign: TextAlign.center,
         ),
       actions: <Widget>[
-        ButtonBar(
-          alignment: MainAxisAlignment.spaceEvenly,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             TextButton(
               onPressed: () => Navigator.of(context).pop(false),

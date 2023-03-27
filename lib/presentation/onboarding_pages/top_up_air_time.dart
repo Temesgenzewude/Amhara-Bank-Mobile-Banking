@@ -21,7 +21,7 @@ class _top_up_airState extends State<top_up_air> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
              SvgPicture.asset("assets/images/blue_with_yellow.svg"),
-              SvgPicture.asset("assets/images/air_time.svg",height: 250,width: 250),
+              SvgPicture.asset("assets/images/onboarding_airtime.svg",height: 250,width: 250),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical:5.0),
                 child: Text("Top-up Air time",
