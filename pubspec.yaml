@@ -41,6 +41,7 @@ dependencies:
   get: ^4.6.5
 
   carousel_slider: ^4.2.1
+  flutter_pin_code_fields: ^1.2.0
 
 
 dev_dependencies:

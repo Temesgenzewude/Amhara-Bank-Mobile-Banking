@@ -1,3 +1,4 @@
+import 'package:amhara_bank_mobile_banking/presentation/login_pages/activation_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -50,7 +51,12 @@ class _top_up_airState extends State<top_up_air> {
                     elevation: 0.0,
                     padding: EdgeInsets.symmetric(vertical: 5),
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                    onPressed: (){},
+                    onPressed: (){
+                       Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ActivationPage()));
+                    },
                     child: Text(
                       "Start Financing",
                       style: TextStyle(

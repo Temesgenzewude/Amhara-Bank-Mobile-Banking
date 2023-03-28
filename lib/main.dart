@@ -1,3 +1,6 @@
+import 'package:amhara_bank_mobile_banking/presentation/login_pages/activation_page.dart';
+import 'package:amhara_bank_mobile_banking/presentation/login_pages/login_page.dart';
+import 'package:amhara_bank_mobile_banking/presentation/login_pages/pin_setup_page.dart';
 import 'package:amhara_bank_mobile_banking/presentation/profile.dart';
 import 'package:amhara_bank_mobile_banking/presentation/services/services_home_page.dart';
 import 'package:amhara_bank_mobile_banking/presentation/splashscreen.dart';
@@ -15,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: ActivationPage(),
     );
   }
 }
