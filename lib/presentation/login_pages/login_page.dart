@@ -17,32 +17,31 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
-    return Stack(
-      children: [
-        SvgPicture.asset(
+    return Scaffold(
+      body: Stack(
+        children: [
+           SvgPicture.asset(
           'assets/images/Patterns.svg',
-          alignment: Alignment.center,
           width: screenSize.width,
-          height: screenSize.height,
+          fit: BoxFit.cover,
         ),
-        Scaffold(
-          body: SingleChildScrollView(
+          SingleChildScrollView(
             child: Center(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: screenSize.height * 0.1,
+                    height: screenSize.height * 0.05,
                   ),
                   SvgPicture.asset(
                     'assets/images/Amhara_Bank_Logo_Yellow.svg',
-                    height: screenSize.width * 0.28,
+                    height: screenSize.width * 0.3,
                   ),
                   SizedBox(
-                    height: screenSize.height * 0.05,
+                    height: screenSize.height * 0.07,
                   ),
-                Text(
+                  Text(
                     'Welcome!',
                     style: TextStyle(
                         fontSize: screenSize.width * 0.07,
@@ -50,23 +49,23 @@ class _LoginPageState extends State<LoginPage> {
                         color: const Color(0xFF005EA6)),
                   ),
                   SizedBox(
-                    height: screenSize.height * 0.02,
+                    height: screenSize.height * 0.04,
                   ),
-                   Text(
+                  Text(
                     'Enter PIN',
                     style: TextStyle(
                         fontWeight: FontWeight.w300,
-                        fontSize: screenSize.width*0.040,
+                        fontSize: screenSize.width * 0.040,
                         color: Color(0xFF96989A)),
                   ),
                   SizedBox(
-                    height: screenSize.height * 0.01,
+                    height: screenSize.height * 0.04,
                   ),
                   SizedBox(
                     width: screenSize.width * 0.8,
                     child: PinCodeFields(
                       length: 4,
-                      fieldWidth: screenSize.width*0.08,
+                      fieldWidth: screenSize.width * 0.08,
                       margin: const EdgeInsets.all(12),
                       keyboardType: TextInputType.number,
                       controller: loginController,
@@ -77,15 +76,17 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                   SizedBox(
-                    height: screenSize.height * 0.15,
+                    height: screenSize.height * 0.1,
                   ),
-                  const LoginButton(routeName: '/activation-page',)
+                  const LoginButton(
+                    routeName: '/activation-page',
+                  )
                 ],
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
