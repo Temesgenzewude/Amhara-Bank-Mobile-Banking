@@ -13,6 +13,8 @@ class pay_your_bills extends StatelessWidget {
         children: [
           
           SvgPicture.asset("assets/images/pay_your_bill.svg",height: 250,width: 250),
+          
+          
           Padding(
             padding: const EdgeInsets.symmetric(vertical:15.0),
             child: Text("Pay Your Bills",
