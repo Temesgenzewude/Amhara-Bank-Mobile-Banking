@@ -13,6 +13,7 @@ class ServicePageCustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      
       margin: EdgeInsets.only(
           left: AppDimension.width20,
           right: AppDimension.width20,
