@@ -37,9 +37,12 @@ dependencies:
   cupertino_icons: ^1.0.2
   smooth_page_indicator: ^1.0.1
   flutter_svg: ^0.22.0
+<<<<<<< Updated upstream
   awesome_dialog: ^3.0.2
   get: ^4.6.5
 
+=======
+>>>>>>> Stashed changes
   carousel_slider: ^4.2.1
   flutter_pin_code_fields: ^1.2.0
 
