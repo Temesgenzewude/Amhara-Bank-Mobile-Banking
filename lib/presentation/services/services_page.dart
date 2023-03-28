@@ -203,15 +203,16 @@ class _ServicePageState extends State<ServicePage> {
                                   ),
                                   borderRadius: BorderRadius.circular(
                                       AppDimension.radius15),
-                                  image: const DecorationImage(
+                                  image: DecorationImage(
                                     fit: BoxFit.cover,
                                     image: AssetImage(
-                                      "assets/images/promo_img1.png",
+                                      "assets/images/promotions/promo_img${index+1}.jpg",
                                     ),
                                   )),
                             );
                           },
-                          itemCount: 4,
+                          itemCount: 5,
+
                         ),
                       ),
                       Positioned(
@@ -236,7 +237,7 @@ class _ServicePageState extends State<ServicePage> {
                           ),
                           child: AnimatedSmoothIndicator(
                             activeIndex: _activeDotIndex,
-                            count: 4,
+                            count: 5,
                             effect: const CustomizableEffect(
                               activeDotDecoration: DotDecoration(
                                   color: Color(0xFF0D6DC4),
