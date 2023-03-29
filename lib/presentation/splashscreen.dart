@@ -21,8 +21,6 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    print(size.height);
-    print(size.width);
     return Scaffold(
       body: Container(
         width: double.infinity,
@@ -34,20 +32,16 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SizedBox(
-              height: size.height * 0.22,
+              height: size.height * 0.18,
             ),
             Column(
               children: [
                 SizedBox(
-                  height: size.height * 0.22,
-                  width: size.width * 0.4,
-                  child: SvgPicture.asset(
-                    'assets/images/amhara_bank_logo.svg',
+                  height: size.height * 0.35,
+                  width: size.width * 0.6,
+                  child: Image.asset(
+                    'assets/images/amhara_bank_logo.png',
                   ),
-                ),
-                SizedBox(
-                  width: size.width * 0.1,
-                  height: size.height * 0.07,
                 ),
                 SvgPicture.asset(
                   'assets/images/yellow_full.svg',

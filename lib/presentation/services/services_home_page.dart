@@ -1,11 +1,5 @@
-<<<<<<< Updated upstream
-import 'package:amhara_bank_mobile_banking/presentation/profile.dart';
-import 'package:amhara_bank_mobile_banking/presentation/services/services_page.dart';
-import 'package:flutter/material.dart';
-=======
 // import 'package:amhara_bank_mobile_banking/presentation/services/services_page.dart';
 // import 'package:flutter/material.dart';
->>>>>>> Stashed changes
 
 
 
@@ -20,19 +14,6 @@ import 'package:flutter/material.dart';
 // class _ServiceHomePageState extends State<ServiceHomePage> {
 //   int _selectedIndex = 0;
 
-<<<<<<< Updated upstream
-  List pages = [
-    ServicePage(),
-    Container(
-      child: Center(
-        child: Text(
-          "Account",
-        ),
-      ),
-    ),
-   profile()
-  ];
-=======
 //   List pages = [
 //     ServicePage(),
 //     Container(
@@ -50,7 +31,6 @@ import 'package:flutter/material.dart';
 //       ),
 //     ),
 //   ];
->>>>>>> Stashed changes
 
 //   void handleBottomNavTap(int index) {
 //     setState(() {
