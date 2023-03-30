@@ -28,6 +28,14 @@ class _ServicePageState extends State<ServicePage> {
 
   @override
   Widget build(BuildContext context) {
+    List<String> promoImages = [
+      "assets/images/promotions/promo_img1.jpg",
+      "assets/images/promotions/promo_img2.jpg",
+      "assets/images/promotions/promo_img3.jpg",
+      "assets/images/promotions/promo_img5.jpg",
+      "assets/images/promotions/promo_img5.jpg",
+    ];
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
@@ -35,7 +43,8 @@ class _ServicePageState extends State<ServicePage> {
           ServicePageCustomAppBar(
             appBarLeftSideWidget: SvgPicture.asset(
               "assets/images/amhara_bank_logo_yellow.svg",
-              height: AppDimension.height30,
+              height: AppDimension.height45,
+              width: AppDimension.contWid120,
             ),
           ),
           const Divider(
@@ -45,37 +54,42 @@ class _ServicePageState extends State<ServicePage> {
           ),
           Container(
             margin: EdgeInsets.only(
+                //TODO: check later
                 bottom: AppDimension.height10,
                 top: AppDimension.height5,
-                left: AppDimension.width20,
-                right: AppDimension.width20),
+                left: AppDimension.width20 + AppDimension.width4,
+                right: AppDimension.width20 + AppDimension.width4),
             child: Column(children: [
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+                  Text(
                     "Balance",
                     style: TextStyle(
-                        color: Color(0xFF191919), fontWeight: FontWeight.bold),
+                        color: Color(0xFF191919),
+                        fontFamily: "PoppinsMedium",
+                        fontSize: AppDimension.font26),
                   ),
                   SizedBox(
-                    height: AppDimension.height5,
+                    height: AppDimension.height10,
                   ),
-                  const Text(
+                  Text(
                     "Your Account Balance",
                     style: TextStyle(
-                        color: Color(0xFF969696), fontWeight: FontWeight.w400),
+                        color: Color(0xFF969696),
+                        fontFamily: "PoppinsRegular",
+                        fontSize: AppDimension.font18),
                   ),
                   SizedBox(
                     height: AppDimension.height10,
                   ),
                   Container(
-                    height: AppDimension.height25 + AppDimension.height45,
+                    height: AppDimension.contHeight100,
                     padding: EdgeInsets.only(
                         left: AppDimension.width20,
                         right: AppDimension.width20,
-                        top: AppDimension.height5,
+                        top: AppDimension.height10,
                         bottom: AppDimension.height10),
                     decoration: BoxDecoration(
                         borderRadius:
@@ -100,20 +114,24 @@ class _ServicePageState extends State<ServicePage> {
                                   _isVisible
                                       ? "Abebe Bikila - 99098563110"
                                       : "Abebe Bikila - 99******110",
-                                  style: TextStyle(color: Color(0xFFC4CACE)),
+                                  style: TextStyle(
+                                      color: Color(0xFFC4CACE),
+                                      fontFamily: "AxiFormaRegular",
+                                      fontSize: AppDimension.font16),
                                 ),
                                 GestureDetector(
-                                  onTap: () {
-                                    Get.defaultDialog();
-                                  },
+                                  onTap: () {},
                                   child: Icon(
                                     Icons.arrow_drop_down_outlined,
                                     color: Color(0xFFC4CACE),
+                                    size: AppDimension.iconSize16,
                                   ),
                                 ),
                               ],
                             ),
-                            // SizedBox(height: 10,),
+                            SizedBox(
+                              height: AppDimension.height20,
+                            ),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.baseline,
                               textBaseline: TextBaseline.alphabetic,
@@ -121,17 +139,18 @@ class _ServicePageState extends State<ServicePage> {
                                 Text(
                                   _isVisible ? "12,600" : "********",
                                   style: TextStyle(
-                                      height: 1.6,
                                       color: Colors.white,
-                                      fontSize: AppDimension.font20,
-                                      fontWeight: FontWeight.w600),
+                                      fontSize: AppDimension.font20 +
+                                          AppDimension.font10,
+                                      fontFamily: "AxiFormaSemiBold"),
                                 ),
                                 Text(
                                   "ETB",
                                   style: TextStyle(
-                                      height: 1.2,
                                       color: const Color(0xFFEBEBEB),
-                                      fontSize: AppDimension.font10),
+                                      fontFamily: "PoppinsRegular",
+                                      fontSize: AppDimension.font10 +
+                                          AppDimension.font2),
                                 )
                               ],
                             )
@@ -145,7 +164,7 @@ class _ServicePageState extends State<ServicePage> {
                               _isVisible
                                   ? Icons.visibility_off_outlined
                                   : Icons.visibility_outlined,
-                              size: AppDimension.iconSize30,
+                              size: AppDimension.iconSize10 * 3,
                               color: const Color(0xFFAAC9E0)),
                         ),
                       ],
@@ -158,26 +177,27 @@ class _ServicePageState extends State<ServicePage> {
                     "Services",
                     style: TextStyle(
                         color: const Color(0xFF2F2E41),
-                        fontSize: AppDimension.font18),
+                        fontFamily: "PoppinsMedium",
+                        fontSize: AppDimension.font20),
                   ),
                   SizedBox(
-                    height: AppDimension.height5 - 2,
+                    height: AppDimension.height5,
                   ),
                   const Divider(
                     thickness: 1,
                     color: Color(0xFFDBD9D9),
                   ),
                   SizedBox(
-                    height: AppDimension.height5,
+                    height: AppDimension.height10,
                   ),
                   Stack(
                     children: [
                       Container(
-                        height: AppDimension.contHeight120,
+                        height: AppDimension.contHeight100*2,
                         width: double.maxFinite,
                         child: CarouselSlider.builder(
                           options: CarouselOptions(
-                            height: AppDimension.contHeight120,
+                            height: AppDimension.contHeight100*2,
                             viewportFraction: 1,
                             autoPlay: true,
                             enableInfiniteScroll: true,
@@ -191,7 +211,7 @@ class _ServicePageState extends State<ServicePage> {
                           ),
                           itemBuilder: (_, index, realIndex) {
                             return Container(
-                              height: AppDimension.contHeight120,
+                              height: AppDimension.contHeight100*2,
                               decoration: BoxDecoration(
                                   gradient: LinearGradient(
                                     begin: Alignment.topCenter,
@@ -202,36 +222,33 @@ class _ServicePageState extends State<ServicePage> {
                                     ],
                                   ),
                                   borderRadius: BorderRadius.circular(
-                                      AppDimension.radius15),
+                                      AppDimension.radius10),
                                   image: DecorationImage(
                                     fit: BoxFit.cover,
-                                    image: AssetImage(
-                                      "assets/images/promotions/promo_img${index+1}.jpg",
-                                    ),
+                                    image: AssetImage(promoImages[index]),
                                   )),
                             );
                           },
                           itemCount: 5,
-
                         ),
                       ),
                       Positioned(
-                        top: AppDimension.contHeight80,
-                        left: AppDimension.contWid120,
+                        top: AppDimension.height25 * 5+AppDimension.height10,
+                        left: AppDimension.width25 * 5 + AppDimension.width10,
                         child: Text(
                           "Pay Your Bills",
                           style: TextStyle(
                               color: Colors.white,
-                              fontSize: AppDimension.font16),
+                              fontFamily: "AxiFormRegular",
+                              fontSize: AppDimension.font20),
                         ),
                       ),
                       SizedBox(
-                        height: AppDimension.height10,
+                        height: AppDimension.height20,
                       ),
                       Positioned(
-                        top: AppDimension.contHeight100,
-                        
-                        left: AppDimension.contWid120,
+                        top: AppDimension.height30 * 5 + AppDimension.height15,
+                        left: AppDimension.width25 * 5 + AppDimension.width10,
                         child: Container(
                           margin: EdgeInsets.only(
                             bottom: AppDimension.height20,
@@ -239,13 +256,15 @@ class _ServicePageState extends State<ServicePage> {
                           child: AnimatedSmoothIndicator(
                             activeIndex: _activeDotIndex,
                             count: 5,
-                            effect: const CustomizableEffect(
+                            effect: CustomizableEffect(
                               activeDotDecoration: DotDecoration(
                                   color: Color(0xFF0D6DC4),
                                   rotationAngle: 45.0),
                               dotDecoration: DotDecoration(
                                 rotationAngle: 45.0,
                                 color: Color(0xFFFFFFFF),
+                                width: AppDimension.height9,
+                                height: AppDimension.height9,
                               ),
                             ),
                           ),
@@ -264,36 +283,36 @@ class _ServicePageState extends State<ServicePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const ServicesPageContainer(
-                        image: "assets/images/transfer_services.svg",
+                        image: "assets/images/services/transfer_services.svg",
                         text1: "Transfer",
                         text2: "Services",
                       ),
                       SizedBox(
-                        width: AppDimension.height10,
+                        width: AppDimension.width10 + AppDimension.width4,
                       ),
                       const ServicesPageContainer(
-                        image: "assets/images/pay_for_bills.svg",
+                        image: "assets/images/services/pay_for_bills.svg",
                         text1: "Pay Your",
                         text2: "Bills",
                       ),
                     ],
                   ),
                   SizedBox(
-                    height: AppDimension.height10,
+                    height: AppDimension.height10 + AppDimension.height4,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const ServicesPageContainer(
-                        image: "assets/images/airtime.svg",
+                        image: "assets/images/services/airtime.svg",
                         text1: "Buy",
                         text2: "Airtime",
                       ),
                       SizedBox(
-                        width: AppDimension.width10,
+                        width: AppDimension.width10 + AppDimension.width4,
                       ),
                       const ServicesPageContainer(
-                        image: "assets/images/other_bank_services.svg",
+                        image: "assets/images/services/other_bank_services.svg",
                         text1: "Other Bank",
                         text2: "Services",
                       ),
