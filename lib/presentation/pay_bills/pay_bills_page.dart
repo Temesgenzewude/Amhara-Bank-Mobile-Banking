@@ -16,7 +16,10 @@ class _PayBillsPageState extends State<PayBillsPage> {
     return Scaffold(
       body: Column(
         children: [
-          PayBillsAppBar(),
+          BillsTransferAirtimeOtherBankCustomAppBar(
+            
+            appBarText: "Pay Your Bills",
+          ),
           Divider(
             thickness: 1,
             color: Color(0xFFDBD9D9),
