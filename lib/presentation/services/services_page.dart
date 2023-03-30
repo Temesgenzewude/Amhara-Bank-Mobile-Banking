@@ -216,8 +216,8 @@ class _ServicePageState extends State<ServicePage> {
                         ),
                       ),
                       Positioned(
-                        top: AppDimension.promoTextTopShift80,
-                        left: AppDimension.promoTextLeftShift110,
+                        top: AppDimension.contHeight80,
+                        left: AppDimension.contWid120,
                         child: Text(
                           "Pay Your Bills",
                           style: TextStyle(
@@ -229,8 +229,9 @@ class _ServicePageState extends State<ServicePage> {
                         height: AppDimension.height10,
                       ),
                       Positioned(
-                        top: AppDimension.dotIndTopShift100,
-                        left: AppDimension.dotIndLeftShift120,
+                        top: AppDimension.contHeight100,
+                        
+                        left: AppDimension.contWid120,
                         child: Container(
                           margin: EdgeInsets.only(
                             bottom: AppDimension.height20,

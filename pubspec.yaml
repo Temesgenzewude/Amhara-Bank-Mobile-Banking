@@ -43,7 +43,6 @@ dependencies:
   carousel_slider: ^4.2.1
   flutter_pin_code_fields: ^1.2.0
 
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -68,6 +67,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/images/promotions/
+    - assets/images/services/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -86,7 +87,9 @@ flutter:
         - asset: assets/fonts/jiret/jiret.ttf
     #       - asset: fonts/Schyler-Italic.ttf
     #         style: italic
-    - family: axiforma
+
+    # AxiForma fonts
+    - family: AxiForma
       fonts:
         - asset: assets/fonts/axi/axiforma.ttf
           style: normal
@@ -143,6 +146,51 @@ flutter:
           weight: 100
         
         
+
+    - family: AxiFormaLight
+      fonts:
+        - asset: assets/fonts/axi/AxiForma-Light.ttf
+
+    - family: AxiFormaRegular
+      fonts:
+        - asset: assets/fonts/axi/AxiForma-Regular.ttf
+
+    - family: AxiFormaMedium
+      fonts:
+        - asset: assets/fonts/axi/AxiForma-Medium.ttf
+
+    - family: AxiFormaSemiBold
+      fonts:
+        - asset: assets/fonts/axi/AxiForma-SemiBold.ttf
+    - family: AxiFormaBold
+      fonts:
+        - asset: assets/fonts/axi/AxiForma-Bold.ttf
+      
+    
+
+    # poppins fonts
+    - family: PoppinsLight
+      fonts:
+        - asset: assets/fonts/poppins/Poppins-Light.ttf
+
+    - family: PoppinsRegular
+      fonts:
+        - asset: assets/fonts/poppins/Poppins-Regular.ttf
+
+    - family: PoppinsMedium
+      fonts:
+        - asset: assets/fonts/poppins/Poppins-Medium.ttf
+
+    - family: PoppinsSemiBold
+      fonts:
+        - asset: assets/fonts/poppins/Poppins-SemiBold.ttf
+
+    - family: PoppinsBold
+      fonts:
+        - asset: assets/fonts/poppins/Poppins-Bold.ttf
+
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
