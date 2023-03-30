@@ -12,34 +12,54 @@ class ServicesPageContainer extends StatelessWidget {
   final text2;
 
   @override
+  
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        height: AppDimension.contHeight70,
+        height: AppDimension.height45 * 2,
         width: AppDimension.contWid130,
         padding: EdgeInsets.only(
           left: AppDimension.width10,
           right: AppDimension.width10,
         ),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(AppDimension.radius10),
+          borderRadius: BorderRadius.circular(AppDimension.radius5),
           color: const Color(0xFFE6E6E6),
         ),
-        child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+        child: Row(children: [
           Container(
-
-            height: AppDimension.contHeight60,
-            width: AppDimension.contWid50,
+            height: AppDimension.contHeight80,
+            width: AppDimension.width25 * 3,
             child: SvgPicture.asset(image),
 
           ),
+          SizedBox(
+            width: AppDimension.width10,
+          ),
           Container(
             padding: EdgeInsets.only(
-                top: AppDimension.height20, bottom: AppDimension.height20),
+                top: AppDimension.height25, bottom: AppDimension.height25),
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: [Text(text1), Text(text2)]),
+                children: [
+                  Text(
+                    text1,
+                    style: TextStyle(
+                      color: Color(0xFF2F2E41),
+                      fontFamily: "PoppinsMedium",
+                      fontSize: AppDimension.font16,
+                    ),
+                  ),
+                  Text(
+                    text2,
+                    style: TextStyle(
+                      color: Color(0xFF2F2E41),
+                      fontFamily: "PoppinsMedium",
+                      fontSize: AppDimension.font16,
+                    ),
+                  )
+                ]),
           )
         ]),
       ),
