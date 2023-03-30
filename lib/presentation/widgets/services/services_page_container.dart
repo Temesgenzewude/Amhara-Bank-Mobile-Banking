@@ -12,57 +12,49 @@ class ServicesPageContainer extends StatelessWidget {
   final text2;
 
   @override
-  
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        height: AppDimension.height45 * 2,
-        width: AppDimension.contWid130,
-        padding: EdgeInsets.only(
-          left: AppDimension.width10,
-          right: AppDimension.width10,
-        ),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(AppDimension.radius5),
-          color: const Color(0xFFE6E6E6),
-        ),
-        child: Row(children: [
-          Container(
-            height: AppDimension.contHeight80,
-            width: AppDimension.width25 * 3,
-            child: SvgPicture.asset(image),
-
-          ),
-          SizedBox(
-            width: AppDimension.width10,
-          ),
-          Container(
-            padding: EdgeInsets.only(
-                top: AppDimension.height25, bottom: AppDimension.height25),
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    text1,
-                    style: TextStyle(
-                      color: Color(0xFF2F2E41),
-                      fontFamily: "PoppinsMedium",
-                      fontSize: AppDimension.font16,
-                    ),
-                  ),
-                  Text(
-                    text2,
-                    style: TextStyle(
-                      color: Color(0xFF2F2E41),
-                      fontFamily: "PoppinsMedium",
-                      fontSize: AppDimension.font16,
-                    ),
-                  )
-                ]),
-          )
-        ]),
+    return Container(
+      height: AppDimension.contHeight40 * 2,
+      width: AppDimension.contWid50 * 3 + AppDimension.width8,
+      padding: EdgeInsets.only(
+        left: AppDimension.width5,
+        right: AppDimension.width5,
       ),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(AppDimension.radius5),
+        color: const Color(0xFFE6E6E6),
+      ),
+      child: Row(children: [
+        Container(
+          height: AppDimension.height30 * 2 + AppDimension.height4,
+          width: AppDimension.width25 * 2 + AppDimension.width4,
+          child: SvgPicture.asset(image),
+        ),
+        Container(
+          height: AppDimension.contHeight40 + AppDimension.height20,
+          width: AppDimension.contHeight70 + AppDimension.height6,
+          padding: EdgeInsets.only(
+              top: AppDimension.height10, bottom: AppDimension.height10),
+          child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  text1,
+                  style: TextStyle(
+                      color: Color(0xFF2F2E41),
+                      fontFamily: "PoppinsMedium",
+                      fontSize: AppDimension.font16 - AppDimension.font2),
+                ),
+                Text(
+                  text2,
+                  style: TextStyle(
+                      color: Color(0xFF2F2E41),
+                      fontFamily: "PoppinsMedium",
+                      fontSize: AppDimension.font16 - AppDimension.font2),
+                )
+              ]),
+        )
+      ]),
     );
   }
 }

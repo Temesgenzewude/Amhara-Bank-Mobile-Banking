@@ -149,22 +149,23 @@ flutter:
 
     - family: AxiFormaLight
       fonts:
-        - asset: assets/fonts/axi/AxiForma-Light.ttf
+        - asset: assets/fonts/axi/Axiforma-Light.ttf
+
 
     - family: AxiFormaRegular
       fonts:
-        - asset: assets/fonts/axi/AxiForma-Regular.ttf
+        - asset: assets/fonts/axi/Axiforma-Regular.ttf
 
     - family: AxiFormaMedium
       fonts:
-        - asset: assets/fonts/axi/AxiForma-Medium.ttf
+        - asset: assets/fonts/axi/Axiforma-Medium.ttf
 
     - family: AxiFormaSemiBold
       fonts:
-        - asset: assets/fonts/axi/AxiForma-SemiBold.ttf
+        - asset: assets/fonts/axi/Axiforma-SemiBold.ttf
     - family: AxiFormaBold
       fonts:
-        - asset: assets/fonts/axi/AxiForma-Bold.ttf
+        - asset: assets/fonts/axi/Axiforma-Bold.ttf
       
     
 

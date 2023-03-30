@@ -1,3 +1,4 @@
+import 'package:amhara_bank_mobile_banking/routes/route_helper.dart';
 import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -5,6 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../widgets/services/account_drop_down_container.dart';
 import '../widgets/services/service_page_custom_app_bar.dart';
 import '../widgets/services/services_page_container.dart';
 
@@ -19,10 +21,17 @@ class _ServicePageState extends State<ServicePage> {
   var _activeDotIndex = 0;
 
   bool _isVisible = true;
+  bool _isDropDown = true;
 
   void handleVisibilityChange() {
     setState(() {
       _isVisible = !_isVisible;
+    });
+  }
+
+  void handleDropDownTap() {
+    setState(() {
+      _isDropDown = !_isDropDown;
     });
   }
 
@@ -43,8 +52,8 @@ class _ServicePageState extends State<ServicePage> {
           ServicePageCustomAppBar(
             appBarLeftSideWidget: SvgPicture.asset(
               "assets/images/amhara_bank_logo_yellow.svg",
-              height: AppDimension.height45,
-              width: AppDimension.contWid120,
+              height: AppDimension.height30 + AppDimension.height8,
+              width: AppDimension.contWid100,
             ),
           ),
           const Divider(
@@ -85,12 +94,12 @@ class _ServicePageState extends State<ServicePage> {
                     height: AppDimension.height10,
                   ),
                   Container(
-                    height: AppDimension.contHeight100,
+                    height: AppDimension.contHeight100 - AppDimension.height4,
                     padding: EdgeInsets.only(
-                        left: AppDimension.width20,
-                        right: AppDimension.width20,
-                        top: AppDimension.height10,
-                        bottom: AppDimension.height10),
+                      left: AppDimension.width20,
+                      right: AppDimension.width20,
+                      top: AppDimension.height10,
+                    ),
                     decoration: BoxDecoration(
                         borderRadius:
                             BorderRadius.circular(AppDimension.radius10),
@@ -109,6 +118,7 @@ class _ServicePageState extends State<ServicePage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Text(
                                   _isVisible
@@ -120,30 +130,44 @@ class _ServicePageState extends State<ServicePage> {
                                       fontSize: AppDimension.font16),
                                 ),
                                 GestureDetector(
-                                  onTap: () {},
-                                  child: Icon(
-                                    Icons.arrow_drop_down_outlined,
-                                    color: Color(0xFFC4CACE),
-                                    size: AppDimension.iconSize16,
+                                  onTap: () {
+                                    handleDropDownTap();
+                                  },
+                                  child: Container(
+                                    height: AppDimension.height25,
+                                    width: AppDimension.width30,
+                                    child: Icon(
+                                      _isDropDown
+                                          ? Icons.arrow_drop_down_outlined
+                                          : Icons.arrow_drop_up_outlined,
+                                      color: Color(0xFFC4CACE),
+                                      size: AppDimension.iconSize24,
+                                    ),
                                   ),
                                 ),
                               ],
                             ),
                             SizedBox(
-                              height: AppDimension.height20,
+                              height: _isDropDown
+                                  ? AppDimension.height10
+                                  : AppDimension.height1,
                             ),
                             Row(
-                              crossAxisAlignment: CrossAxisAlignment.baseline,
+                              crossAxisAlignment: _isDropDown
+                                  ? CrossAxisAlignment.baseline
+                                  : CrossAxisAlignment.center,
                               textBaseline: TextBaseline.alphabetic,
                               children: [
-                                Text(
-                                  _isVisible ? "12,600" : "********",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: AppDimension.font20 +
-                                          AppDimension.font10,
-                                      fontFamily: "AxiFormaSemiBold"),
-                                ),
+                                _isDropDown
+                                    ? Text(
+                                        _isVisible ? "12,600" : "********",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: AppDimension.font20 +
+                                                AppDimension.font10,
+                                            fontFamily: "AxiFormaSemiBold"),
+                                      )
+                                    : AccountDropDownContainer(),
                                 Text(
                                   "ETB",
                                   style: TextStyle(
@@ -164,21 +188,21 @@ class _ServicePageState extends State<ServicePage> {
                               _isVisible
                                   ? Icons.visibility_off_outlined
                                   : Icons.visibility_outlined,
-                              size: AppDimension.iconSize10 * 3,
+                              size: AppDimension.iconSize24,
                               color: const Color(0xFFAAC9E0)),
                         ),
                       ],
                     ),
                   ),
                   SizedBox(
-                    height: AppDimension.height10,
+                    height: AppDimension.height20,
                   ),
                   Text(
                     "Services",
                     style: TextStyle(
                         color: const Color(0xFF2F2E41),
                         fontFamily: "PoppinsMedium",
-                        fontSize: AppDimension.font20),
+                        fontSize: AppDimension.font20 - AppDimension.font3),
                   ),
                   SizedBox(
                     height: AppDimension.height5,
@@ -188,16 +212,18 @@ class _ServicePageState extends State<ServicePage> {
                     color: Color(0xFFDBD9D9),
                   ),
                   SizedBox(
-                    height: AppDimension.height10,
+                    height: AppDimension.height5,
                   ),
                   Stack(
                     children: [
                       Container(
-                        height: AppDimension.contHeight100*2,
+                        height: AppDimension.contHeight60 * 3 +
+                            AppDimension.height4,
                         width: double.maxFinite,
                         child: CarouselSlider.builder(
                           options: CarouselOptions(
-                            height: AppDimension.contHeight100*2,
+                            height: AppDimension.contHeight60 * 3 +
+                                AppDimension.height4,
                             viewportFraction: 1,
                             autoPlay: true,
                             enableInfiniteScroll: true,
@@ -211,7 +237,8 @@ class _ServicePageState extends State<ServicePage> {
                           ),
                           itemBuilder: (_, index, realIndex) {
                             return Container(
-                              height: AppDimension.contHeight100*2,
+                              height: AppDimension.contHeight60 * 3 +
+                                  AppDimension.height4,
                               decoration: BoxDecoration(
                                   gradient: LinearGradient(
                                     begin: Alignment.topCenter,
@@ -233,22 +260,22 @@ class _ServicePageState extends State<ServicePage> {
                         ),
                       ),
                       Positioned(
-                        top: AppDimension.height25 * 5+AppDimension.height10,
+                        top: AppDimension.height25 * 5 + AppDimension.height10,
                         left: AppDimension.width25 * 5 + AppDimension.width10,
                         child: Text(
                           "Pay Your Bills",
                           style: TextStyle(
                               color: Colors.white,
-                              fontFamily: "AxiFormRegular",
-                              fontSize: AppDimension.font20),
+                              fontFamily: "AxiFormaRegular",
+                              fontSize: AppDimension.font16),
                         ),
                       ),
                       SizedBox(
                         height: AppDimension.height20,
                       ),
                       Positioned(
-                        top: AppDimension.height30 * 5 + AppDimension.height15,
-                        left: AppDimension.width25 * 5 + AppDimension.width10,
+                        top: AppDimension.height20 * 8,
+                        left: AppDimension.width25 * 5 + AppDimension.width7,
                         child: Container(
                           margin: EdgeInsets.only(
                             bottom: AppDimension.height20,
@@ -257,14 +284,15 @@ class _ServicePageState extends State<ServicePage> {
                             activeIndex: _activeDotIndex,
                             count: 5,
                             effect: CustomizableEffect(
+                              spacing: AppDimension.width8,
                               activeDotDecoration: DotDecoration(
                                   color: Color(0xFF0D6DC4),
                                   rotationAngle: 45.0),
                               dotDecoration: DotDecoration(
                                 rotationAngle: 45.0,
                                 color: Color(0xFFFFFFFF),
-                                width: AppDimension.height9,
-                                height: AppDimension.height9,
+                                width: AppDimension.height8,
+                                height: AppDimension.height8,
                               ),
                             ),
                           ),
@@ -282,39 +310,60 @@ class _ServicePageState extends State<ServicePage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const ServicesPageContainer(
-                        image: "assets/images/services/transfer_services.svg",
-                        text1: "Transfer",
-                        text2: "Services",
+                      GestureDetector(
+                        onTap: () {
+                          Get.toNamed(RouteHelper.getTransferServicesPage());
+                        },
+                        child: const ServicesPageContainer(
+                          image: "assets/images/services/transfer_services.svg",
+                          text1: "Transfer",
+                          text2: "Services",
+                        ),
                       ),
                       SizedBox(
                         width: AppDimension.width10 + AppDimension.width4,
                       ),
-                      const ServicesPageContainer(
-                        image: "assets/images/services/pay_for_bills.svg",
-                        text1: "Pay Your",
-                        text2: "Bills",
+                      GestureDetector(
+                        onTap: () {
+                          Get.toNamed(RouteHelper.getPayBillsPage());
+                        },
+                        child: const ServicesPageContainer(
+                          image: "assets/images/services/pay_for_bills.svg",
+                          text1: "Pay Your",
+                          text2: "Bills",
+                        ),
                       ),
                     ],
                   ),
                   SizedBox(
-                    height: AppDimension.height10 + AppDimension.height4,
+                    height: AppDimension.height20,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const ServicesPageContainer(
-                        image: "assets/images/services/airtime.svg",
-                        text1: "Buy",
-                        text2: "Airtime",
+                      GestureDetector(
+                        onTap: () {
+                          Get.toNamed(RouteHelper.getBuyAirtimePage());
+                        },
+                        child: const ServicesPageContainer(
+                          image: "assets/images/services/airtime.svg",
+                          text1: "Buy",
+                          text2: "Airtime",
+                        ),
                       ),
                       SizedBox(
                         width: AppDimension.width10 + AppDimension.width4,
                       ),
-                      const ServicesPageContainer(
-                        image: "assets/images/services/other_bank_services.svg",
-                        text1: "Other Bank",
-                        text2: "Services",
+                      GestureDetector(
+                        onTap: () {
+                          Get.toNamed(RouteHelper.otherBankServicesPage);
+                        },
+                        child: const ServicesPageContainer(
+                          image:
+                              "assets/images/services/other_bank_services.svg",
+                          text1: "Other Bank",
+                          text2: "Services",
+                        ),
                       ),
                     ],
                   ),
