@@ -36,21 +36,25 @@ class _ReusableAlertBoxState extends State<ReusableAlertBox> {
               width: AppDimension.width24,
               height: AppDimension.height30,
               child: IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.close_outlined),
+                onPressed: () {
+                  Navigator.of(context).pop(false);
+                },
+                icon: Icon(Icons.close_outlined,size: AppDimension.iconSize24,),
               ))
         ],
       ),
       content: SizedBox(
         width: AppDimension.width352,
-        height: AppDimension.height200,
+        height: AppDimension.contHeight120 + AppDimension.height40,
         child: Column(
           children: [
-             SizedBox(
-            height: AppDimension.height40,
-          ),
-            const Text(
-                'Are you sure to transfer 500 ETB from acount number 889345458934 to account number 900339430924309'),
+            SizedBox(
+              height: AppDimension.height40,
+            ),
+            Text(
+              'Are you sure to transfer 500 ETB from acount number 889345458934 to account number 900339430924309',
+              style: TextStyle(fontSize: AppDimension.font16),
+            ),
           ],
         ),
       ),
@@ -58,30 +62,47 @@ class _ReusableAlertBoxState extends State<ReusableAlertBox> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(AppDimension.radius25),
+            SizedBox(
+              height: AppDimension.height47,
+              width: AppDimension.width110,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.circular(AppDimension.radius25),
+                    ),
+                    side: BorderSide(
+                        color: Color(0xFF005EA6), width: AppDimension.width1)),
+                onPressed: () => {Navigator.of(context).pop(false)},
+                child: Text(
+                  "Cancel",
+                  style: TextStyle(
+                      color: Color(0xFF005EA6), fontSize: AppDimension.font16),
                 ),
               ),
-              onPressed: () {},
-              child: Text(
-                "Cancel",
-                style: TextStyle(color: Color(0xFF005EA6)),
-              ),
             ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xFF005EA6),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(
-                    AppDimension.radius40,
+            SizedBox(
+              height: AppDimension.height47,
+              width: AppDimension.width110,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xFF005EA6),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(
+                      AppDimension.radius40,
+                    ),
+                  ),
+                ),
+                onPressed: () {},
+                child: Text(
+                  "Confirm",
+                  style: TextStyle(
+                    fontSize: AppDimension.font16,
+                    fontWeight: FontWeight.w400
                   ),
                 ),
               ),
-              onPressed: () {},
-              child: Text("Confirm"),
             )
           ],
         ),
