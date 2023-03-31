@@ -1,4 +1,5 @@
 import 'package:amhara_bank_mobile_banking/presentation/login_pages/login_button.dart';
+import 'package:amhara_bank_mobile_banking/presentation/login_pages/pin_setup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_pin_code_fields/flutter_pin_code_fields.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -84,7 +85,11 @@ class _ActivationPageState extends State<ActivationPage> {
                   SizedBox(
                     height: screenSize.height * 0.15,
                   ),
-                  const LoginButton(routeName: '/pin-setup',)
+
+                   LoginButton(
+                    routeName: PinSetUpPage(),
+                  )
+
                 ],
               ),
             ),

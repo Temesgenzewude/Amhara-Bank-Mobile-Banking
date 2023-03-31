@@ -1,4 +1,5 @@
 import 'package:amhara_bank_mobile_banking/presentation/login_pages/login_button.dart';
+import 'package:amhara_bank_mobile_banking/presentation/login_pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -95,13 +96,15 @@ class _PinSetUpPageState extends State<PinSetUpPage> {
                         labelText: '',
                         contentPadding: EdgeInsets.zero,
                       ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: screenSize.height * 0.17,
-                  ),
-                  const LoginButton(
-                    routeName: '/login',
+
+                      SizedBox(
+                        height: screenSize.height * 0.17,
+                      ),
+                      const LoginButton(
+                        routeName: LoginPage(),
+                      ),
+                    ],
+
                   ),
                 ],
               ),
