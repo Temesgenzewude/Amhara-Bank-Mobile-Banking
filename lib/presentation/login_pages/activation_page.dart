@@ -1,4 +1,5 @@
 import 'package:amhara_bank_mobile_banking/presentation/login_pages/login_button.dart';
+import 'package:amhara_bank_mobile_banking/presentation/login_pages/pin_setup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_pin_code_fields/flutter_pin_code_fields.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -17,32 +18,32 @@ class _ActivationPageState extends State<ActivationPage> {
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
-    return Scaffold(
-      body: Stack(
-        
-        children: [
-          SvgPicture.asset(
+    return Stack(
+      children: [
+        SvgPicture.asset(
           'assets/images/Patterns.svg',
+          alignment: Alignment.center,
           width: screenSize.width,
-          fit: BoxFit.cover,
+          height: screenSize.height,
         ),
-          SingleChildScrollView(
+        Scaffold(
+          body: SingleChildScrollView(
             child: Center(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: screenSize.height * 0.05,
+                    height: screenSize.height * 0.1,
                   ),
                   SvgPicture.asset(
                     'assets/images/Amhara_Bank_Logo_Yellow.svg',
                     height: screenSize.width * 0.28,
                   ),
                   SizedBox(
-                    height: screenSize.height * 0.07,
+                    height: screenSize.height * 0.05,
                   ),
-                  Text(
+                Text(
                     'Welcome!',
                     style: TextStyle(
                         fontSize: screenSize.width * 0.07,
@@ -52,11 +53,11 @@ class _ActivationPageState extends State<ActivationPage> {
                   SizedBox(
                     height: screenSize.height * 0.02,
                   ),
-                  Text(
+                   Text(
                     'Enter Activation code',
                     style: TextStyle(
                         fontWeight: FontWeight.w300,
-                        fontSize: screenSize.width * 0.040,
+                        fontSize: screenSize.width*0.040,
                         color: Color(0xFF96989A)),
                   ),
                   SizedBox(
@@ -64,10 +65,11 @@ class _ActivationPageState extends State<ActivationPage> {
                   ),
                   SizedBox(
                     width: screenSize.width * 0.6,
-                    child: TextField(
+                    child:  TextField(
+                      
                       keyboardType: TextInputType.number,
                       controller: activationController,
-                      decoration: const InputDecoration(
+                      decoration:const InputDecoration(
                         border: UnderlineInputBorder(
                           borderSide: BorderSide(
                             color: Color.fromRGBO(0, 94, 166, 1),
@@ -81,17 +83,19 @@ class _ActivationPageState extends State<ActivationPage> {
                     ),
                   ),
                   SizedBox(
-                    height: screenSize.height * 0.17,
+                    height: screenSize.height * 0.15,
                   ),
-                  const LoginButton(
-                    routeName: '/pin-setup',
+
+                   LoginButton(
+                    routeName: PinSetUpPage(),
                   )
+
                 ],
               ),
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

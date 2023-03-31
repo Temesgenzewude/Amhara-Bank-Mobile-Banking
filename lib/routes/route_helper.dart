@@ -1,3 +1,4 @@
+
 import 'package:amhara_bank_mobile_banking/presentation/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -68,3 +69,4 @@ class RouteHelper {
         transition: Transition.fadeIn),
   ];
 }
+

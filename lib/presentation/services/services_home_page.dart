@@ -1,3 +1,4 @@
+
 import 'dart:async';
 
 import 'package:amhara_bank_mobile_banking/presentation/services/services_page.dart';
@@ -5,14 +6,16 @@ import 'package:amhara_bank_mobile_banking/presentation/widgets/services/qr_code
 import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
 import 'package:flutter/material.dart';
 
+
 import '../widgets/services/qr_code_scanner_button_with_text.dart';
 
 class ServiceHomePage extends StatefulWidget {
-  const ServiceHomePage({super.key});
+ const ServiceHomePage({super.key});
 
-  @override
-  State<ServiceHomePage> createState() => _ServiceHomePageState();
+ @override
+ State<ServiceHomePage> createState() => _ServiceHomePageState();
 }
+
 
 class _ServiceHomePageState extends State<ServiceHomePage> {
   int _selectedIndex = 0;
@@ -88,3 +91,4 @@ class _ServiceHomePageState extends State<ServiceHomePage> {
     );
   }
 }
+

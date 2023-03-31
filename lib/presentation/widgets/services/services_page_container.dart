@@ -3,9 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class ServicesPageContainer extends StatelessWidget {
-  const ServicesPageContainer(
-      {Key? key, required this.image, required this.text1, required this.text2})
-      : super(key: key);
+  const ServicesPageContainer({
+    Key? key,
+    required this.image,
+    required this.text1,
+    required this.text2
+  }) : super(key: key);
 
   final image;
   final text1;
@@ -13,6 +16,7 @@ class ServicesPageContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Container(
       height: AppDimension.contHeight40 * 2,
       width: AppDimension.contWid50 * 3 + AppDimension.width10,
@@ -20,6 +24,7 @@ class ServicesPageContainer extends StatelessWidget {
       padding: EdgeInsets.only(
         left: AppDimension.width5,
         right: AppDimension.width5,
+
       ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(AppDimension.radius5),

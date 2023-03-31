@@ -1,3 +1,4 @@
+
 import 'package:amhara_bank_mobile_banking/routes/route_helper.dart';
 import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -10,24 +11,29 @@ import '../widgets/services/account_drop_down_container.dart';
 import '../widgets/services/service_page_custom_app_bar.dart';
 import '../widgets/services/services_page_container.dart';
 
+
 class ServicePage extends StatefulWidget {
-  const ServicePage({super.key});
+   const ServicePage({super.key});
 
   @override
   State<ServicePage> createState() => _ServicePageState();
-}
+ }
 
 class _ServicePageState extends State<ServicePage> {
-  var _activeDotIndex = 0;
+   var _activeDotIndex = 0;
+
 
   bool _isVisible = true;
   bool _isDropDown = true;
 
+
+
   void handleVisibilityChange() {
-    setState(() {
-      _isVisible = !_isVisible;
-    });
-  }
+     setState(() {
+     _isVisible = !_isVisible;
+   });
+ }
+
 
   void handleDropDownTap() {
     setState(() {
@@ -376,3 +382,4 @@ class _ServicePageState extends State<ServicePage> {
     );
   }
 }
+

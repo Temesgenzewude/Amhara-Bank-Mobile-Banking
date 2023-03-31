@@ -31,15 +31,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  get: ^4.6.5
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   smooth_page_indicator: ^1.0.1
   flutter_svg: ^0.22.0
-  awesome_dialog: ^3.0.2
-  get: ^4.6.5
-
   carousel_slider: ^4.2.1
   flutter_pin_code_fields: ^1.2.0
 
@@ -92,6 +90,7 @@ flutter:
     - family: AxiForma
       fonts:
         - asset: assets/fonts/axi/axiforma.ttf
+
           style: normal
         - asset: assets/fonts/axi/Axiforma-Black.ttf
           style: italic
@@ -189,6 +188,7 @@ flutter:
     - family: PoppinsBold
       fonts:
         - asset: assets/fonts/poppins/Poppins-Bold.ttf
+
 
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
