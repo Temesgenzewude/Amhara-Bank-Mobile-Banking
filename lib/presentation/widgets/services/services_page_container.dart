@@ -15,7 +15,8 @@ class ServicesPageContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: AppDimension.contHeight40 * 2,
-      width: AppDimension.contWid50 * 3 + AppDimension.width8,
+      width: AppDimension.contWid50 * 3 + AppDimension.width10,
+
       padding: EdgeInsets.only(
         left: AppDimension.width5,
         right: AppDimension.width5,
