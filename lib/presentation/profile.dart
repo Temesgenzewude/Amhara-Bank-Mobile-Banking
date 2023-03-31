@@ -1,13 +1,14 @@
 import 'package:amhara_bank_mobile_banking/presentation/onboarding_pages/manage_account.dart';
 import 'package:amhara_bank_mobile_banking/presentation/onboarding_pages/pay_your_bills.dart';
 import 'package:amhara_bank_mobile_banking/presentation/onboarding_pages/top_up_air_time.dart';
+
 import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:get/get.dart';
 
 class profile extends StatefulWidget {
   const profile({Key? key}) : super(key: key);
@@ -22,6 +23,7 @@ class _profileState extends State<profile> {
   bool onpagechange = false;
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
         backgroundColor: Color(0xFFFFFFFF),
         body: Column(
@@ -104,6 +106,7 @@ class _profileState extends State<profile> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
+
                       Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
@@ -120,6 +123,7 @@ class _profileState extends State<profile> {
                                 style: TextStyle(fontSize: AppDimension.font16))
                           ]),
                       Icon(Icons.chevron_right, size: AppDimension.height25)
+
                     ],
                   ),
                 ),
@@ -146,6 +150,7 @@ class _profileState extends State<profile> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
+
                       Row(children: [
                         Padding(
                           padding: const EdgeInsets.only(right: 25.0),
@@ -157,6 +162,7 @@ class _profileState extends State<profile> {
                             style: TextStyle(fontSize: AppDimension.font16))
                       ]),
                       Icon(Icons.chevron_right, size: AppDimension.height25)
+
                     ],
                   ),
                 ),
@@ -183,6 +189,7 @@ class _profileState extends State<profile> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
+
                       Row(children: [
                         Padding(
                           padding: const EdgeInsets.only(right: 25.0),
@@ -194,10 +201,12 @@ class _profileState extends State<profile> {
                             style: TextStyle(fontSize: AppDimension.font16))
                       ]),
                       Icon(Icons.chevron_right, size: AppDimension.height25)
+
                     ],
                   ),
                 ),
               ),
+
             ),
             Padding(
               padding: EdgeInsets.only(
@@ -216,10 +225,12 @@ class _profileState extends State<profile> {
                   left: AppDimension.width25),
               child: GestureDetector(
                 onTap: () {},
+
                 child: Container(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
+
                       Row(children: [
                         Padding(
                           padding: const EdgeInsets.only(right: 25.0),
@@ -232,6 +243,7 @@ class _profileState extends State<profile> {
                             style: TextStyle(fontSize: AppDimension.font16))
                       ]),
                       Icon(Icons.chevron_right, size: AppDimension.height25)
+
                     ],
                   ),
                 ),
@@ -258,6 +270,7 @@ class _profileState extends State<profile> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
+
                       Row(children: [
                         Padding(
                           padding: const EdgeInsets.only(right: 25.0),
@@ -270,10 +283,12 @@ class _profileState extends State<profile> {
                             style: TextStyle(fontSize: AppDimension.font16))
                       ]),
                       Icon(Icons.chevron_right, size: AppDimension.height25)
+
                     ],
                   ),
                 ),
               ),
+
             ),
             Padding(
               padding: EdgeInsets.only(
@@ -418,6 +433,7 @@ class _profileState extends State<profile> {
               ),
             )
           ],
+
         ));
   }
 }

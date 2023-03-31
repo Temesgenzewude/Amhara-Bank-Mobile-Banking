@@ -32,10 +32,9 @@ class ServicesPageContainer extends StatelessWidget {
         ),
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
           Container(
-            
-            height: AppDimension.servicePageImgContHeight50+16,
-            width: AppDimension.servicePageImgContWid40+5,
-            child: SvgPicture.asset(image),
+            height: AppDimension.servicePageImgContHeight50,
+            width: AppDimension.servicePageImgContWid40,
+            child: SvgPicture.asset(image, fit: BoxFit.cover,),
     
           ),
           Container(
