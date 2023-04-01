@@ -1,4 +1,5 @@
 import 'package:amhara_bank_mobile_banking/presentation/login_pages/login_button.dart';
+import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_pin_code_fields/flutter_pin_code_fields.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -26,6 +27,7 @@ class _LoginPageState extends State<LoginPage> {
           height: screenSize.height,
         ),
         Scaffold(
+          resizeToAvoidBottomInset: false,
           body: SingleChildScrollView(
             child: Center(
               child: Column(
@@ -33,41 +35,49 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: screenSize.height * 0.1,
+                    height: AppDimension.height40,
                   ),
                   SvgPicture.asset(
                     'assets/images/Amhara_Bank_Logo_Yellow.svg',
-                    height: screenSize.width * 0.28,
+                    height: AppDimension.height96,
+                    width: AppDimension.width196,
                   ),
                   SizedBox(
-                    height: screenSize.height * 0.05,
+                    height: AppDimension.height68,
                   ),
-                Text(
-                    'Welcome!',
-                    style: TextStyle(
-                        fontSize: screenSize.width * 0.07,
+                  SizedBox(
+                    height: AppDimension.contHeight80,
+                    width: AppDimension.width139,
+                    child: Text(
+                      'Welcome!',
+                      style: TextStyle(
+                        fontSize: AppDimension.font28,
                         fontWeight: FontWeight.w400,
-                        color: const Color(0xFF005EA6)),
+                        color: const Color(0xFF005EA6),
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                   SizedBox(
-                    height: screenSize.height * 0.02,
-                  ),
-                   Text(
-                    'Enter PIN',
-                    style: TextStyle(
-                        fontWeight: FontWeight.w300,
-                        fontSize: screenSize.width*0.040,
-                        color: Color(0xFF96989A)),
-                  ),
-                  SizedBox(
-                    height: screenSize.height * 0.01,
+                    height: AppDimension.height22,
+                    width: AppDimension.width66,
+                    child: Text(
+                      'Enter PIN',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w300,
+                          fontSize: AppDimension.font16,
+                          color: Color(0xFF96989A)),
+                    ),
                   ),
                   SizedBox(
-                    width: screenSize.width * 0.8,
+                    height: AppDimension.height69,
+                  ),
+                  SizedBox(
+                    width: AppDimension.width160,
                     child: PinCodeFields(
                       length: 4,
-                      fieldWidth: screenSize.width*0.08,
-                      margin: const EdgeInsets.all(12),
+                      fieldWidth: AppDimension.width30,
+                      margin: EdgeInsets.all(AppDimension.width12),
                       keyboardType: TextInputType.number,
                       controller: loginController,
                       focusNode: focusNode,
@@ -77,9 +87,11 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                   SizedBox(
-                    height: screenSize.height * 0.15,
+                    height: AppDimension.height136,
                   ),
-                  const LoginButton(routeName: '/activation-page',)
+                  const LoginButton(
+                    routeName: '/activation-page',
+                  )
                 ],
               ),
             ),

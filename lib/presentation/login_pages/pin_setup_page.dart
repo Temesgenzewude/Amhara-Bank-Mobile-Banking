@@ -1,9 +1,9 @@
 import 'package:amhara_bank_mobile_banking/presentation/login_pages/login_button.dart';
+import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class PinSetUpPage extends StatefulWidget {
-  
   PinSetUpPage({super.key});
 
   @override
@@ -16,89 +16,98 @@ class _PinSetUpPageState extends State<PinSetUpPage> {
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
     return Stack(
       children: [
         SvgPicture.asset(
           'assets/images/Patterns.svg',
           alignment: Alignment.center,
-          width: screenSize.width,
-          height: screenSize.height,
+          width: AppDimension.screenWidth,
+          height: AppDimension.screenHeight,
         ),
         Scaffold(
-          body: Center(
+          body: Padding(
+            padding: EdgeInsets.only(
+                left: AppDimension.width81, right: AppDimension.width77),
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: screenSize.height * 0.01,
+                    height: AppDimension.height40,
                   ),
-                  SvgPicture.asset("assets/images/Amhara_Bank_Logo_Yellow.svg"),
+                  SvgPicture.asset(
+                    'assets/images/Amhara_Bank_Logo_Yellow.svg',
+                    height: AppDimension.height96,
+                    width: AppDimension.width196,
+                  ),
                   SizedBox(
-                    height: screenSize.height * 0.05,
+                    height: AppDimension.height68,
                   ),
-                  Text(
-                    'Welcome!',
-                    style: TextStyle(
-                        fontSize: screenSize.width * 0.07,
+                  SizedBox(
+                    height: AppDimension.contHeight80,
+                    width: AppDimension.width139,
+                    child: Text(
+                      'Welcome!',
+                      style: TextStyle(
+                        fontSize: AppDimension.font28,
                         fontWeight: FontWeight.w400,
-                        color: const Color(0xFF005EA6)),
-                  ),
-                  SizedBox(
-                    height: screenSize.height * 0.02,
+                        color: const Color(0xFF005EA6),
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                   Text(
                     'Setup PIN',
                     style: TextStyle(
                         fontWeight: FontWeight.w300,
-                        fontSize: screenSize.width * 0.040,
-                        color: const Color(0xFF96989A)),
+                        fontSize: AppDimension.font16,
+                        color: Color(0xFF96989A)),
                   ),
                   SizedBox(
-                    height: screenSize.height * 0.1,
+                    height: AppDimension.height40,
                   ),
                   SizedBox(
-                    width: screenSize.width * 0.6,
                     child: TextField(
                       controller: newPinController,
                       keyboardType: TextInputType.number,
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         border: UnderlineInputBorder(
                           borderSide: BorderSide(
-                            color: Color.fromRGBO(0, 94, 166, 1),
-                            width: 1.0,
+                            color: Color(0XFF0047BA),
+                            width: AppDimension.width1,
                           ),
                         ),
                         hintText: 'New PIN',
+                        hintStyle: TextStyle(fontSize: AppDimension.font14),
                         labelText: '',
                         contentPadding: EdgeInsets.zero,
                       ),
                     ),
                   ),
                   SizedBox(
-                    height: screenSize.height * 0.099,
+                    height: AppDimension.height54,
                   ),
                   SizedBox(
-                    width: screenSize.width * 0.6,
                     child: TextField(
                       controller: confirmPinController,
-                      decoration: const InputDecoration(
-                        border: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Color.fromRGBO(0, 94, 166, 1),
-                            width: 1.0,
-                          ),
-                        ),
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
                         hintText: 'Confirm PIN',
+                        hintStyle: TextStyle(fontSize: AppDimension.font14),
                         labelText: '',
                         contentPadding: EdgeInsets.zero,
+                        border: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0XFF0047BA),
+                            width: AppDimension.width1,
+                          ),
+                        ),
                       ),
                     ),
                   ),
                   SizedBox(
-                    height: screenSize.height * 0.17,
+                    height: AppDimension.contHeight100,
                   ),
                   const LoginButton(
                     routeName: '/login',
