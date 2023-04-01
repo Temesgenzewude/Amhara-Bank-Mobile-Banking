@@ -30,13 +30,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
 
-<<<<<<< HEAD
       
       home: TelebirrAccountTransfer(),
-=======
-      home: SplashScreen(),
-
->>>>>>> 2964d5b162dab24e378369754eb27bf33c6b1d68
     );
   }
 }
