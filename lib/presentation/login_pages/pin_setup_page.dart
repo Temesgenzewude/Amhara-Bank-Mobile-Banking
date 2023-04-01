@@ -1,4 +1,5 @@
 import 'package:amhara_bank_mobile_banking/presentation/login_pages/login_button.dart';
+import 'package:amhara_bank_mobile_banking/presentation/login_pages/login_page.dart';
 import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -110,7 +111,7 @@ class _PinSetUpPageState extends State<PinSetUpPage> {
                     height: AppDimension.contHeight100,
                   ),
                   const LoginButton(
-                    routeName: '/login',
+                    routeName: LoginPage(),
                   ),
                 ],
               ),

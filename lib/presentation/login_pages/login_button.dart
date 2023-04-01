@@ -3,7 +3,7 @@ import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
 import 'package:flutter/material.dart';
 
 class LoginButton extends StatelessWidget {
-  final String routeName;
+  final Widget routeName;
 
   const LoginButton({super.key, required this.routeName});
 
@@ -15,7 +15,8 @@ class LoginButton extends StatelessWidget {
       width: AppDimension.width140,
       child: ElevatedButton(
         onPressed: () {
-          Navigator.pushNamed(context, routeName);
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => routeName));
         },
         style: ElevatedButton.styleFrom(
             backgroundColor: const Color(0xFF005EA6),
