@@ -11,27 +11,33 @@ class ServicePageCustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: AppDimension.contWid50+AppDimension.height2,
+      
       margin: EdgeInsets.only(
-          left: AppDimension.width20,
-          right: AppDimension.width20,
-          top: AppDimension.height30),
+          left: AppDimension.width20 + AppDimension.width4,
+          right: AppDimension.width20 + AppDimension.width4,
+          top: AppDimension.height10*3+ AppDimension.height6),
+
       color: Colors.white,
       child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Column(
-              children: [],
-            ),
+            
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Icon(
+
                   Icons.refresh,
+
                   color: const Color(
                     0xFF143B58,
                   ),
                   size: AppDimension.iconSize30,
+
                 ),
+
+
                 SizedBox(
                   width: AppDimension.width10,
                 ),
@@ -68,6 +74,7 @@ class ServicePageCustomAppBar extends StatelessWidget {
                     ),
                   ],
                 )
+
               ],
             ),
           ]),
