@@ -38,7 +38,7 @@ class _LoginPageState extends State<LoginPage> {
                     height: AppDimension.height40,
                   ),
                   SvgPicture.asset(
-                    'assets/images/Amhara_Bank_Logo_Yellow.svg',
+                    'assets/images/amhara_bank_logo_yellow.svg',
                     height: AppDimension.height96,
                     width: AppDimension.width196,
                   ),
