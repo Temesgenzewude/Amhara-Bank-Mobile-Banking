@@ -21,6 +21,7 @@ class AccountDropDownContainer extends StatelessWidget {
           borderRadius: BorderRadius.circular(
               AppDimension.radius4 + AppDimension.radius3)),
       height: AppDimension.contHeight60,
+      
       width: AppDimension.contWid80 * 2,
       child:
           Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
@@ -32,9 +33,10 @@ class AccountDropDownContainer extends StatelessWidget {
               color: Color(0xFF143B58)),
         ),
         Divider(
+          
           thickness: 0,
           color: Color(0xFF143B58),
-          height: 1,
+          height: 0.5,
         ),
         Text(
           "Abebe Bekila - 254830",

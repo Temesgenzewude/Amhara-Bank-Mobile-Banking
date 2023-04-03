@@ -1,22 +1,22 @@
-
 import 'dart:async';
 
 import 'package:amhara_bank_mobile_banking/presentation/profile.dart';
+
+import 'package:amhara_bank_mobile_banking/presentation/services/reusabele_bottom_navigation_bar.dart';
+
 import 'package:amhara_bank_mobile_banking/presentation/services/services_page.dart';
 import 'package:amhara_bank_mobile_banking/presentation/widgets/services/qr_code_scanner_floating_action_button.dart';
 import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
 import 'package:flutter/material.dart';
 
-
 import '../widgets/services/qr_code_scanner_button_with_text.dart';
 
 class ServiceHomePage extends StatefulWidget {
- const ServiceHomePage({super.key});
+  const ServiceHomePage({super.key});
 
- @override
- State<ServiceHomePage> createState() => _ServiceHomePageState();
+  @override
+  State<ServiceHomePage> createState() => _ServiceHomePageState();
 }
-
 
 class _ServiceHomePageState extends State<ServiceHomePage> {
   int _selectedIndex = 0;
@@ -31,14 +31,8 @@ class _ServiceHomePageState extends State<ServiceHomePage> {
         ),
       ),
     ),
-   profile()
+    profile(),
   ];
-
-  void _handleBottomNavTap(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
 
   void _startCountDownTimer() {
     Timer.periodic(Duration(seconds: 1), (timer) {
@@ -49,6 +43,12 @@ class _ServiceHomePageState extends State<ServiceHomePage> {
       } else {
         timer.cancel();
       }
+    });
+  }
+
+  void _handleBottomNavTap(int index) {
+    setState(() {
+      _selectedIndex = index;
     });
   }
 
@@ -69,21 +69,33 @@ class _ServiceHomePageState extends State<ServiceHomePage> {
         unselectedItemColor: Color(0xFF969696),
         backgroundColor: Colors.white,
         selectedLabelStyle: TextStyle(
-          color: Color(0xFF0047BA),
-          fontSize: AppDimension.font10 + AppDimension.height2,
-        ),
+            color: Color(0xFF0047BA),
+            fontSize: AppDimension.font10 + AppDimension.height8,
+            fontFamily: "PoppinsRegular"),
         unselectedLabelStyle: TextStyle(
-          color: Color(0xFF969696),
-          fontSize: AppDimension.font10 + AppDimension.height2,
-        ),
+            color: Color(0xFF969696),
+            fontSize: AppDimension.font10 + AppDimension.height8,
+            fontFamily: "PoppinsRegular"),
         onTap: _handleBottomNavTap,
         items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined), label: "Home"),
+              icon: Icon(
+                Icons.home_outlined,
+                size: AppDimension.iconSize30,
+              ),
+              label: "Home"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.account_balance_outlined), label: "Accounts"),
+              icon: Icon(
+                Icons.account_balance_outlined,
+                size: AppDimension.iconSize30,
+              ),
+              label: "Accounts"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.person_outlined), label: "Profile"),
+              icon: Icon(
+                Icons.person_outlined,
+                size: AppDimension.iconSize30,
+              ),
+              label: "Profile"),
         ],
       ),
       floatingActionButton: _timeLeft > 0
@@ -92,4 +104,3 @@ class _ServiceHomePageState extends State<ServiceHomePage> {
     );
   }
 }
-
