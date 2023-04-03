@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../../utils/app_dimensions.dart';
 
 class ServicePageCustomAppBar extends StatelessWidget {
   const ServicePageCustomAppBar({
+
     required this.appBarLeftSideWidget,
     Key? key,
+
   }) : super(key: key);
 
   final Widget appBarLeftSideWidget;

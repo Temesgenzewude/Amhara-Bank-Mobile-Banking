@@ -40,6 +40,7 @@ dependencies:
   flutter_svg: ^0.22.0
   carousel_slider: ^4.2.1
   flutter_pin_code_fields: ^1.2.0
+  awesome_dialog: ^3.0.2
 
 dev_dependencies:
   flutter_test:
