@@ -221,7 +221,9 @@ class _ServicePageState extends State<ServicePage> {
                         CarouselSlider.builder(
                           options: CarouselOptions(
                             height: AppDimension.contHeight100 +
-                                AppDimension.contHeight80,
+
+                                AppDimension.contHeight80-AppDimension.height20,
+
                             viewportFraction: 1,
                             autoPlay: true,
                             enableInfiniteScroll: true,
@@ -235,7 +237,9 @@ class _ServicePageState extends State<ServicePage> {
                           ),
                           itemBuilder: (_, index, realIndex) {
                             return Container(
-                              height: AppDimension.contHeight60 * 3,
+
+                              height: AppDimension.contHeight60 * 3-AppDimension.height20,
+
                               decoration: BoxDecoration(
                                   gradient: LinearGradient(
                                     begin: Alignment.topCenter,
@@ -257,7 +261,9 @@ class _ServicePageState extends State<ServicePage> {
                         ),
                         Positioned(
                           top:
-                              AppDimension.height25 * 5 + AppDimension.height10,
+
+                              AppDimension.height25 * 5-AppDimension.height15,
+
                           left: AppDimension.width25 * 5 + AppDimension.width10,
                           child: Text(
                             "Pay Your Bills",
@@ -271,8 +277,10 @@ class _ServicePageState extends State<ServicePage> {
                           height: AppDimension.height20,
                         ),
                         Positioned(
-                          top: AppDimension.height20 * 8,
-                          left: AppDimension.width25 * 5 + AppDimension.width7,
+
+                          top: AppDimension.height20 * 8-AppDimension.height20,
+                          left: AppDimension.width25 * 5 + AppDimension.width15,
+
                           child: Container(
                             margin: EdgeInsets.only(
                               bottom: AppDimension.height20,

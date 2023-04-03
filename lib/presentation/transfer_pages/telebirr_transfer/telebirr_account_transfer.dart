@@ -243,7 +243,7 @@ class _TelebirrAccountTransferState extends State<TelebirrAccountTransfer> {
           ],
         ),
       ),
-      bottomNavigationBar: RusableBottomNavBAr(),
+      bottomNavigationBar: ReUsableBottomNavBar(),
     );
   }
 }

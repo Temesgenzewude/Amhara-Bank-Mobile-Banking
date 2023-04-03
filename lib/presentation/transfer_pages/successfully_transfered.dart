@@ -218,7 +218,7 @@ class _SuccessfullyTransferedState extends State<SuccessfullyTransfered> {
           ),
         ),
       ),
-      bottomNavigationBar: RusableBottomNavBAr(),
+      bottomNavigationBar: ReUsableBottomNavBar(),
     );
   }
 }

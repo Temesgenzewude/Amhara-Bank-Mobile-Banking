@@ -243,7 +243,7 @@ class _OwnAccountTransferState extends State<OwnAccountTransfer> {
           ],
         ),
       ),
-      bottomNavigationBar: RusableBottomNavBAr(),
+      bottomNavigationBar: ReUsableBottomNavBar(),
     );
   }
 }

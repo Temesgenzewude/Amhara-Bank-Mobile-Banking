@@ -1,5 +1,6 @@
 
 import 'package:amhara_bank_mobile_banking/routes/route_helper.dart';
+
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
@@ -14,8 +15,10 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
 
+
       initialRoute: RouteHelper.getServicesPage(),
       getPages: RouteHelper.routes,
+
 
     );
   }

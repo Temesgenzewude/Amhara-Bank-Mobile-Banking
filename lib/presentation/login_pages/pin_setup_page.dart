@@ -1,3 +1,4 @@
+
 import 'package:amhara_bank_mobile_banking/presentation/login_pages/login_button.dart';
 import 'package:amhara_bank_mobile_banking/presentation/login_pages/login_page.dart';
 import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
@@ -7,6 +8,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 class PinSetUpPage extends StatefulWidget {
   PinSetUpPage({super.key});
 
+
   @override
   State<PinSetUpPage> createState() => _PinSetUpPageState();
 }
@@ -14,6 +16,7 @@ class PinSetUpPage extends StatefulWidget {
 class _PinSetUpPageState extends State<PinSetUpPage> {
   TextEditingController newPinController = TextEditingController();
   TextEditingController confirmPinController = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
@@ -122,3 +125,4 @@ class _PinSetUpPageState extends State<PinSetUpPage> {
     );
   }
 }
+

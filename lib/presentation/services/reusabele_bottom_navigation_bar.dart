@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
+
 import '../../utils/app_dimensions.dart';
+
 
 class ReUsableBottomNavBar extends StatefulWidget {
   const ReUsableBottomNavBar({super.key});
@@ -10,8 +12,10 @@ class ReUsableBottomNavBar extends StatefulWidget {
 }
 
 class _ReUsableBottomNavBarState extends State<ReUsableBottomNavBar> {
+
   int _selectedIndex = 0;
   void _handleBottomNavTap(int index) {
+
     setState(() {
       _selectedIndex = index;
     });
