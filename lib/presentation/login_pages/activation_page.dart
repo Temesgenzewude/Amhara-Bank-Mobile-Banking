@@ -1,7 +1,7 @@
 import 'package:amhara_bank_mobile_banking/presentation/login_pages/login_button.dart';
 import 'package:amhara_bank_mobile_banking/presentation/login_pages/pin_setup_page.dart';
+import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_pin_code_fields/flutter_pin_code_fields.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class ActivationPage extends StatefulWidget {
@@ -23,10 +23,11 @@ class _ActivationPageState extends State<ActivationPage> {
         SvgPicture.asset(
           'assets/images/Patterns.svg',
           alignment: Alignment.center,
-          width: screenSize.width,
-          height: screenSize.height,
+          width: AppDimension.screenWidth,
+          height: AppDimension.screenHeight,
         ),
         Scaffold(
+          resizeToAvoidBottomInset: false,
           body: SingleChildScrollView(
             child: Center(
               child: Column(
@@ -34,46 +35,55 @@ class _ActivationPageState extends State<ActivationPage> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: screenSize.height * 0.1,
+                    height: AppDimension.height40,
                   ),
                   SvgPicture.asset(
-                    'assets/images/Amhara_Bank_Logo_Yellow.svg',
-                    height: screenSize.width * 0.28,
+                    'assets/images/amhara_bank_logo_yellow.svg',
+                    height: AppDimension.height96,
+                    width: AppDimension.width196,
                   ),
                   SizedBox(
-                    height: screenSize.height * 0.05,
+                    height: AppDimension.height68,
                   ),
-                Text(
-                    'Welcome!',
-                    style: TextStyle(
-                        fontSize: screenSize.width * 0.07,
+                  SizedBox(
+                    height: AppDimension.contHeight80,
+                    width: AppDimension.width139,
+                    child: Text(
+                      'Welcome!',
+                      style: TextStyle(
+                        fontSize: AppDimension.font28,
                         fontWeight: FontWeight.w400,
-                        color: const Color(0xFF005EA6)),
+                        color: const Color(0xFF005EA6),
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                   SizedBox(
-                    height: screenSize.height * 0.02,
-                  ),
-                   Text(
-                    'Enter Activation code',
-                    style: TextStyle(
+                    height: AppDimension.height22,
+                    width: AppDimension.width150,
+                    child: Text(
+                      'Enter Activation code',
+                      style: TextStyle(
                         fontWeight: FontWeight.w300,
-                        fontSize: screenSize.width*0.040,
-                        color: Color(0xFF96989A)),
+                        fontSize: AppDimension.font16,
+                        color: Color(0xFF96989A),
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                   SizedBox(
-                    height: screenSize.height * 0.03,
+                    height: AppDimension.height69,
                   ),
                   SizedBox(
-                    width: screenSize.width * 0.6,
-                    child:  TextField(
-                      
+                    width: AppDimension.width238,
+                    child: TextField(
                       keyboardType: TextInputType.number,
                       controller: activationController,
-                      decoration:const InputDecoration(
+                      decoration: InputDecoration(
                         border: UnderlineInputBorder(
                           borderSide: BorderSide(
-                            color: Color.fromRGBO(0, 94, 166, 1),
-                            width: 1.0,
+                            color: Color(0XFF0047BA),
+                            width: AppDimension.width1,
                           ),
                         ),
                         hintText: '',
@@ -83,7 +93,7 @@ class _ActivationPageState extends State<ActivationPage> {
                     ),
                   ),
                   SizedBox(
-                    height: screenSize.height * 0.15,
+                    height: AppDimension.height136,
                   ),
 
                   //  LoginButton(

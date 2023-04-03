@@ -1,117 +1,128 @@
-// import 'package:amhara_bank_mobile_banking/presentation/login_pages/login_button.dart';
-// import 'package:amhara_bank_mobile_banking/presentation/login_pages/login_page.dart';
-// import 'package:flutter/material.dart';
-// import 'package:flutter_svg/flutter_svg.dart';
 
-// class PinSetUpPage extends StatefulWidget {
-  
-//   PinSetUpPage({super.key});
+import 'package:amhara_bank_mobile_banking/presentation/login_pages/login_button.dart';
+import 'package:amhara_bank_mobile_banking/presentation/login_pages/login_page.dart';
+import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
-//   @override
-//   State<PinSetUpPage> createState() => _PinSetUpPageState();
-// }
+class PinSetUpPage extends StatefulWidget {
+  PinSetUpPage({super.key});
 
-// class _PinSetUpPageState extends State<PinSetUpPage> {
-//   TextEditingController newPinController = TextEditingController();
-//   TextEditingController confirmPinController = TextEditingController();
 
-//   @override
-//   Widget build(BuildContext context) {
-//     Size screenSize = MediaQuery.of(context).size;
-//     return Stack(
-//       children: [
-//         SvgPicture.asset(
-//           'assets/images/Patterns.svg',
-//           alignment: Alignment.center,
-//           width: screenSize.width,
-//           height: screenSize.height,
-//         ),
-//         Scaffold(
-//           body: Center(
-//             child: SingleChildScrollView(
-//               child: Column(
-//                 crossAxisAlignment: CrossAxisAlignment.center,
-//                 mainAxisAlignment: MainAxisAlignment.start,
-//                 children: [
-//                   SizedBox(
-//                     height: screenSize.height * 0.01,
-//                   ),
-//                   SvgPicture.asset("assets/images/Amhara_Bank_Logo_Yellow.svg"),
-//                   SizedBox(
-//                     height: screenSize.height * 0.05,
-//                   ),
-//                   Text(
-//                     'Welcome!',
-//                     style: TextStyle(
-//                         fontSize: screenSize.width * 0.07,
-//                         fontWeight: FontWeight.w400,
-//                         color: const Color(0xFF005EA6)),
-//                   ),
-//                   SizedBox(
-//                     height: screenSize.height * 0.02,
-//                   ),
-//                   Text(
-//                     'Setup PIN',
-//                     style: TextStyle(
-//                         fontWeight: FontWeight.w300,
-//                         fontSize: screenSize.width * 0.040,
-//                         color: const Color(0xFF96989A)),
-//                   ),
-//                   SizedBox(
-//                     height: screenSize.height * 0.1,
-//                   ),
-//                   SizedBox(
-//                     width: screenSize.width * 0.6,
-//                     child: TextField(
-//                       controller: newPinController,
-//                       keyboardType: TextInputType.number,
-//                       decoration: const InputDecoration(
-//                         border: UnderlineInputBorder(
-//                           borderSide: BorderSide(
-//                             color: Color.fromRGBO(0, 94, 166, 1),
-//                             width: 1.0,
-//                           ),
-//                         ),
-//                         hintText: 'New PIN',
-//                         labelText: '',
-//                         contentPadding: EdgeInsets.zero,
-//                       ),
-//                     ),
-//                   ),
-//                   SizedBox(
-//                     height: screenSize.height * 0.099,
-//                   ),
-//                   SizedBox(
-//                     width: screenSize.width * 0.6,
-//                     child: TextField(
-//                       controller: confirmPinController,
-//                       decoration: const InputDecoration(
-//                         border: UnderlineInputBorder(
-//                           borderSide: BorderSide(
-//                             color: Color.fromRGBO(0, 94, 166, 1),
-//                             width: 1.0,
-//                           ),
-//                         ),
-//                         hintText: 'Confirm PIN',
-//                         labelText: '',
-//                         contentPadding: EdgeInsets.zero,
-//                       ),
+  @override
+  State<PinSetUpPage> createState() => _PinSetUpPageState();
+}
 
-//                       SizedBox(
-//                         height: screenSize.height * 0.17,
-//                       ),
-//                       const LoginButton(
-//                         routeName: LoginPage(),
-//                       ),
-//                     ],
+class _PinSetUpPageState extends State<PinSetUpPage> {
+  TextEditingController newPinController = TextEditingController();
+  TextEditingController confirmPinController = TextEditingController();
 
-//                   ),
-//                 ],
-//               ),
-//             ),
-//           ),
-//         )
-//       ],
-//     );
-//   }
-// }
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        SvgPicture.asset(
+          'assets/images/Patterns.svg',
+          alignment: Alignment.center,
+          width: AppDimension.screenWidth,
+          height: AppDimension.screenHeight,
+        ),
+        Scaffold(
+          body: Padding(
+            padding: EdgeInsets.only(
+                left: AppDimension.width81, right: AppDimension.width77),
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: AppDimension.height40,
+                  ),
+                  SvgPicture.asset(
+                    'assets/images/amhara_bank_logo_yellow.svg',
+                    height: AppDimension.height96,
+                    width: AppDimension.width196,
+                  ),
+                  SizedBox(
+                    height: AppDimension.height68,
+                  ),
+                  SizedBox(
+                    height: AppDimension.contHeight80,
+                    width: AppDimension.width139,
+                    child: Text(
+                      'Welcome!',
+                      style: TextStyle(
+                        fontSize: AppDimension.font28,
+                        fontWeight: FontWeight.w400,
+                        color: const Color(0xFF005EA6),
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Text(
+                    'Setup PIN',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w300,
+                        fontSize: AppDimension.font16,
+                        color: Color(0xFF96989A)),
+                  ),
+                  SizedBox(
+                    height: AppDimension.height40,
+                  ),
+                  SizedBox(
+                    child: TextField(
+                      controller: newPinController,
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                        border: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0XFF0047BA),
+                            width: AppDimension.width1,
+                          ),
+                        ),
+                        hintText: 'New PIN',
+                        hintStyle: TextStyle(fontSize: AppDimension.font14),
+                        labelText: '',
+                        contentPadding: EdgeInsets.zero,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: AppDimension.height54,
+                  ),
+                  SizedBox(
+                    child: TextField(
+                      controller: confirmPinController,
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                        hintText: 'Confirm PIN',
+                        hintStyle: TextStyle(fontSize: AppDimension.font14),
+                        labelText: '',
+                        contentPadding: EdgeInsets.zero,
+                        border: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0XFF0047BA),
+                            width: AppDimension.width1,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: AppDimension.contHeight100,
+                  ),
+                  const LoginButton(
+                    routeName: LoginPage(),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        )
+      ],
+    );
+  }
+}
+

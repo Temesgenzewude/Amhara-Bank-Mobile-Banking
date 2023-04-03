@@ -1,13 +1,10 @@
 import 'package:get/get.dart';
 
 class AppDimension {
-
   // my device width is 390
   // my device height is 844
   static double myDeviceWidth = 390;
   static double myDeviceHeight = 844;
-  
-
 
   // applying proportional width and height for other devices
   static double screenHeight = Get.context!.height;
@@ -106,8 +103,7 @@ class AppDimension {
   static double width9 = screenWidth / (myDeviceWidth / 9);
 
   static double width10 = screenWidth / (myDeviceWidth / 10);
-  // static double width8 = screenWidth / (myDeviceWidth / 8);
-  // static double width9 = screenWidth / (myDeviceWidth / 9);
+
   static double width12 = screenWidth / (myDeviceWidth / 12);
 
   static double width15 = screenWidth / (myDeviceWidth / 15);
@@ -184,7 +180,6 @@ class AppDimension {
 
   static double font60 = screenHeight / (myDeviceHeight / 60);
 
-  
   //radius
   static double radius1 = screenHeight / (myDeviceHeight / 1);
   static double radius2 = screenHeight / (myDeviceHeight / 2);
@@ -202,7 +197,7 @@ class AppDimension {
   static double radius45 = screenHeight / (myDeviceHeight / 45);
   static double radius55 = screenHeight / (myDeviceHeight / 55);
 
-  // static double radius40 = screenHeight / (myDeviceHeight / 40);
+
   static double radius24 = screenHeight / (myDeviceHeight / 24);
   static double radius70 = screenHeight / (myDeviceHeight / 70);
 
@@ -222,7 +217,6 @@ class AppDimension {
   static double iconSize30 = screenHeight / (myDeviceHeight / 30);
   static double iconSize33 = screenHeight / (myDeviceHeight / 33);
 
- 
   // dynamic container dimensions
   static double contHeight30 = screenHeight / (myDeviceHeight / 30);
   static double contWid30 = screenWidth / (myDeviceWidth / 30);
@@ -251,41 +245,9 @@ class AppDimension {
   static double contWid140 = screenWidth / (myDeviceWidth / 140);
   static double contHeight150 = screenHeight / (myDeviceHeight / 150);
   static double contWid150 = screenWidth / (myDeviceWidth / 150);
-
- 
-
-
-  // dynamic container dimensions
-  // static double contHeight30 = screenHeight / (myDeviceHeight / 30);
-  // static double contWid30 = screenWidth / (myDeviceWidth / 30);
-
-  // static double contHeight40 = screenHeight / (myDeviceHeight / 40);
-  // static double contWid40 = screenWidth / (myDeviceWidth / 40);
-
-  // static double contHeight50 = screenHeight / (myDeviceHeight / 50);
-  // static double contWid50 = screenWidth / (myDeviceWidth / 50);
-
-  // static double contWid60 = screenWidth / (myDeviceWidth / 60);
-  // static double contHeight60 = screenHeight / (myDeviceHeight / 60);
-
-  // static double contHeight70 = screenHeight / (myDeviceHeight / 70);
-  // static double contHeight80 = screenHeight / (myDeviceHeight / 80);
-  // static double contWid80 = screenWidth / (myDeviceWidth / 80);
-
-  // static double contHeight100 = screenHeight / (myDeviceHeight / 100);
-  // static double contWid100 = screenWidth / (myDeviceWidth / 100);
-
-  // static double contHeight120 = screenHeight / (myDeviceHeight / 120);
-  // static double contWid120 = screenWidth / (myDeviceWidth / 120);
   static double contHeight64 = screenHeight / (myDeviceHeight / 64);
-
-  // static double contWid130 = screenWidth / (myDeviceWidth / 130);
-  // services page container dimensions
-  static double servicePageContHeight70 = screenHeight / (myDeviceHeight / 70);
-  static double servicePageContWid130 = screenWidth / (myDeviceWidth / 130);
-  static double servicePageImgContHeight50 =
-      screenHeight / (myDeviceHeight / 50);
-  static double servicePageImgContWid40 = screenWidth / (myDeviceWidth / 40);
+    static double height50 = screenHeight / (myDeviceHeight / 50);
+  static double height100 = screenHeight / (myDeviceHeight / 100);
 
   // splash screen dimensions
   static double mainLogoHeight150 = screenHeight / (myDeviceHeight / 150);
@@ -296,22 +258,18 @@ class AppDimension {
   static double sizedBox38 = screenHeight / (myDeviceHeight / 38);
   //third sized box
   static double height206 = screenHeight / (myDeviceHeight / 206);
-  // static double height40 = (screenHeight / (myDeviceHeight / 40));
+
   static double height176 = screenHeight / (myDeviceHeight / 176);
   static double height686 = screenHeight / (myDeviceHeight / 158);
   static double height23 = screenHeight / (myDeviceHeight / 23);
-  // static double height96 = screenHeight / (myDeviceHeight / 96);
-  // static double width196 = screenHeight / (myDeviceHeight / 196.35);
+
   static double height250 = screenHeight / (myDeviceHeight / 250);
   static double width250 = screenHeight / (myDeviceHeight / 250);
   static double height31 = screenHeight / (myDeviceHeight / 31);
   static double width287 = screenHeight / (myDeviceHeight / 287);
   static double height94 = screenHeight / (myDeviceHeight / 94);
   static double height81 = screenHeight / (myDeviceHeight / 81);
-  // static double height50 = screenHeight / (myDeviceHeight / 50);
-  // static double width1 = screenHeight / (myDeviceHeight / 1);
-  static double height100 = screenHeight / (myDeviceHeight / 100);
-    // static double width352 = screenHeight / (myDeviceHeight / 352);
+
 
 
 

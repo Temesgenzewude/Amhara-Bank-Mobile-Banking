@@ -1,4 +1,5 @@
 import 'package:amhara_bank_mobile_banking/presentation/login_pages/pin_setup_page.dart';
+import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
 import 'package:flutter/material.dart';
 
 class LoginButton extends StatelessWidget {
@@ -10,8 +11,8 @@ class LoginButton extends StatelessWidget {
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     return SizedBox(
-      height: screenSize.height * 0.06,
-      width: screenSize.width * 0.4,
+      height: AppDimension.height44,
+      width: AppDimension.width140,
       child: ElevatedButton(
         onPressed: () {
           Navigator.push(
@@ -20,8 +21,8 @@ class LoginButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
             backgroundColor: const Color(0xFF005EA6),
             textStyle:
-                const TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
-        child: const Text('Login'),
+                 TextStyle(fontSize: AppDimension.font16, fontWeight: FontWeight.w500)),
+        child:  Text('Login'),
       ),
     );
   }
