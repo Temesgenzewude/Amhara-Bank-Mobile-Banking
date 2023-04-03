@@ -1,5 +1,7 @@
+
 import 'package:amhara_bank_mobile_banking/presentation/login_pages/activation_page.dart';
 import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -14,6 +16,7 @@ class _TopUpAirtimePageState extends State<TopUpAirtimePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: SafeArea(
         child: Column(
           children: [
@@ -47,6 +50,7 @@ class _TopUpAirtimePageState extends State<TopUpAirtimePage> {
               height: AppDimension.height94,
               child: Text(
                 "Top-up Air time",
+
                 style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontFamily: 'axioforma',
@@ -88,8 +92,10 @@ class _TopUpAirtimePageState extends State<TopUpAirtimePage> {
                 onPressed: () {},
                 child:  Text('Start Financing',style: TextStyle(fontSize: AppDimension.font16),),
               ),
+
             ),
           ],
+
         ),
       ),
     );

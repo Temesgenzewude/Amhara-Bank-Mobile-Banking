@@ -33,6 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           children: [
             SizedBox(
+
               height: AppDimension.sizedBox292,
             ),
             Column(
@@ -45,6 +46,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 SizedBox(
                   height: AppDimension.sizedBox38,
                 ),
+
                 SvgPicture.asset(
                   'assets/images/yellow_full.svg',
                 ),
