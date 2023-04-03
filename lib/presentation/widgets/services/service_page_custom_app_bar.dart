@@ -1,11 +1,12 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../../utils/app_dimensions.dart';
 
 class ServicePageCustomAppBar extends StatelessWidget {
   const ServicePageCustomAppBar({
-    Key? key,
+    Key? key, required SvgPicture appBarLeftSideWidget,
   }) : super(key: key);
 
   @override
