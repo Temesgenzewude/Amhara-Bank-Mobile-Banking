@@ -221,7 +221,7 @@ class TransferAccount extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: RusableBottomNavBAr(),
+      bottomNavigationBar: ReUsableBottomNavBar(),
     );
   }
 }

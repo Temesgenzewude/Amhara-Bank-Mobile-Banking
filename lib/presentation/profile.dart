@@ -3,7 +3,6 @@ import 'package:amhara_bank_mobile_banking/presentation/onboarding_pages/pay_you
 import 'package:amhara_bank_mobile_banking/presentation/onboarding_pages/top_up_air_time.dart';
 
 import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
-import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/material.dart';

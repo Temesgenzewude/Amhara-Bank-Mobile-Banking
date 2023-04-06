@@ -1,4 +1,4 @@
-
+import 'package:amhara_bank_mobile_banking/presentation/services/services_home_page.dart';
 import 'package:amhara_bank_mobile_banking/presentation/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -38,7 +38,9 @@ class RouteHelper {
     ),
     GetPage(
       name: servicesPage,
-      page: () => Container(),
+      page: () {
+        return ServiceHomePage();
+      },
       transition: Transition.fadeIn,
     ),
     GetPage(
@@ -69,4 +71,3 @@ class RouteHelper {
         transition: Transition.fadeIn),
   ];
 }
-
