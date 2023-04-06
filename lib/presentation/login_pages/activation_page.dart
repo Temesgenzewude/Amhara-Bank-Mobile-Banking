@@ -17,18 +17,18 @@ class _ActivationPageState extends State<ActivationPage> {
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
-    return Stack(
-      children: [
-        SvgPicture.asset(
-          'assets/images/Patterns.svg',
-          alignment: Alignment.center,
-          width: AppDimension.screenWidth,
-          height: AppDimension.screenHeight,
-        ),
-        Scaffold(
-          resizeToAvoidBottomInset: false,
-          body: SingleChildScrollView(
+    return Scaffold(
+      body: Stack(
+        children: [
+          SizedBox(
+            width: AppDimension.screenWidth,
+            height: AppDimension.screenHeight,
+            child: SvgPicture.asset(
+              'assets/images/Patterns.svg',
+              fit: BoxFit.cover,
+            ),
+          ),
+          SingleChildScrollView(
             child: Center(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -52,8 +52,8 @@ class _ActivationPageState extends State<ActivationPage> {
                       'Welcome!',
                       style: TextStyle(
                         fontSize: AppDimension.font28,
-                        fontWeight: FontWeight.w400,
-                        color: const Color(0xFF005EA6),
+                        fontFamily: "AxiformaRegular",
+                        color: const Color(0xFF0047BA),
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -64,7 +64,7 @@ class _ActivationPageState extends State<ActivationPage> {
                     child: Text(
                       'Enter Activation code',
                       style: TextStyle(
-                        fontWeight: FontWeight.w300,
+                        fontFamily: "AxiFormaLight",
                         fontSize: AppDimension.font16,
                         color: Color(0xFF96989A),
                       ),
@@ -96,16 +96,16 @@ class _ActivationPageState extends State<ActivationPage> {
                     height: AppDimension.height136,
                   ),
 
-                  //  LoginButton(
-                  //   routeName: PinSetUpPage(),
-                  // )
+                  LoginButton(
+                    routeName: PinSetUpPage(),
+                  )
 
                 ],
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

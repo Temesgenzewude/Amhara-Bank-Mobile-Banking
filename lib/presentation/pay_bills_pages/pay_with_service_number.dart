@@ -3,14 +3,14 @@ import 'package:amhara_bank_mobile_banking/presentation/transfer_pages/reusable_
 import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
 import 'package:flutter/material.dart';
 
-class OwnAccountTransfer extends StatefulWidget {
-  OwnAccountTransfer({super.key});
+class PayWithServiceNumber extends StatefulWidget {
+  PayWithServiceNumber({super.key});
 
   @override
-  State<OwnAccountTransfer> createState() => _OwnAccountTransferState();
+  State<PayWithServiceNumber> createState() => _PayWithServiceNumberState();
 }
 
-class _OwnAccountTransferState extends State<OwnAccountTransfer> {
+class _PayWithServiceNumberState extends State<PayWithServiceNumber> {
   TextEditingController accountnumberController = TextEditingController();
   TextEditingController amountContoller = TextEditingController();
   String? selectedValue = "Abebe Bikila Abebe-8***9";
@@ -40,7 +40,7 @@ class _OwnAccountTransferState extends State<OwnAccountTransfer> {
                   color: Color(0xFF143B58),
                 ),
                 Text(
-                  "Transfer",
+                  "Billing information",
                   style: TextStyle(
                       color: Color(0xFF143B58),
                       fontWeight: FontWeight.w400,
@@ -54,14 +54,16 @@ class _OwnAccountTransferState extends State<OwnAccountTransfer> {
             ),
             Padding(
               padding: EdgeInsets.only(
-                  left: AppDimension.width24, right: AppDimension.width25),
+                left: AppDimension.width24,
+                right: AppDimension.width25,
+              ),
               child: SizedBox(
                 height: AppDimension.height716,
                 child: Column(
                   children: [
                     Container(
                       padding: EdgeInsets.only(top: AppDimension.height25),
-                      height: AppDimension.height423,
+                      height: AppDimension.height272,
                       width: AppDimension.width341,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -72,7 +74,51 @@ class _OwnAccountTransferState extends State<OwnAccountTransfer> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                "Select Account",
+                                "Service number",
+                                style: TextStyle(
+                                    color: const Color(0xFF143B58),
+                                    fontSize: AppDimension.font18,
+                                    fontWeight: FontWeight.w400,
+                                    fontFamily: 'AxiFormaRegular'),
+                              ),
+                              SizedBox(
+                                height: AppDimension.height10,
+                              ),
+                              Container(
+                                padding: EdgeInsets.only(
+                                    left: AppDimension.width24,
+                                    right: AppDimension.width21),
+                                width: AppDimension.width341,
+                                height: AppDimension.contHeight64,
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Colors.grey,
+                                        width: AppDimension.width1),
+                                    borderRadius: BorderRadius.circular(
+                                        AppDimension.radius25)),
+                                child: TextField(
+                                  textAlignVertical: TextAlignVertical.top,
+                                  keyboardType: TextInputType.number,
+                                  controller: accountnumberController,
+                                  decoration: const InputDecoration(
+                                    border: InputBorder.none,
+                                    hintText: '000 000 000',
+                                    labelText: '',
+                                    contentPadding: EdgeInsets.zero,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: AppDimension.height30,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Account number",
                                 style: TextStyle(
                                     color: const Color(0xFF143B58),
                                     fontSize: AppDimension.font18,
@@ -127,96 +173,10 @@ class _OwnAccountTransferState extends State<OwnAccountTransfer> {
                               ),
                             ],
                           ),
-                          SizedBox(
-                            height: AppDimension.height30,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                "Account number",
-                                style: TextStyle(
-                                    color: const Color(0xFF143B58),
-                                    fontSize: AppDimension.font18,
-                                    fontWeight: FontWeight.w400,
-                                    fontFamily: 'AxiFormaRegular'),
-                              ),
-                              SizedBox(
-                                height: AppDimension.height10,
-                              ),
-                              Container(
-                                padding: EdgeInsets.only(
-                                    left: AppDimension.width24,
-                                    right: AppDimension.width21),
-                                width: AppDimension.width341,
-                                height: AppDimension.contHeight64,
-                                decoration: BoxDecoration(
-                                    border: Border.all(
-                                        color: Colors.grey,
-                                        width: AppDimension.width1),
-                                    borderRadius: BorderRadius.circular(
-                                        AppDimension.radius25)),
-                                child: TextField(
-                                  keyboardType: TextInputType.number,
-                                  controller: accountnumberController,
-                                  decoration: const InputDecoration(
-                                    border: InputBorder.none,
-                                    hintText: '000 000 000',
-                                    labelText: '',
-                                    contentPadding: EdgeInsets.zero,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: AppDimension.height30,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                "Amount",
-                                style: TextStyle(
-                                    color: const Color(0xFF143B58),
-                                    fontSize: AppDimension.font18,
-                                    fontWeight: FontWeight.w400,
-                                    fontFamily: 'AxiFormaRegular'),
-                              ),
-                              SizedBox(
-                                height: AppDimension.height10,
-                              ),
-                              Container(
-                                padding: EdgeInsets.only(
-                                    left: AppDimension.width24,
-                                    right: AppDimension.width21),
-                                width: AppDimension.width341,
-                                height: AppDimension.contHeight64,
-                                decoration: BoxDecoration(
-                                    border: Border.all(
-                                        color: Colors.grey,
-                                        width: AppDimension.width1),
-                                    borderRadius: BorderRadius.circular(
-                                        AppDimension.radius24)),
-                                child: TextField(
-                                  keyboardType: TextInputType.number,
-                                  controller: amountContoller,
-                                  decoration: const InputDecoration(
-                                    border: InputBorder.none,
-                                    hintText: '',
-                                    labelText: '',
-                                    contentPadding: EdgeInsets.zero,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
                         ],
                       ),
                     ),
-                    SizedBox(height: AppDimension.contHeight80),
+                    SizedBox(height: AppDimension.height228),
                     Center(
                       child: SizedBox(
                         width: AppDimension.width341,
@@ -234,8 +194,9 @@ class _OwnAccountTransferState extends State<OwnAccountTransfer> {
                           child: Text(
                             'Continue',
                             style: TextStyle(
-                                fontSize: AppDimension.font16,
-                                fontFamily: 'AxiFormaRegular'),
+                              fontSize: AppDimension.font16,
+                              fontFamily: 'AxiFormaRegular',
+                            ),
                           ),
                         ),
                       ),
@@ -248,7 +209,7 @@ class _OwnAccountTransferState extends State<OwnAccountTransfer> {
           ],
         ),
       ),
-      bottomNavigationBar: ReUsableBottomNavBar(),
+      bottomNavigationBar: RusableBottomNavBAr(),
     );
   }
 }
