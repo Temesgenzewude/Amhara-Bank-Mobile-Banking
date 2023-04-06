@@ -34,10 +34,10 @@ class _SuccessfullyTransferedState extends State<SuccessfullyTransfered> {
                     Text(
                       "Transfer",
                       style: TextStyle(
-                        color: Color(0xFF143B58),
-                        fontWeight: FontWeight.w400,
-                        fontSize: AppDimension.font24,
-                      ),
+                          color: Color(0xFF143B58),
+                          fontWeight: FontWeight.w400,
+                          fontSize: AppDimension.font24,
+                          fontFamily: 'AxiFormaRegular'),
                     ),
                   ],
                 ),
@@ -55,8 +55,8 @@ class _SuccessfullyTransferedState extends State<SuccessfullyTransfered> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Container(
-                     height: AppDimension.contHeight120,
-                    width: AppDimension.contWid120,
+                      height: AppDimension.contHeight120,
+                      width: AppDimension.contWid120,
                       decoration: BoxDecoration(
                         border: Border.all(
                             color: Color(0xFF0047BA),
@@ -93,10 +93,10 @@ class _SuccessfullyTransferedState extends State<SuccessfullyTransfered> {
                           "500 ETB Birr Transfered Successfully!",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontSize:
-                                  AppDimension.font28,
+                              fontSize: AppDimension.font28,
                               fontWeight: FontWeight.w400,
-                              color: Color(0xFF143B58)),
+                              color: Color(0xFF143B58),
+                              fontFamily: "AxiFormaSemiBold"),
                         ),
                       ),
                     ),
@@ -104,30 +104,34 @@ class _SuccessfullyTransferedState extends State<SuccessfullyTransfered> {
                       height: AppDimension.height40,
                     ),
                     SizedBox(
-                      height: AppDimension.height50,
+                      height: AppDimension.height50 + AppDimension.height5,
                       width: AppDimension.width195,
                       child: Column(
                         children: [
                           Text(
-                            'to Abebe Bekila-5247',
+                            'to Abebe Bikila-5247',
                             style: TextStyle(
-                                color: Color(0xFF0047BA),
-                                fontSize: AppDimension.font16),
+                              color: Color(0xFF0047BA),
+                              fontSize: AppDimension.font16,
+                              fontFamily: "AxiFormaRegular",
+                            ),
                           ),
                           Text(
                             'from Abebe Bikila-7009',
                             style: TextStyle(
-                                color: Color(0xFF0047BA),
-                                fontSize: AppDimension.font16),
+                              color: Color(0xFF0047BA),
+                              fontSize: AppDimension.font16,
+                              fontFamily: "AxiFormaRegular",
+                            ),
                           )
                         ],
                       ),
                     ),
                     SizedBox(
-                      height: AppDimension.height35,
+                      height: AppDimension.height30,
                     ),
                     SizedBox(
-                      height: AppDimension.height65,
+                      height: AppDimension.contHeight70,
                       width: AppDimension.width302,
                       child: Padding(
                         padding: EdgeInsets.only(
@@ -144,6 +148,7 @@ class _SuccessfullyTransferedState extends State<SuccessfullyTransfered> {
                                     color: Color(0XFF9DA9B2),
                                     fontSize: AppDimension.font16,
                                     fontWeight: FontWeight.w400,
+                                    fontFamily: "AxiFormaRegular",
                                   ),
                                 ),
                                 SizedBox(
@@ -152,9 +157,11 @@ class _SuccessfullyTransferedState extends State<SuccessfullyTransfered> {
                                 Text(
                                   "t23xadYH45P0",
                                   style: TextStyle(
-                                      color: Color(0xFF0047BA),
-                                      fontSize: AppDimension.font16,
-                                      fontWeight: FontWeight.w400),
+                                    color: Color(0xFF0047BA),
+                                    fontSize: AppDimension.font16,
+                                    fontWeight: FontWeight.w400,
+                                    fontFamily: "AxiFormaRegular",
+                                  ),
                                 )
                               ],
                             ),
@@ -166,6 +173,7 @@ class _SuccessfullyTransferedState extends State<SuccessfullyTransfered> {
                                     color: Color(0XFF9DA9B2),
                                     fontSize: AppDimension.font16,
                                     fontWeight: FontWeight.w400,
+                                    fontFamily: "AxiFormaRegular",
                                   ),
                                 ),
                                 SizedBox(
@@ -174,9 +182,11 @@ class _SuccessfullyTransferedState extends State<SuccessfullyTransfered> {
                                 Text(
                                   "t23xadYH45P0",
                                   style: TextStyle(
-                                      color: Color(0xFF0047BA),
-                                      fontSize: AppDimension.font16,
-                                      fontWeight: FontWeight.w400),
+                                    color: Color(0xFF0047BA),
+                                    fontSize: AppDimension.font16,
+                                    fontWeight: FontWeight.w400,
+                                    fontFamily: "AxiFormaRegular",
+                                  ),
                                 )
                               ],
                             ),
@@ -185,7 +195,7 @@ class _SuccessfullyTransferedState extends State<SuccessfullyTransfered> {
                       ),
                     ),
                     SizedBox(
-                      height: AppDimension.contHeight60,
+                      height: AppDimension.height50,
                     ),
                     Container(
                       height: AppDimension.height56,
@@ -194,8 +204,8 @@ class _SuccessfullyTransferedState extends State<SuccessfullyTransfered> {
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.white,
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(
-                                  AppDimension.radius55),
+                              borderRadius:
+                                  BorderRadius.circular(AppDimension.radius55),
                             ),
                             side: BorderSide(
                               color: Color(0xFF0047BA),
@@ -207,6 +217,7 @@ class _SuccessfullyTransferedState extends State<SuccessfullyTransfered> {
                           style: TextStyle(
                             color: Color(0xFF005EA6),
                             fontSize: AppDimension.font16,
+                            fontFamily: "AxiFormaRegular",
                           ),
                         ),
                       ),

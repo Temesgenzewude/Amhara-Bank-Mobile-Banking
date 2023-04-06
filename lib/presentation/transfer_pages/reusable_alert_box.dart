@@ -1,7 +1,5 @@
 import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class ReusableAlertBox extends StatefulWidget {
   const ReusableAlertBox({super.key});
@@ -27,20 +25,26 @@ class _ReusableAlertBoxState extends State<ReusableAlertBox> {
           Text(
             'Confirm',
             style: TextStyle(
-                color: Color(0xFf143B58), fontSize: AppDimension.font24),
+                color: Color(0xFf143B58),
+                fontSize: AppDimension.font24,
+                fontFamily: 'AxiFormaRegular'),
           ),
           SizedBox(
             width: AppDimension.width40,
           ),
           SizedBox(
-              width: AppDimension.width24,
-              height: AppDimension.height30,
-              child: IconButton(
-                onPressed: () {
-                  Navigator.of(context).pop(false);
-                },
-                icon: Icon(Icons.close_outlined,size: AppDimension.iconSize24,),
-              ))
+            width: AppDimension.width24,
+            height: AppDimension.height30,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.of(context).pop(false);
+              },
+              child: Icon(
+                Icons.close_outlined,
+                size: AppDimension.iconSize24,
+              ),
+            ),
+          )
         ],
       ),
       content: SizedBox(
@@ -51,10 +55,54 @@ class _ReusableAlertBoxState extends State<ReusableAlertBox> {
             SizedBox(
               height: AppDimension.height40,
             ),
-            Text(
-              'Are you sure to transfer 500 ETB from acount number 889345458934 to account number 900339430924309',
-              style: TextStyle(fontSize: AppDimension.font16),
-            ),
+            RichText(
+              textAlign: TextAlign.center,
+              text: TextSpan(
+                children: <TextSpan>[
+                  TextSpan(
+                    text: 'Are you sure to transfer 500 ETB from ',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF143B58),
+                        fontSize: AppDimension.font16,
+                        fontFamily: 'AxiFormaRegular'),
+                  ),
+                  TextSpan(
+                    text: 'Acount number ',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF143B58),
+                        fontSize: AppDimension.font16,
+                        fontFamily: 'AxiFormaRegular'),
+                  ),
+                  TextSpan(
+                    text: '889345458934 ',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF143B58),
+                        fontSize: AppDimension.font16,
+                        fontFamily: 'AxiFormaMedium'),
+                  ),
+                  TextSpan(
+                    text: 'to ',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF143B58),
+                        fontSize: AppDimension.font16,
+                        fontFamily: 'AxiFormaRegular'),
+                  ),
+                  TextSpan(
+                    text: '90000324279283?',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFF143B58),
+                      fontSize: AppDimension.font16,
+                      fontFamily: 'AxiFormaMedium',
+                    ),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
@@ -78,7 +126,9 @@ class _ReusableAlertBoxState extends State<ReusableAlertBox> {
                 child: Text(
                   "Cancel",
                   style: TextStyle(
-                      color: Color(0xFF005EA6), fontSize: AppDimension.font16),
+                      color: Color(0xFF005EA6),
+                      fontSize: AppDimension.font16,
+                      fontFamily: "AxiFormaRegular"),
                 ),
               ),
             ),
@@ -98,9 +148,9 @@ class _ReusableAlertBoxState extends State<ReusableAlertBox> {
                 child: Text(
                   "Confirm",
                   style: TextStyle(
-                    fontSize: AppDimension.font16,
-                    fontWeight: FontWeight.w400
-                  ),
+                      fontSize: AppDimension.font16,
+                      fontWeight: FontWeight.w400,
+                      fontFamily: "AxiFormaRegular"),
                 ),
               ),
             )

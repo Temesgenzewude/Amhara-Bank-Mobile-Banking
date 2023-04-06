@@ -9,7 +9,6 @@ class TransferAccount extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -30,16 +29,17 @@ class TransferAccount extends StatelessWidget {
                 Text(
                   "Transfer",
                   style: TextStyle(
-                    color: Color(0xFF143B58),
-                    fontWeight: FontWeight.w400,
-                    fontSize: AppDimension.height24,
-                  ),
+                      color: Color(0xFF143B58),
+                      fontWeight: FontWeight.w400,
+                      fontSize: AppDimension.height24,
+                      fontFamily: 'AxiFormaRegular'),
                 ),
               ],
             ),
             Divider(),
             Padding(
-              padding: EdgeInsets.only(left: AppDimension.width24 , right: AppDimension.width25),
+              padding: EdgeInsets.only(
+                  left: AppDimension.width24, right: AppDimension.width25),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -52,10 +52,10 @@ class TransferAccount extends StatelessWidget {
                         Text(
                           "Transfer to",
                           style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: AppDimension.font20,
-                            color: Color(0xFF143B58),
-                          ),
+                              fontWeight: FontWeight.w400,
+                              fontSize: AppDimension.font20,
+                              color: Color(0xFF143B58),
+                              fontFamily: 'AxiFormaRegular'),
                         ),
                         GestureDetector(
                           onTap: () {},
@@ -68,7 +68,7 @@ class TransferAccount extends StatelessWidget {
                                     AppDimension.radius5)),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children:  [
+                              children: [
                                 Padding(
                                   padding: EdgeInsets.all(15.0),
                                   child: Text(
@@ -76,7 +76,8 @@ class TransferAccount extends StatelessWidget {
                                     style: TextStyle(
                                         color: Color(0xFF143B58),
                                         fontSize: AppDimension.font16,
-                                        fontWeight: FontWeight.w400),
+                                        fontWeight: FontWeight.w400,
+                                        fontFamily: 'AxiFormaRegular'),
                                   ),
                                 ),
                                 Padding(
@@ -106,7 +107,8 @@ class TransferAccount extends StatelessWidget {
                                     style: TextStyle(
                                         color: Color(0xFF143B58),
                                         fontSize: AppDimension.font16,
-                                        fontWeight: FontWeight.w400),
+                                        fontWeight: FontWeight.w400,
+                                        fontFamily: 'AxiFormaRegular'),
                                   ),
                                 ),
                                 Padding(
@@ -128,7 +130,7 @@ class TransferAccount extends StatelessWidget {
                                     AppDimension.radius5)),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children:  [
+                              children: [
                                 Padding(
                                   padding: EdgeInsets.all(15.0),
                                   child: Text(
@@ -136,7 +138,8 @@ class TransferAccount extends StatelessWidget {
                                     style: TextStyle(
                                         color: Color(0xFF143B58),
                                         fontSize: AppDimension.font16,
-                                        fontWeight: FontWeight.w400),
+                                        fontWeight: FontWeight.w400,
+                                        fontFamily: 'AxiFormaRegular'),
                                   ),
                                 ),
                                 Padding(
@@ -158,7 +161,7 @@ class TransferAccount extends StatelessWidget {
                                     AppDimension.radius5)),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children:  [
+                              children: [
                                 Padding(
                                   padding: EdgeInsets.all(15.0),
                                   child: Text(
@@ -166,7 +169,8 @@ class TransferAccount extends StatelessWidget {
                                     style: TextStyle(
                                         color: Color(0xFF143B58),
                                         fontSize: AppDimension.font16,
-                                        fontWeight: FontWeight.w400),
+                                        fontWeight: FontWeight.w400,
+                                        fontFamily: 'AxiFormaRegular'),
                                   ),
                                 ),
                                 Padding(
@@ -188,7 +192,7 @@ class TransferAccount extends StatelessWidget {
                                     AppDimension.radius5)),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children:  [
+                              children: [
                                 Padding(
                                   padding: EdgeInsets.all(15.0),
                                   child: Text(
@@ -196,7 +200,8 @@ class TransferAccount extends StatelessWidget {
                                     style: TextStyle(
                                         color: Color(0xFF143B58),
                                         fontSize: AppDimension.font16,
-                                        fontWeight: FontWeight.w400),
+                                        fontWeight: FontWeight.w400,
+                                        fontFamily: 'AxiFormaRegular'),
                                   ),
                                 ),
                                 Padding(

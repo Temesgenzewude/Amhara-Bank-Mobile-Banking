@@ -7,7 +7,8 @@ class TelebirrAccountTransfer extends StatefulWidget {
   TelebirrAccountTransfer({super.key});
 
   @override
-  State<TelebirrAccountTransfer> createState() => _TelebirrAccountTransferState();
+  State<TelebirrAccountTransfer> createState() =>
+      _TelebirrAccountTransferState();
 }
 
 class _TelebirrAccountTransferState extends State<TelebirrAccountTransfer> {
@@ -23,7 +24,7 @@ class _TelebirrAccountTransferState extends State<TelebirrAccountTransfer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-            resizeToAvoidBottomInset : false,
+      resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -42,10 +43,10 @@ class _TelebirrAccountTransferState extends State<TelebirrAccountTransfer> {
                 Text(
                   "Telebirr Transfer",
                   style: TextStyle(
-                    color: Color(0xFF143B58),
-                    fontWeight: FontWeight.w400,
-                    fontSize: AppDimension.font24,
-                  ),
+                      color: Color(0xFF143B58),
+                      fontWeight: FontWeight.w400,
+                      fontSize: AppDimension.font24,
+                      fontFamily: 'AxiFormaRegular'),
                 ),
               ],
             ),
@@ -76,7 +77,8 @@ class _TelebirrAccountTransferState extends State<TelebirrAccountTransfer> {
                                 style: TextStyle(
                                     color: const Color(0xFF143B58),
                                     fontSize: AppDimension.font18,
-                                    fontWeight: FontWeight.w400),
+                                    fontWeight: FontWeight.w400,
+                                    fontFamily: 'AxiFormaRegular'),
                               ),
                               SizedBox(
                                 height: AppDimension.height10,
@@ -138,7 +140,8 @@ class _TelebirrAccountTransferState extends State<TelebirrAccountTransfer> {
                                 style: TextStyle(
                                     color: const Color(0xFF143B58),
                                     fontSize: AppDimension.font18,
-                                    fontWeight: FontWeight.w400),
+                                    fontWeight: FontWeight.w400,
+                                    fontFamily: 'AxiFormaRegular'),
                               ),
                               SizedBox(
                                 height: AppDimension.height10,
@@ -180,7 +183,8 @@ class _TelebirrAccountTransferState extends State<TelebirrAccountTransfer> {
                                 style: TextStyle(
                                     color: const Color(0xFF143B58),
                                     fontSize: AppDimension.font18,
-                                    fontWeight: FontWeight.w400),
+                                    fontWeight: FontWeight.w400,
+                                    fontFamily: 'AxiFormaRegular'),
                               ),
                               SizedBox(
                                 height: AppDimension.height10,
@@ -220,7 +224,7 @@ class _TelebirrAccountTransferState extends State<TelebirrAccountTransfer> {
                         height: AppDimension.contHeight64,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                              backgroundColor: Color(0xFF005EA6),
+                              backgroundColor: Color(0xFF0047BA),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(
                                     AppDimension.radius30),
@@ -230,7 +234,9 @@ class _TelebirrAccountTransferState extends State<TelebirrAccountTransfer> {
                               builder: (_) => ReusableAlertBox()),
                           child: Text(
                             'Continue',
-                            style: TextStyle(fontSize: AppDimension.font16),
+                            style: TextStyle(
+                                fontSize: AppDimension.font16,
+                                fontFamily: 'AxiFormaRegular'),
                           ),
                         ),
                       ),
