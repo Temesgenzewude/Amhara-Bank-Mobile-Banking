@@ -2,14 +2,14 @@ import 'package:amhara_bank_mobile_banking/presentation/services/reusabele_botto
 import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
 import 'package:flutter/material.dart';
 
-class SuccessfullyTransfered extends StatefulWidget {
-  const SuccessfullyTransfered({super.key});
+class PaymentCompleted extends StatefulWidget {
+  const PaymentCompleted({super.key});
 
   @override
-  State<SuccessfullyTransfered> createState() => _SuccessfullyTransferedState();
+  State<PaymentCompleted> createState() => _PaymentCompletedState();
 }
 
-class _SuccessfullyTransferedState extends State<SuccessfullyTransfered> {
+class _PaymentCompletedState extends State<PaymentCompleted> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +32,7 @@ class _SuccessfullyTransferedState extends State<SuccessfullyTransfered> {
                       color: Color(0xFF143B58),
                     ),
                     Text(
-                      "Transfer",
+                      "Payment Complete",
                       style: TextStyle(
                           color: Color(0xFF143B58),
                           fontWeight: FontWeight.w400,
@@ -90,7 +90,7 @@ class _SuccessfullyTransferedState extends State<SuccessfullyTransfered> {
                             left: AppDimension.width40,
                             right: AppDimension.width40),
                         child: Text(
-                          "500 ETB Birr Transfered Successfully!",
+                          "1299 ETB Birr Payed Successfully!",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontSize: AppDimension.font28,
@@ -109,7 +109,7 @@ class _SuccessfullyTransferedState extends State<SuccessfullyTransfered> {
                       child: Column(
                         children: [
                           Text(
-                            'to Abebe Bikila-5247',
+                            'to Ethiotelecom-5247',
                             style: TextStyle(
                               color: Color(0xFF0047BA),
                               fontSize: AppDimension.font16,
@@ -197,7 +197,7 @@ class _SuccessfullyTransferedState extends State<SuccessfullyTransfered> {
                     SizedBox(
                       height: AppDimension.height50,
                     ),
-                    Container(
+                    SizedBox(
                       height: AppDimension.height56,
                       width: AppDimension.width150,
                       child: ElevatedButton(
@@ -229,7 +229,7 @@ class _SuccessfullyTransferedState extends State<SuccessfullyTransfered> {
           ),
         ),
       ),
-      bottomNavigationBar: ReUsableBottomNavBar(),
+      bottomNavigationBar: RusableBottomNavBAr(),
     );
   }
 }

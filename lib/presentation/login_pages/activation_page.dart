@@ -17,63 +17,59 @@ class _ActivationPageState extends State<ActivationPage> {
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
+
     return Scaffold(
       body: Stack(
         children: [
-          Container(
-            
-            
+          SizedBox(
+            width: AppDimension.screenWidth,
+            height: AppDimension.screenHeight,
             child: SvgPicture.asset(
               'assets/images/Patterns.svg',
-              width: AppDimension.screenWidth,
-              height: AppDimension.screenHeight,
               fit: BoxFit.cover,
             ),
           ),
-          Container(
-            
-            child: SingleChildScrollView(
-              child: Center(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      height: AppDimension.height40,
-                    ),
-                    SvgPicture.asset(
-                      'assets/images/amhara_bank_logo_yellow.svg',
-                      height: AppDimension.height96,
-                      width: AppDimension.width196,
-                    ),
-                    SizedBox(
-                      height: AppDimension.height68,
-                    ),
-                    SizedBox(
-                      height: AppDimension.contHeight80,
-                      width: AppDimension.width139,
-                      child: Text(
-                        'Welcome!',
-                        style: TextStyle(
-                          fontSize: AppDimension.font28,
-                          fontFamily: "AxiformaRegular",
-                          color: const Color(0xFF0047BA),
-                        ),
-                        textAlign: TextAlign.center,
+          SingleChildScrollView(
+            child: Center(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: AppDimension.height40,
+                  ),
+                  SvgPicture.asset(
+                    'assets/images/amhara_bank_logo_yellow.svg',
+                    height: AppDimension.height96,
+                    width: AppDimension.width196,
+                  ),
+                  SizedBox(
+                    height: AppDimension.height68,
+                  ),
+                  SizedBox(
+                    height: AppDimension.contHeight80,
+                    width: AppDimension.width139,
+                    child: Text(
+                      'Welcome!',
+                      style: TextStyle(
+                        fontSize: AppDimension.font28,
+                        fontFamily: "AxiformaRegular",
+                        color: const Color(0xFF0047BA),
+
                       ),
                     ),
-                    SizedBox(
-                      height: AppDimension.height22,
-                      width: AppDimension.width150,
-                      child: Text(
-                        'Enter Activation code',
-                        style: TextStyle(
-                          fontFamily: "AxiFormaLight",
-                          fontSize: AppDimension.font16,
-                          color: Color(0xFF96989A),
-                        ),
-                        textAlign: TextAlign.center,
+
+                  ),
+                  SizedBox(
+                    height: AppDimension.height22,
+                    width: AppDimension.width150,
+                    child: Text(
+                      'Enter Activation code',
+                      style: TextStyle(
+                        fontFamily: "AxiFormaLight",
+                        fontSize: AppDimension.font16,
+                        color: Color(0xFF96989A),
+
                       ),
                     ),
                     SizedBox(
@@ -97,16 +93,18 @@ class _ActivationPageState extends State<ActivationPage> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: AppDimension.height136,
-                    ),
-    
-                     LoginButton(
-                      routeName: PinSetUpPage(),
-                    )
-    
-                  ],
-                ),
+
+                  ),
+                  SizedBox(
+                    height: AppDimension.height136,
+                  ),
+
+                  LoginButton(
+                    routeName: PinSetUpPage(),
+                  )
+
+                ],
+
               ),
             ),
           ),

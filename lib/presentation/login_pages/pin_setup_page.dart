@@ -24,11 +24,12 @@ class _PinSetUpPageState extends State<PinSetUpPage> {
       body: Stack(
         children: [
           Container(
-           
+
+            width: AppDimension.screenWidth,
+              height: AppDimension.screenHeight,
             child: SvgPicture.asset(
               'assets/images/Patterns.svg',
-              width: AppDimension.screenWidth,
-              height: AppDimension.screenHeight,
+
               fit: BoxFit.cover,
             ),
           ),
@@ -103,7 +104,9 @@ class _PinSetUpPageState extends State<PinSetUpPage> {
                         keyboardType: TextInputType.number,
                         decoration: InputDecoration(
                           hintText: 'Confirm PIN',
-                          hintStyle: TextStyle(fontSize: AppDimension.font14),
+
+                          hintStyle: TextStyle(fontSize: AppDimension.font14,),
+
                           labelText: '',
                           contentPadding: EdgeInsets.zero,
                           border: UnderlineInputBorder(

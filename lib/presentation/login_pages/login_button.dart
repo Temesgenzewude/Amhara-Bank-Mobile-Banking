@@ -9,7 +9,6 @@ class LoginButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
     return SizedBox(
       height: AppDimension.height44,
       width: AppDimension.width140,
@@ -19,10 +18,13 @@ class LoginButton extends StatelessWidget {
               context, MaterialPageRoute(builder: (context) => routeName));
         },
         style: ElevatedButton.styleFrom(
-            backgroundColor: const Color(0xFF005EA6),
-            textStyle:
-                 TextStyle(fontSize: AppDimension.font16, fontWeight: FontWeight.w500)),
-        child:  Text('Login'),
+          backgroundColor: const Color(0xFF005EA6),
+          textStyle: TextStyle(
+              fontSize: AppDimension.font16,
+              fontWeight: FontWeight.w500,
+              fontFamily: 'AxiFormaRegular'),
+        ),
+        child: Text('Login'),
       ),
     );
   }

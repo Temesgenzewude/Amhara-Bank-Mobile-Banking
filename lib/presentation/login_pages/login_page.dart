@@ -18,90 +18,86 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
+
     return Scaffold(
       body: Stack(
         children: [
-          Container(
-            
+          SizedBox(
+            height: AppDimension.screenHeight,
+            width: AppDimension.screenWidth,
             child: SvgPicture.asset(
               'assets/images/Patterns.svg',
-              width: screenSize.width,
-              height: screenSize.height,
               fit: BoxFit.cover,
             ),
           ),
-          Container(
-           
-            child: SingleChildScrollView(
-              child: Center(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      height: AppDimension.height40,
-                    ),
-                    SvgPicture.asset(
-                      'assets/images/amhara_bank_logo_yellow.svg',
-                      height: AppDimension.height96,
-                      width: AppDimension.width196,
-                    ),
-                    SizedBox(
-                      height: AppDimension.height68,
-                    ),
-                    SizedBox(
-                      height: AppDimension.contHeight80,
-                      width: AppDimension.width139,
-                      child: Text(
-                        'Welcome!',
-                        style: TextStyle(
-                          fontSize: AppDimension.font28,
-                          fontFamily: "AxiformaRegular",
-                          color: const Color(0xFF005EA6),
-                        ),
-                        textAlign: TextAlign.center,
+          SingleChildScrollView(
+            child: Center(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: AppDimension.height40,
+                  ),
+                  SvgPicture.asset(
+                    'assets/images/amhara_bank_logo_yellow.svg',
+                    height: AppDimension.height96,
+                    width: AppDimension.width196,
+                  ),
+                  SizedBox(
+                    height: AppDimension.height68,
+                  ),
+                  SizedBox(
+                    height: AppDimension.contHeight80,
+                    width: AppDimension.width139,
+                    child: Text(
+                      'Welcome!',
+                      style: TextStyle(
+                        fontSize: AppDimension.font28,
+                        fontFamily: "AxiformaRegular",
+                        color: const Color(0xFF005EA6),
+
                       ),
                     ),
-                    SizedBox(
-                      height: AppDimension.height22,
-                      width: AppDimension.width66,
-                      child: Text(
-                        'Enter PIN',
-                        style: TextStyle(
-                            fontFamily: "AxiFormaLight",
-                            fontSize: AppDimension.font16,
-                            color: Color(0xFF96989A)),
-                      ),
+
+                  ),
+                  SizedBox(
+                    height: AppDimension.height22,
+                    width: AppDimension.width66,
+                    child: Text(
+                      'Enter PIN',
+                      style: TextStyle(
+                          fontFamily: "AxiFormaLight",
+                          fontSize: AppDimension.font16,
+                          color: Color(0xFF96989A)),
                     ),
-                    SizedBox(
-                      height: AppDimension.height69,
+                  ),
+                  SizedBox(
+                    height: AppDimension.height69,
+                  ),
+                  SizedBox(
+                    width: AppDimension.width160,
+                    child: PinCodeFields(
+                      textStyle: TextStyle(fontFamily: "AxiFormaLight"),
+                      length: 4,
+                      fieldWidth: AppDimension.width30,
+                      margin: EdgeInsets.all(AppDimension.width12),
+                      keyboardType: TextInputType.number,
+                      controller: loginController,
+                      focusNode: focusNode,
+                      onComplete: (String value) {
+                        print(value);
+                      },
                     ),
-                    SizedBox(
-                      width: AppDimension.width160,
-                      child: PinCodeFields(
-                        textStyle: TextStyle(fontFamily: "AxiFormaLight"),
-                        length: 4,
-                        fieldWidth: AppDimension.width30,
-                        margin: EdgeInsets.all(AppDimension.width12),
-                        keyboardType: TextInputType.number,
-                        controller: loginController,
-                        focusNode: focusNode,
-                        onComplete: (String value) {
-                          print(value);
-                        },
-                      ),
-                    ),
-                    SizedBox(
-                      height: AppDimension.height136,
-                    ),
-    
-                     LoginButton(
-                      routeName: ServiceHomePage(),
-                    )
-    
-                  ],
-                ),
+                  ),
+                  SizedBox(
+                    height: AppDimension.height136,
+                  ),
+                  LoginButton(
+                    routeName: ServiceHomePage(),
+                  )
+                ],
+
               ),
             ),
           ),
