@@ -1,6 +1,13 @@
 import 'package:amhara_bank_mobile_banking/presentation/login_pages/activation_page.dart';
 import 'package:amhara_bank_mobile_banking/presentation/login_pages/login_page.dart';
 import 'package:amhara_bank_mobile_banking/presentation/login_pages/pin_setup_page.dart';
+import 'package:amhara_bank_mobile_banking/presentation/other_bank_transfer/other_bank_transfer_1.dart';
+import 'package:amhara_bank_mobile_banking/presentation/pay_bills_pages/billing_page_summary.dart';
+import 'package:amhara_bank_mobile_banking/presentation/pay_bills_pages/ethio_tell_pay_bills.dart';
+import 'package:amhara_bank_mobile_banking/presentation/pay_bills_pages/pay_bills.dart';
+import 'package:amhara_bank_mobile_banking/presentation/pay_bills_pages/pay_with_service_number.dart';
+import 'package:amhara_bank_mobile_banking/presentation/pay_bills_pages/payment_complete.dart';
+import 'package:amhara_bank_mobile_banking/presentation/profile.dart';
 import 'package:amhara_bank_mobile_banking/presentation/services/services_home_page.dart';
 
 import 'package:amhara_bank_mobile_banking/presentation/splashscreen.dart';
@@ -19,7 +26,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
   
@@ -28,7 +34,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
       
-      home: TelebirrAccountTransfer(),
+      home:PinSetUpPage(),
     );
   }
 }
