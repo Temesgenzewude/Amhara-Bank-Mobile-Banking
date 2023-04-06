@@ -95,9 +95,11 @@ class _ActivationPageState extends State<ActivationPage> {
                   SizedBox(
                     height: AppDimension.height136,
                   ),
+
                   LoginButton(
                     routeName: PinSetUpPage(),
                   )
+
                 ],
               ),
             ),

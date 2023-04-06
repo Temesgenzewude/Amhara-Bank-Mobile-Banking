@@ -10,16 +10,10 @@ import 'package:amhara_bank_mobile_banking/presentation/pay_bills_pages/payment_
 import 'package:amhara_bank_mobile_banking/presentation/profile.dart';
 import 'package:amhara_bank_mobile_banking/presentation/services/services_home_page.dart';
 
-import 'package:amhara_bank_mobile_banking/presentation/splashscreen.dart';
-import 'package:amhara_bank_mobile_banking/presentation/transfer_pages/own_account_transfer/own_account_transfer.dart';
-import 'package:amhara_bank_mobile_banking/presentation/transfer_pages/successfully_transfered.dart';
-import 'package:amhara_bank_mobile_banking/presentation/transfer_pages/telebirr_transfer/telebirr_account_transfer.dart';
-import 'package:amhara_bank_mobile_banking/presentation/transfer_pages/transfer_account.dart';
+import 'package:amhara_bank_mobile_banking/routes/route_helper.dart';
+
 import 'package:get/get.dart';
-
 import 'package:flutter/material.dart';
-
-
 
 void main() {
   runApp(MyApp());
@@ -28,13 +22,14 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-  
-
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
 
-      
-      home:PinSetUpPage(),
+
+      initialRoute: RouteHelper.getServicesPage(),
+      getPages: RouteHelper.routes,
+
+
     );
   }
 }
