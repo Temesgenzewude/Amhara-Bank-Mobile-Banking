@@ -246,7 +246,7 @@ class AppDimension {
   static double contHeight150 = screenHeight / (myDeviceHeight / 150);
   static double contWid150 = screenWidth / (myDeviceWidth / 150);
   static double contHeight64 = screenHeight / (myDeviceHeight / 64);
-    static double height50 = screenHeight / (myDeviceHeight / 50);
+    // static double height50 = screenHeight / (myDeviceHeight / 50);
   static double height100 = screenHeight / (myDeviceHeight / 100);
 
   // splash screen dimensions

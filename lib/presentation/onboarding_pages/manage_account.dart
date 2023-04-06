@@ -21,12 +21,12 @@ class ManageAccountPage extends StatelessWidget {
           ),
           SizedBox(
             width: AppDimension.width287,
-            height: AppDimension.height94,
+            height: AppDimension.height100,
             child: Text(
               "Manage Your Accounts",
               style: TextStyle(
                   fontWeight: FontWeight.w500,
-                  fontFamily: "axioforma",
+                  fontFamily: "AxiFormaSemiBold",
                   fontSize: AppDimension.font26+AppDimension.font10,
                   color: Color(0xFF143B58)),
               textAlign: TextAlign.center,
@@ -40,7 +40,12 @@ class ManageAccountPage extends StatelessWidget {
             width: AppDimension.width287 + AppDimension.height10,
             child: Text(
               "Send,recieve and manage your account",
-              style: TextStyle(color: Color(0xFF687B89), fontSize: AppDimension.font16),
+              style: TextStyle(
+                color: Color(0xFF687B89), 
+                fontSize: AppDimension.font16,
+                fontFamily: "AxiFormaRegular"
+                
+                ),
               textAlign: TextAlign.center,
             ),
           ),

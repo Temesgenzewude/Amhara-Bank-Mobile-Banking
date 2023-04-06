@@ -18,94 +18,100 @@ class _ActivationPageState extends State<ActivationPage> {
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
-    return Stack(
-      children: [
-        SvgPicture.asset(
-          'assets/images/Patterns.svg',
-          alignment: Alignment.center,
-          width: AppDimension.screenWidth,
-          height: AppDimension.screenHeight,
-        ),
-        Scaffold(
-          resizeToAvoidBottomInset: false,
-          body: SingleChildScrollView(
-            child: Center(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    height: AppDimension.height40,
-                  ),
-                  SvgPicture.asset(
-                    'assets/images/amhara_bank_logo_yellow.svg',
-                    height: AppDimension.height96,
-                    width: AppDimension.width196,
-                  ),
-                  SizedBox(
-                    height: AppDimension.height68,
-                  ),
-                  SizedBox(
-                    height: AppDimension.contHeight80,
-                    width: AppDimension.width139,
-                    child: Text(
-                      'Welcome!',
-                      style: TextStyle(
-                        fontSize: AppDimension.font28,
-                        fontWeight: FontWeight.w400,
-                        color: const Color(0xFF005EA6),
-                      ),
-                      textAlign: TextAlign.center,
+    return Scaffold(
+      body: Stack(
+        children: [
+          Container(
+            
+            
+            child: SvgPicture.asset(
+              'assets/images/Patterns.svg',
+              width: AppDimension.screenWidth,
+              height: AppDimension.screenHeight,
+              fit: BoxFit.cover,
+            ),
+          ),
+          Container(
+            
+            child: SingleChildScrollView(
+              child: Center(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: AppDimension.height40,
                     ),
-                  ),
-                  SizedBox(
-                    height: AppDimension.height22,
-                    width: AppDimension.width150,
-                    child: Text(
-                      'Enter Activation code',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w300,
-                        fontSize: AppDimension.font16,
-                        color: Color(0xFF96989A),
-                      ),
-                      textAlign: TextAlign.center,
+                    SvgPicture.asset(
+                      'assets/images/amhara_bank_logo_yellow.svg',
+                      height: AppDimension.height96,
+                      width: AppDimension.width196,
                     ),
-                  ),
-                  SizedBox(
-                    height: AppDimension.height69,
-                  ),
-                  SizedBox(
-                    width: AppDimension.width238,
-                    child: TextField(
-                      keyboardType: TextInputType.number,
-                      controller: activationController,
-                      decoration: InputDecoration(
-                        border: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Color(0XFF0047BA),
-                            width: AppDimension.width1,
-                          ),
+                    SizedBox(
+                      height: AppDimension.height68,
+                    ),
+                    SizedBox(
+                      height: AppDimension.contHeight80,
+                      width: AppDimension.width139,
+                      child: Text(
+                        'Welcome!',
+                        style: TextStyle(
+                          fontSize: AppDimension.font28,
+                          fontFamily: "AxiformaRegular",
+                          color: const Color(0xFF0047BA),
                         ),
-                        hintText: '',
-                        labelText: '',
-                        contentPadding: EdgeInsets.zero,
+                        textAlign: TextAlign.center,
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    height: AppDimension.height136,
-                  ),
-
-                  //  LoginButton(
-                  //   routeName: PinSetUpPage(),
-                  // )
-
-                ],
+                    SizedBox(
+                      height: AppDimension.height22,
+                      width: AppDimension.width150,
+                      child: Text(
+                        'Enter Activation code',
+                        style: TextStyle(
+                          fontFamily: "AxiFormaLight",
+                          fontSize: AppDimension.font16,
+                          color: Color(0xFF96989A),
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    SizedBox(
+                      height: AppDimension.height69,
+                    ),
+                    SizedBox(
+                      width: AppDimension.width238,
+                      child: TextField(
+                        keyboardType: TextInputType.number,
+                        controller: activationController,
+                        decoration: InputDecoration(
+                          border: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(0XFF0047BA),
+                              width: AppDimension.width1,
+                            ),
+                          ),
+                          hintText: '',
+                          labelText: '',
+                          contentPadding: EdgeInsets.zero,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: AppDimension.height136,
+                    ),
+    
+                     LoginButton(
+                      routeName: PinSetUpPage(),
+                    )
+    
+                  ],
+                ),
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

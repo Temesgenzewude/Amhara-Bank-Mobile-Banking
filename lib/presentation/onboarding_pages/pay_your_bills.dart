@@ -25,7 +25,7 @@ class PayYourBillsPage extends StatelessWidget {
               "Pay Your Bills",
               style: TextStyle(
                   fontWeight: FontWeight.w500,
-                  fontFamily: 'axioforma',
+                  fontFamily: 'AxiFormaSemiBold',
                   fontSize: AppDimension.font26+AppDimension.font10,
                   color: Color(0xFF143B58)),
               textAlign: TextAlign.center,
@@ -39,7 +39,11 @@ class PayYourBillsPage extends StatelessWidget {
             width: AppDimension.width287 + AppDimension.width10,
             child: Text(
               "Pay for your service bills right from your phone",
-              style: TextStyle(color: Color(0xFF687B89),  fontSize: AppDimension.font16),
+              style: TextStyle(
+                color: Color(0xFF687B89), 
+                 fontSize: AppDimension.font16,
+                 fontFamily: "AxiFormaRegular",
+                 ),
               textAlign: TextAlign.center,
             ),
           ),

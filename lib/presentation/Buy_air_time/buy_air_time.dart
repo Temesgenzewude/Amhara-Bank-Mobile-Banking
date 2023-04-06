@@ -5,19 +5,18 @@ import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class OtherBankTrasfer2 extends StatefulWidget {
-  OtherBankTrasfer2({super.key});
+class BuyAirTime extends StatefulWidget {
+  BuyAirTime({super.key});
 
   @override
-  State<OtherBankTrasfer2> createState() => _OtherBankTrasfer2State();
+  State<BuyAirTime> createState() => _BuyAirTimeState();
 }
 
-class _OtherBankTrasfer2State extends State<OtherBankTrasfer2> {
+class _BuyAirTimeState extends State<BuyAirTime> {
   TextEditingController accountnumberController = TextEditingController();
   TextEditingController amountContoller = TextEditingController();
   TextEditingController accountToTransferController = TextEditingController();
   String? selectedValue = "Abebe Bikila Abebe-8***9";
-  String? selectedValueforBank = "Commercial Bank of Ethiopia";
   List dropdownItems = [
     "Abebe Bikila Abebe-8***9",
     "Abel Abebe-8***9",
@@ -44,19 +43,19 @@ class _OtherBankTrasfer2State extends State<OtherBankTrasfer2> {
               children: [
                 IconButton(
                   onPressed: () {
-                    Get.toNamed(RouteHelper.getOtherBankTransfer1());
+                    Get.toNamed(RouteHelper.getServicesPage());
                   },
                   icon: const Icon(Icons.chevron_left),
                   iconSize: AppDimension.iconSize33,
                   color: Color(0xFF143B58),
                 ),
                 Text(
-                  "Other Bank Transfer",
+                  "Buy Airtime",
                   style: TextStyle(
-                      color: Color(0xFF143B58),
-                      fontWeight: FontWeight.w400,
-                      fontSize: AppDimension.font24,
-                      fontFamily: "AxiFormaRegular"),
+                    color: Color(0xFF143B58),
+                    fontFamily: "AxiformaRegular",
+                    fontSize: AppDimension.font24,
+                  ),
                 ),
               ],
             ),
@@ -67,7 +66,7 @@ class _OtherBankTrasfer2State extends State<OtherBankTrasfer2> {
               padding: EdgeInsets.only(
                   left: AppDimension.width24,
                   right: AppDimension.width25,
-                  top: AppDimension.height10),
+                  top: AppDimension.height20),
               child: SizedBox(
                 height: AppDimension.height716,
                 child: Column(
@@ -83,12 +82,13 @@ class _OtherBankTrasfer2State extends State<OtherBankTrasfer2> {
                             Text(
                               "Select Account",
                               style: TextStyle(
-                                  color: const Color(0xFF143B58),
-                                  fontSize: AppDimension.font18,
-                                  fontFamily: "AxiFormaRegular"),
+                                color: const Color(0xFF143B58),
+                                fontSize: AppDimension.font18,
+                                fontFamily: "AxiformaRegular",
+                              ),
                             ),
                             SizedBox(
-                              height: AppDimension.height10,
+                              height: AppDimension.height20,
                             ),
                             Container(
                               padding: EdgeInsets.only(
@@ -125,8 +125,7 @@ class _OtherBankTrasfer2State extends State<OtherBankTrasfer2> {
                                         dropdownvalue,
                                         style: TextStyle(
                                             fontSize: AppDimension.font16,
-                                            fontWeight: FontWeight.w400,
-                                            fontFamily: "AxiFormaRegular",
+                                            fontFamily: "AxiformaRegular",
                                             color: Color(0xFF143B58)),
                                       ),
                                     );
@@ -144,79 +143,15 @@ class _OtherBankTrasfer2State extends State<OtherBankTrasfer2> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "Bank to Transfer",
-                              style: TextStyle(
-                                  color: const Color(0xFF143B58),
-                                  fontSize: AppDimension.font18,
-                                  fontFamily: "AxiFormaRegular",
-                                  fontWeight: FontWeight.w400),
-                            ),
-                            SizedBox(
-                              height: AppDimension.height10,
-                            ),
-                            Container(
-                              padding: EdgeInsets.only(
-                                  left: AppDimension.width24,
-                                  right: AppDimension.width21),
-                              width: AppDimension.width341,
-                              height: AppDimension.contHeight64,
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: Colors.grey,
-                                      width: AppDimension.width1),
-                                  borderRadius: BorderRadius.circular(
-                                      AppDimension.radius24)),
-                              child: DropdownButtonHideUnderline(
-                                child: DropdownButton(
-                                  icon: SizedBox(
-                                    height: AppDimension.height20,
-                                    width: AppDimension.width10,
-                                    child: Icon(
-                                      Icons.keyboard_arrow_down,
-                                      color: Color(0xFF143B58),
-                                    ),
-                                  ),
-                                  value: selectedValueforBank,
-                                  onChanged: (newVal) {
-                                    setState(() {
-                                      selectedValueforBank = newVal! as String;
-                                    });
-                                  },
-                                  items: Banks.map((bankvalue) {
-                                    return DropdownMenuItem(
-                                      value: bankvalue,
-                                      child: Text(
-                                        bankvalue,
-                                        style: TextStyle(
-                                            fontFamily: "AxiFormaRegular",
-                                            fontSize: AppDimension.font16,
-                                            fontWeight: FontWeight.w400,
-                                            color: Color(0xFF143B58)),
-                                      ),
-                                    );
-                                  }).toList(),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: AppDimension.height30,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              "Account To Transfer",
+                              "Phone Number",
                               style: TextStyle(
                                 color: const Color(0xFF143B58),
                                 fontSize: AppDimension.font18,
-                                fontFamily: "AxiFormaRegular",
+                                fontFamily: "AxiformaRegular",
                               ),
                             ),
                             SizedBox(
-                              height: AppDimension.height10,
+                              height: AppDimension.height20,
                             ),
                             Container(
                               padding: EdgeInsets.only(
@@ -234,12 +169,12 @@ class _OtherBankTrasfer2State extends State<OtherBankTrasfer2> {
                                 controller: accountToTransferController,
                                 style: TextStyle(
                                   fontSize: AppDimension.font15,
-                                  fontFamily: "AxiFormaRegular",
+                                  fontFamily: "AxiformaRegular",
                                 ),
                                 keyboardType: TextInputType.number,
                                 decoration: const InputDecoration(
                                   border: InputBorder.none,
-                                  hintText: '000 000 000 000',
+                                  hintText: '',
                                   labelText: '',
                                   contentPadding: EdgeInsets.zero,
                                 ),
@@ -259,11 +194,11 @@ class _OtherBankTrasfer2State extends State<OtherBankTrasfer2> {
                               style: TextStyle(
                                 color: const Color(0xFF143B58),
                                 fontSize: AppDimension.font18,
-                                fontFamily: "AxiFormaRegular",
+                                fontFamily: "AxiformaRegular",
                               ),
                             ),
                             SizedBox(
-                              height: AppDimension.height10,
+                              height: AppDimension.height20,
                             ),
                             Container(
                               padding: EdgeInsets.only(
@@ -280,13 +215,13 @@ class _OtherBankTrasfer2State extends State<OtherBankTrasfer2> {
                               child: TextField(
                                 style: TextStyle(
                                   fontSize: AppDimension.font15,
-                                  fontFamily: "AxiFormaRegular",
+                                  fontFamily: "AxiformaRegular",
                                 ),
                                 keyboardType: TextInputType.number,
                                 controller: amountContoller,
                                 decoration: const InputDecoration(
                                   border: InputBorder.none,
-                                  hintText: '1000',
+                                  hintText: '',
                                   labelText: '',
                                   contentPadding: EdgeInsets.zero,
                                 ),
@@ -296,7 +231,7 @@ class _OtherBankTrasfer2State extends State<OtherBankTrasfer2> {
                         ),
                       ],
                     ),
-                    SizedBox(height: AppDimension.contHeight60),
+                    SizedBox(height: AppDimension.contHeight80),
                     Center(
                       child: SizedBox(
                         width: AppDimension.width341,
@@ -328,9 +263,10 @@ class _OtherBankTrasfer2State extends State<OtherBankTrasfer2> {
                                       Text(
                                         'Confirm',
                                         style: TextStyle(
-                                            color: Color(0xFf143B58),
-                                            fontSize: AppDimension.font24,
-                                            fontFamily: "AxiFormaSemiBold"),
+                                          color: Color(0xFF143B58),
+                                          fontSize: AppDimension.font24,
+                                          fontFamily: "AxiformaRegular",
+                                        ),
                                       ),
                                       SizedBox(
                                         width: AppDimension.width40,
@@ -359,10 +295,10 @@ class _OtherBankTrasfer2State extends State<OtherBankTrasfer2> {
                                           height: AppDimension.height40,
                                         ),
                                         Text(
-                                          'Are you sure to transfer 500 ETB from Account Number 8898320381 to CBE Account 1000220977009?',
+                                          'Are you sure to top up 50 ETB Airtime from Account Number 8898320381 to service number 0910101010?',
                                           style: TextStyle(
                                             fontSize: AppDimension.font16,
-                                            fontFamily: "AxiFormaRegular",
+                                            fontFamily: "AxiformaRegular",
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -397,7 +333,7 @@ class _OtherBankTrasfer2State extends State<OtherBankTrasfer2> {
                                               "Cancel",
                                               style: TextStyle(
                                                   color: Color(0xFF005EA6),
-                                                  fontFamily: "AxiFormaRegular",
+                                                  fontFamily: "AxiformaRegular",
                                                   fontSize:
                                                       AppDimension.font16),
                                             ),
@@ -409,7 +345,7 @@ class _OtherBankTrasfer2State extends State<OtherBankTrasfer2> {
                                           child: ElevatedButton(
                                             style: ElevatedButton.styleFrom(
                                               backgroundColor:
-                                                  Color(0xFF0047BA),
+                                                  Color(0xFF005EA6),
                                               shape: RoundedRectangleBorder(
                                                 borderRadius:
                                                     BorderRadius.circular(
@@ -419,13 +355,13 @@ class _OtherBankTrasfer2State extends State<OtherBankTrasfer2> {
                                             ),
                                             onPressed: () {
                                               Get.toNamed(RouteHelper
-                                                  .getOtherBankSuccessful());
+                                                  .getBuyAirtimeSuccessPage());
                                             },
                                             child: Text(
                                               "Confirm",
                                               style: TextStyle(
                                                 fontSize: AppDimension.font16,
-                                                fontFamily: "AxiFormaRegular",
+                                                fontFamily: "AxiformaSemiBold",
                                               ),
                                             ),
                                           ),
@@ -442,7 +378,7 @@ class _OtherBankTrasfer2State extends State<OtherBankTrasfer2> {
                             'Continue',
                             style: TextStyle(
                               fontSize: AppDimension.font16,
-                              fontFamily: "AxiFormaRegular",
+                              fontFamily: "AxiformaRegular",
                             ),
                           ),
                         ),
