@@ -344,7 +344,6 @@ class _ServicePageState extends State<ServicePage> {
                         height: AppDimension.height10,
                       ),
                       Expanded(
-
                         child: GestureDetector(
                           onTap: () {
                             Get.toNamed(RouteHelper.getPayBillsPage());

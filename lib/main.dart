@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
 
-      initialRoute: RouteHelper.getServicesPage(),
+      initialRoute: RouteHelper.getSplashScreen(),
       getPages: RouteHelper.routes,
 
 
