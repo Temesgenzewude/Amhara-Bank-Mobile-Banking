@@ -18,6 +18,7 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: Stack(
         children: [
@@ -55,9 +56,10 @@ class _LoginPageState extends State<LoginPage> {
                         fontSize: AppDimension.font28,
                         fontFamily: "AxiformaRegular",
                         color: const Color(0xFF005EA6),
+
                       ),
-                      textAlign: TextAlign.center,
                     ),
+
                   ),
                   SizedBox(
                     height: AppDimension.height22,
@@ -95,6 +97,7 @@ class _LoginPageState extends State<LoginPage> {
                     routeName: ServiceHomePage(),
                   )
                 ],
+
               ),
             ),
           ),

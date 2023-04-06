@@ -75,7 +75,7 @@ class _ServicePageState extends State<ServicePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
 
-                    SizedBox(height: AppDimension.height10,),
+                    SizedBox(height: AppDimension.height5,),
                     Text(
                       "Balance",
                       style: TextStyle(
@@ -222,7 +222,7 @@ class _ServicePageState extends State<ServicePage> {
                           options: CarouselOptions(
                             height: AppDimension.contHeight100 +
 
-                                AppDimension.contHeight80-AppDimension.height20,
+                                AppDimension.contHeight80-(AppDimension.height15),
 
                             viewportFraction: 1,
                             autoPlay: true,
@@ -384,7 +384,7 @@ class _ServicePageState extends State<ServicePage> {
 
                         child: GestureDetector(
                           onTap: () {
-                            Get.toNamed(RouteHelper.otherBankServicesPage);
+                            Get.toNamed(RouteHelper.getOtherBankTransfer1());
                           },
                           child: const ServicesPageContainer(
                             image: "assets/images/services/other_bank_services.svg",
