@@ -18,18 +18,18 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
-    return Stack(
-      children: [
-        SvgPicture.asset(
-          'assets/images/Patterns.svg',
-          alignment: Alignment.center,
-          width: screenSize.width,
-          height: screenSize.height,
-        ),
-        Scaffold(
-          resizeToAvoidBottomInset: false,
-          body: SingleChildScrollView(
+    return Scaffold(
+      body: Stack(
+        children: [
+          SizedBox(
+            height: AppDimension.screenHeight,
+            width: AppDimension.screenWidth,
+            child: SvgPicture.asset(
+              'assets/images/Patterns.svg',
+              fit: BoxFit.cover,
+            ),
+          ),
+          SingleChildScrollView(
             child: Center(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -53,7 +53,7 @@ class _LoginPageState extends State<LoginPage> {
                       'Welcome!',
                       style: TextStyle(
                         fontSize: AppDimension.font28,
-                        fontWeight: FontWeight.w400,
+                        fontFamily: "AxiformaRegular",
                         color: const Color(0xFF005EA6),
                       ),
                       textAlign: TextAlign.center,
@@ -65,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
                     child: Text(
                       'Enter PIN',
                       style: TextStyle(
-                          fontWeight: FontWeight.w300,
+                          fontFamily: "AxiFormaLight",
                           fontSize: AppDimension.font16,
                           color: Color(0xFF96989A)),
                     ),
@@ -76,6 +76,7 @@ class _LoginPageState extends State<LoginPage> {
                   SizedBox(
                     width: AppDimension.width160,
                     child: PinCodeFields(
+                      textStyle: TextStyle(fontFamily: "AxiFormaLight"),
                       length: 4,
                       fieldWidth: AppDimension.width30,
                       margin: EdgeInsets.all(AppDimension.width12),
@@ -90,17 +91,15 @@ class _LoginPageState extends State<LoginPage> {
                   SizedBox(
                     height: AppDimension.height136,
                   ),
-
-                   LoginButton(
+                  LoginButton(
                     routeName: ServiceHomePage(),
                   )
-
                 ],
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
