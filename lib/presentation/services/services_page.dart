@@ -23,13 +23,14 @@ class _ServicePageState extends State<ServicePage> {
   bool _isVisible = true;
   bool _isDropDown = true;
 
-  void handleVisibilityChange() {
+  void _handleVisibilityChange() {
+
     setState(() {
       _isVisible = !_isVisible;
     });
   }
 
-  void handleDropDownTap() {
+  void _handleDropDownTap() {
     setState(() {
       _isDropDown = !_isDropDown;
     });
@@ -81,7 +82,8 @@ class _ServicePageState extends State<ServicePage> {
                       style: TextStyle(
                           color: Color(0xFF191919),
                           fontFamily: "PoppinsMedium",
-                          fontSize: AppDimension.font26),
+                          fontSize: AppDimension.font18),
+
                     ),
                     SizedBox(
                       height: AppDimension.height5,
@@ -91,7 +93,7 @@ class _ServicePageState extends State<ServicePage> {
                       style: TextStyle(
                           color: Color(0xFF969696),
                           fontFamily: "PoppinsRegular",
-                          fontSize: AppDimension.font18),
+                          fontSize: AppDimension.font10+ AppDimension.font2),
                     ),
                     SizedBox(
                       height: AppDimension.height10,
@@ -130,11 +132,11 @@ class _ServicePageState extends State<ServicePage> {
                                     style: TextStyle(
                                         color: Color(0xFFC4CACE),
                                         fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.font16),
+                                        fontSize: AppDimension.font16/2),
                                   ),
                                   GestureDetector(
                                     onTap: () {
-                                      handleDropDownTap();
+                                      _handleDropDownTap();
                                     },
                                     child: Container(
                                       height: AppDimension.height25,
@@ -144,7 +146,7 @@ class _ServicePageState extends State<ServicePage> {
                                             ? Icons.arrow_drop_down_outlined
                                             : Icons.arrow_drop_up_outlined,
                                         color: Color(0xFFC4CACE),
-                                        size: AppDimension.iconSize24,
+                                        size: AppDimension.iconSize10,
                                       ),
                                     ),
                                   ),
@@ -185,13 +187,13 @@ class _ServicePageState extends State<ServicePage> {
                           ),
                           GestureDetector(
                             onTap: () {
-                              handleVisibilityChange();
+                              _handleVisibilityChange();
                             },
                             child: Icon(
                                 _isVisible
                                     ? Icons.visibility_off_outlined
                                     : Icons.visibility_outlined,
-                                size: AppDimension.iconSize24,
+                                size: AppDimension.iconSize20,
                                 color: const Color(0xFFAAC9E0)),
                           ),
                         ],

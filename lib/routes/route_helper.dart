@@ -11,6 +11,7 @@ import 'package:amhara_bank_mobile_banking/presentation/pay_bills_pages/pay_bill
 import 'package:amhara_bank_mobile_banking/presentation/pay_bills_pages/pay_with_service_number.dart';
 import 'package:amhara_bank_mobile_banking/presentation/pay_bills_pages/payment_complete.dart';
 import 'package:amhara_bank_mobile_banking/presentation/profile.dart';
+import 'package:amhara_bank_mobile_banking/presentation/account_pages/account_home_page.dart';
 import 'package:amhara_bank_mobile_banking/presentation/services/services_home_page.dart';
 import 'package:amhara_bank_mobile_banking/presentation/splashscreen.dart';
 import 'package:amhara_bank_mobile_banking/presentation/transfer_pages/own_account_transfer/own_account_transfer.dart';
@@ -44,6 +45,10 @@ class RouteHelper {
   static const String payWithServiceNumber = '/pay-with-service-number';
   static const String billingSummary = '/billing-summary-page';
   static const String paymentCompleted = '/payment-completed-page';
+  static const String buyAirtimePage = '/buy-airtime-page';
+  static const String otherBankServicesPage = '/other-bank-services-page';
+  static const String payBillsPage = '/pay-bills-page';
+  static const String accountPage = "/account-page";
 
   static getSplashScreen() => '$splashScreen';
 
@@ -57,15 +62,17 @@ class RouteHelper {
   static String getEthioTellPayBills() => "$ethioTellPayBills";
   static String getPayWithServiceNumber() => "$payWithServiceNumber";
   static String getBillingPageSummary() => "$billingSummary";
-  static String getPaymentCompleted()=> "$paymentCompleted";
-
-
+  static String getPaymentCompleted() => "$paymentCompleted";
 
   static String getServicesPage() => '$servicesPage';
   static String getTransferServicesPage() => '$transferServicesPage';
   static String getBuyAirtimePage() => '$buyairtimepage';
   static String getBuyAirtimeSuccessPage() => '$buyairtimesuccesspage';
   static String getOnboardingPage() => '$onboardingpage';
+  static String getOtherBankServicesPage() => '$otherBankServicesPage';
+
+  static String getAccountPage() => "$accountPage";
+
   static String getProfilePage() => '$profilePage';
   static String getOtherBankTransfer1() => '$otherbanktransfer1';
   static String getOtherBankTransfer2() => '$otherbanktransfer2';
@@ -94,16 +101,14 @@ class RouteHelper {
       transition: Transition.fadeIn,
     ),
     GetPage(
-      name: payWithServiceNumber,
-      page: (() => PayWithServiceNumber()),
-      transition: Transition.fadeIn
-    ),
-     GetPage(
-      name: billingSummary,
-      page: (() => BillingPageSummary()),
-      transition: Transition.fadeIn
-    ),
-     GetPage(
+        name: payWithServiceNumber,
+        page: (() => PayWithServiceNumber()),
+        transition: Transition.fadeIn),
+    GetPage(
+        name: billingSummary,
+        page: (() => BillingPageSummary()),
+        transition: Transition.fadeIn),
+    GetPage(
       name: paymentCompleted,
       page: (() => PaymentCompleted()),
       transition: Transition.fadeIn,
