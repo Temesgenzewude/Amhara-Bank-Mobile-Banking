@@ -23,9 +23,7 @@ class TransferAccount extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 IconButton(
-                  onPressed: () =>Get.toNamed(RouteHelper.servicesPage),
-                
-                  
+                  onPressed: () => Get.toNamed(RouteHelper.servicesPage),
                   icon: const Icon(Icons.chevron_left),
                   iconSize: AppDimension.iconSize33,
                   color: Color(0xFF143B58),

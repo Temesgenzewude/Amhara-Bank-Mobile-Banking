@@ -22,9 +22,10 @@ class _profileState extends State<profile> {
   bool onpagechange = false;
   @override
   Widget build(BuildContext context) {
-
+    
     return Scaffold(
         backgroundColor: Color(0xFFFFFFFF),
+        
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -111,7 +112,6 @@ class _profileState extends State<profile> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-
                       Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
@@ -131,7 +131,6 @@ class _profileState extends State<profile> {
                                   ))
                           ]),
                       Icon(Icons.chevron_right, size: AppDimension.height25)
-
                     ],
                   ),
                 ),
@@ -158,7 +157,6 @@ class _profileState extends State<profile> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-
                       Row(children: [
                         Padding(
                           padding: const EdgeInsets.only(right: 15.0),
@@ -174,7 +172,6 @@ class _profileState extends State<profile> {
                               ))
                       ]),
                       Icon(Icons.chevron_right, size: AppDimension.height25)
-
                     ],
                   ),
                 ),
@@ -201,7 +198,6 @@ class _profileState extends State<profile> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-
                       Row(children: [
                         Padding(
                           padding: const EdgeInsets.only(right: 25.0),
@@ -216,12 +212,10 @@ class _profileState extends State<profile> {
                               ))
                       ]),
                       Icon(Icons.chevron_right, size: AppDimension.height25)
-
                     ],
                   ),
                 ),
               ),
-
             ),
             Padding(
               padding: EdgeInsets.only(
@@ -240,12 +234,10 @@ class _profileState extends State<profile> {
                   left: AppDimension.width25),
               child: GestureDetector(
                 onTap: () {},
-
                 child: Container(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-
                       Row(children: [
                         Padding(
                           padding: const EdgeInsets.only(right: 25.0),
@@ -261,7 +253,6 @@ class _profileState extends State<profile> {
                               ))
                       ]),
                       Icon(Icons.chevron_right, size: AppDimension.height25)
-
                     ],
                   ),
                 ),
@@ -288,7 +279,6 @@ class _profileState extends State<profile> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-
                       Row(children: [
                         Padding(
                           padding: const EdgeInsets.only(right: 25.0),
@@ -304,12 +294,10 @@ class _profileState extends State<profile> {
                               ))
                       ]),
                       Icon(Icons.chevron_right, size: AppDimension.height25)
-
                     ],
                   ),
                 ),
               ),
-
             ),
             Padding(
               padding: EdgeInsets.only(
@@ -463,7 +451,6 @@ class _profileState extends State<profile> {
               ),
             )
           ],
-
         ));
   }
 }
