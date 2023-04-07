@@ -22,6 +22,7 @@ class _OtherBankSuccessfullyTransferredState extends State<OtherBankSuccessfully
           ),
           SizedBox(
             height: AppDimension.height57+AppDimension.height20,
+            
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [

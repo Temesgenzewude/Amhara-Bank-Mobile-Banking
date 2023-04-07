@@ -22,36 +22,37 @@ class _profileState extends State<profile> {
   bool onpagechange = false;
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
         backgroundColor: Color(0xFFFFFFFF),
-        
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
               padding: EdgeInsets.only(
-                  left: AppDimension.width25,
-                  top: AppDimension.height31 + AppDimension.height15),
-              child: Container(
-                child: Text(
-                  "Profile",
-                  style: TextStyle(
-                      fontSize: AppDimension.height25,
+                  right: AppDimension.width20 + AppDimension.width4,
+                  left: AppDimension.width20 + AppDimension.width4,
+                  top: AppDimension.height30 + AppDimension.height6),
+              child: Row(children: [
+                Container(
+                  height: AppDimension.height30 + AppDimension.height8,
+                  width: AppDimension.contWid100,
+                  child: Text(
+                    "Profile",
+                    style: TextStyle(
+                      fontSize: AppDimension.font24,
                       color: Color(0xFF143B58),
-                      fontFamily: "AxiformaSemiBold",
-                      
-                      ),
+                      fontFamily: "AxiFormaSemiBold",
+                    ),
+                  ),
                 ),
-              ),
+              ]),
             ),
-            Padding(
-              padding: EdgeInsets.only(top: AppDimension.height25),
-              child: Container(
-                width: AppDimension.screenWidth,
-                height: AppDimension.height96 - AppDimension.height94,
-                color: Color(0xFFDBD9D9),
-              ),
+            Divider(
+              thickness: AppDimension.height1,
+              color: Color(0xFFDBD9D9),
+              indent: 0,
+              // height: AppDimension.height20,
             ),
             Padding(
               padding: EdgeInsets.only(
@@ -80,9 +81,8 @@ class _profileState extends State<profile> {
                             Text(
                               "Language",
                               style: TextStyle(
-                                fontSize: AppDimension.font16,
-                                fontFamily: "AxiFormaRegular"
-                                ),
+                                  fontSize: AppDimension.font16,
+                                  fontFamily: "AxiFormaRegular"),
                             )
                           ]),
                       Icon(Icons.chevron_right, size: AppDimension.height25)
@@ -126,9 +126,8 @@ class _profileState extends State<profile> {
                             ),
                             Text("Change Pin",
                                 style: TextStyle(
-                                  fontSize: AppDimension.font16,
-                                  fontFamily: "AxiFormaRegular"
-                                  ))
+                                    fontSize: AppDimension.font16,
+                                    fontFamily: "AxiFormaRegular"))
                           ]),
                       Icon(Icons.chevron_right, size: AppDimension.height25)
                     ],
@@ -166,10 +165,8 @@ class _profileState extends State<profile> {
                         ),
                         Text("Share Holder Detail",
                             style: TextStyle(
-                              fontSize: AppDimension.font16,
-                              fontFamily: "AxiFormaRegular"
-                              
-                              ))
+                                fontSize: AppDimension.font16,
+                                fontFamily: "AxiFormaRegular"))
                       ]),
                       Icon(Icons.chevron_right, size: AppDimension.height25)
                     ],
@@ -207,9 +204,8 @@ class _profileState extends State<profile> {
                         ),
                         Text("Unsubscribe",
                             style: TextStyle(
-                              fontSize: AppDimension.font16,
-                              fontFamily: "AxiFormaRegular"
-                              ))
+                                fontSize: AppDimension.font16,
+                                fontFamily: "AxiFormaRegular"))
                       ]),
                       Icon(Icons.chevron_right, size: AppDimension.height25)
                     ],
@@ -248,9 +244,8 @@ class _profileState extends State<profile> {
                         ),
                         Text("FAQ",
                             style: TextStyle(
-                              fontSize: AppDimension.font16,
-                              fontFamily: "AxiFormaRegular"
-                              ))
+                                fontSize: AppDimension.font16,
+                                fontFamily: "AxiFormaRegular"))
                       ]),
                       Icon(Icons.chevron_right, size: AppDimension.height25)
                     ],
@@ -289,9 +284,8 @@ class _profileState extends State<profile> {
                         ),
                         Text("About",
                             style: TextStyle(
-                              fontSize: AppDimension.font16,
-                              fontFamily: "AxiFormaRegular"
-                              ))
+                                fontSize: AppDimension.font16,
+                                fontFamily: "AxiFormaRegular"))
                       ]),
                       Icon(Icons.chevron_right, size: AppDimension.height25)
                     ],
@@ -328,9 +322,8 @@ class _profileState extends State<profile> {
                     ),
                     Text("Logout",
                         style: TextStyle(
-                          fontSize: AppDimension.font16,
-                          fontFamily: "AxiFormaRegular"
-                          ))
+                            fontSize: AppDimension.font16,
+                            fontFamily: "AxiFormaRegular"))
                   ],
                 ),
                 onTap: () {
@@ -354,9 +347,7 @@ class _profileState extends State<profile> {
                                   style: TextStyle(
                                       color: Color(0xFf143B58),
                                       fontSize: AppDimension.font24,
-                                      fontFamily: "AxiFormaSemiBold"
-                                      ),
-                                      
+                                      fontFamily: "AxiFormaSemiBold"),
                                 ),
                               ),
                               SizedBox(
@@ -388,11 +379,9 @@ class _profileState extends State<profile> {
                                 ),
                                 Text(
                                   'Are you sure you want to Logout ?',
-                                  style:
-                                      TextStyle(
-                                        fontSize: AppDimension.font20,
-                                        fontFamily: "AxiFormaRegular"
-                                        ),
+                                  style: TextStyle(
+                                      fontSize: AppDimension.font20,
+                                      fontFamily: "AxiFormaRegular"),
                                   textAlign: TextAlign.center,
                                 ),
                               ],
@@ -420,7 +409,8 @@ class _profileState extends State<profile> {
                                     "Cancel",
                                     style: TextStyle(
                                         color: Color(0xFF005EA6),
-                                        fontSize: AppDimension.font16,fontFamily: "AxiFormaRegular"),
+                                        fontSize: AppDimension.font16,
+                                        fontFamily: "AxiFormaRegular"),
                                   ),
                                 ),
                                 ElevatedButton(
@@ -436,7 +426,8 @@ class _profileState extends State<profile> {
                                   child: Text(
                                     "Confirm",
                                     style: TextStyle(
-                                        fontSize: AppDimension.font16,fontFamily: "AxiFormaRegular"),
+                                        fontSize: AppDimension.font16,
+                                        fontFamily: "AxiFormaRegular"),
                                   ),
                                 )
                               ],
