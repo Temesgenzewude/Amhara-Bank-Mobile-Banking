@@ -71,7 +71,7 @@ class _ActivationPageState extends State<ActivationPage> {
                         color: Color(0xFF96989A),
 
                       ),
-                    ),
+                    ),),
                     SizedBox(
                       height: AppDimension.height69,
                     ),
@@ -94,7 +94,7 @@ class _ActivationPageState extends State<ActivationPage> {
                       ),
                     ),
 
-                  ),
+                  
                   SizedBox(
                     height: AppDimension.height136,
                   ),

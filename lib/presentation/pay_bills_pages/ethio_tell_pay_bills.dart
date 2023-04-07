@@ -130,7 +130,7 @@ class EthioTelPayBills extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: RusableBottomNavBAr(),
+      // bottomNavigationBar: ReUsableBottomNavBar(),
     );
   }
 }

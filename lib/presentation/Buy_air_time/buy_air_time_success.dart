@@ -225,7 +225,7 @@ class _BuyAirtimeSuccessfullyTransferredState
           )
         ],
       ),
-      bottomNavigationBar: ReUsableBottomNavBar(),
+      // bottomNavigationBar: ReUsableBottomNavBar(),
     );
   }
 }

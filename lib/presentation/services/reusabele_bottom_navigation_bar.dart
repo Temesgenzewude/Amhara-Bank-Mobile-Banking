@@ -5,8 +5,6 @@ import '../../utils/app_dimensions.dart';
 
 
 class ReUsableBottomNavBar extends StatefulWidget {
-  const ReUsableBottomNavBar({super.key});
-
   @override
   State<ReUsableBottomNavBar> createState() => _ReUsableBottomNavBarState();
 }

@@ -1492,6 +1492,7 @@ class _OtherBankTransfer1State extends State<OtherBankTransfer1> {
             ),
           ],
         ),
-        bottomNavigationBar: ReUsableBottomNavBar());
+        // bottomNavigationBar: ReUsableBottomNavBar()
+        );
   }
 }

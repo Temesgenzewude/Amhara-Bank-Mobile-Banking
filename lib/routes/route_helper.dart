@@ -7,6 +7,7 @@ import 'package:amhara_bank_mobile_banking/presentation/other_bank_transfer/othe
 import 'package:amhara_bank_mobile_banking/presentation/other_bank_transfer/other_bank_transfer_success.dart';
 import 'package:amhara_bank_mobile_banking/presentation/profile.dart';
 import 'package:amhara_bank_mobile_banking/presentation/services/services_home_page.dart';
+import 'package:amhara_bank_mobile_banking/presentation/services/services_page.dart';
 import 'package:amhara_bank_mobile_banking/presentation/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

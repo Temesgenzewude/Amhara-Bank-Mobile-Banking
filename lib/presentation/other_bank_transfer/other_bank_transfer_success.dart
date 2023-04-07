@@ -222,7 +222,7 @@ class _OtherBankSuccessfullyTransferredState extends State<OtherBankSuccessfully
           )
         ],
       ),
-      bottomNavigationBar: ReUsableBottomNavBar(),
+      // bottomNavigationBar: ReUsableBottomNavBar(),
     );
   }
 }

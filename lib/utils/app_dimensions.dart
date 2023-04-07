@@ -129,8 +129,9 @@ class AppDimension {
   static double width68 = screenWidth / (myDeviceWidth / 68);
   static double width81 = screenWidth / (myDeviceWidth / 81);
   static double width77 = screenWidth / (myDeviceWidth / 77);
+  static double width100 = screenWidth / (myDeviceWidth / 100);
 
-  static double width110 = screenWidth / (myDeviceWidth / 100);
+  static double width110 = screenWidth / (myDeviceWidth / 110);
   static double width106 = screenWidth / (myDeviceWidth / 106);
   static double width113 = screenWidth / (myDeviceWidth / 113);
 
@@ -155,6 +156,7 @@ class AppDimension {
   static double width196 = screenWidth / (myDeviceWidth / 196);
   static double width302 = screenHeight / (myDeviceWidth / 302);
   static double width357 = screenHeight / (myDeviceWidth / 357);
+  static double width265 = screenHeight / (myDeviceWidth / 265);
 
   static double width368 = screenHeight / (myDeviceWidth / 368);
 
@@ -270,6 +272,9 @@ class AppDimension {
   static double height94 = screenHeight / (myDeviceHeight / 94);
   static double height81 = screenHeight / (myDeviceHeight / 81);
 
+  static double height154 = screenHeight / (myDeviceHeight / 154);
+  static double height123 = screenHeight / (myDeviceHeight / 123);
+  static double height169 = screenHeight / (myDeviceHeight / 169);
 
 
 
