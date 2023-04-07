@@ -334,7 +334,7 @@ class _ServicePageState extends State<ServicePage> {
 
                         child: GestureDetector(
                           onTap: () {
-                            Get.toNamed(RouteHelper.getTransferServicesPage());
+                            Get.toNamed(RouteHelper.getTransferAccountPage());
                           },
                           child: const ServicesPageContainer(
                             image: "assets/images/services/transfer_services.svg",
@@ -347,7 +347,6 @@ class _ServicePageState extends State<ServicePage> {
                         height: AppDimension.height10,
                       ),
                       Expanded(
-
                         child: GestureDetector(
                           onTap: () {
                             Get.toNamed(RouteHelper.getPayBillsPage());

@@ -1,5 +1,7 @@
+import 'package:amhara_bank_mobile_banking/routes/route_helper.dart';
 import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ReusableAlertBox extends StatefulWidget {
   const ReusableAlertBox({super.key});
@@ -36,9 +38,7 @@ class _ReusableAlertBoxState extends State<ReusableAlertBox> {
             width: AppDimension.width24,
             height: AppDimension.height30,
             child: GestureDetector(
-              onTap: () {
-                Navigator.of(context).pop(false);
-              },
+              onTap: () => Get.back(),
               child: Icon(
                 Icons.close_outlined,
                 size: AppDimension.iconSize24,
@@ -122,7 +122,7 @@ class _ReusableAlertBoxState extends State<ReusableAlertBox> {
                     ),
                     side: BorderSide(
                         color: Color(0xFF005EA6), width: AppDimension.width1)),
-                onPressed: () => {Navigator.of(context).pop(false)},
+                onPressed: () =>Get.back(),
                 child: Text(
                   "Cancel",
                   style: TextStyle(
@@ -144,7 +144,7 @@ class _ReusableAlertBoxState extends State<ReusableAlertBox> {
                     ),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: ()=>Get.toNamed(RouteHelper.successfulTrasfer),
                 child: Text(
                   "Confirm",
                   style: TextStyle(

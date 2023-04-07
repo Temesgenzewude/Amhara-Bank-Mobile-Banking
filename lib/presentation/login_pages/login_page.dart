@@ -18,7 +18,6 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       body: Stack(
         children: [
@@ -56,10 +55,9 @@ class _LoginPageState extends State<LoginPage> {
                         fontSize: AppDimension.font28,
                         fontFamily: "AxiformaRegular",
                         color: const Color(0xFF005EA6),
-
                       ),
+                      textAlign: TextAlign.center,
                     ),
-
                   ),
                   SizedBox(
                     height: AppDimension.height22,
@@ -67,9 +65,11 @@ class _LoginPageState extends State<LoginPage> {
                     child: Text(
                       'Enter PIN',
                       style: TextStyle(
-                          fontFamily: "AxiFormaLight",
-                          fontSize: AppDimension.font16,
-                          color: Color(0xFF96989A)),
+                        fontFamily: "AxiFormaLight",
+                        fontSize: AppDimension.font16,
+                        color: Color(0xFF96989A),
+                      ),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                   SizedBox(
@@ -78,7 +78,10 @@ class _LoginPageState extends State<LoginPage> {
                   SizedBox(
                     width: AppDimension.width160,
                     child: PinCodeFields(
-                      textStyle: TextStyle(fontFamily: "AxiFormaLight"),
+                      textStyle: TextStyle(
+                        fontSize: AppDimension.font15,
+                        fontFamily: "AxiformaLightr",
+                      ),
                       length: 4,
                       fieldWidth: AppDimension.width30,
                       margin: EdgeInsets.all(AppDimension.width12),
@@ -97,7 +100,6 @@ class _LoginPageState extends State<LoginPage> {
                     routeName: ServiceHomePage(),
                   )
                 ],
-
               ),
             ),
           ),

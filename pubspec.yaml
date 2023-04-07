@@ -145,8 +145,7 @@ flutter:
     #       style: italic
     #       weight: 100
         
-        
-
+      
     - family: AxiFormaLight
       fonts:
         - asset: assets/fonts/axi/Axiforma-Light.ttf

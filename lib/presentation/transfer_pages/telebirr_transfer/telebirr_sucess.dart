@@ -4,14 +4,14 @@ import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class PaymentCompleted extends StatefulWidget {
-  const PaymentCompleted({super.key});
+class TeleBirrSuccess extends StatefulWidget {
+  const TeleBirrSuccess({super.key});
 
   @override
-  State<PaymentCompleted> createState() => _PaymentCompletedState();
+  State<TeleBirrSuccess> createState() => _TeleBirrSuccessState();
 }
 
-class _PaymentCompletedState extends State<PaymentCompleted> {
+class _TeleBirrSuccessState extends State<TeleBirrSuccess> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,13 +28,13 @@ class _PaymentCompletedState extends State<PaymentCompleted> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     IconButton(
-                      onPressed: ()=>Get.toNamed(RouteHelper.getBillingPageSummary()),
+                      onPressed: () => Get.toNamed(RouteHelper.getTellBirrTransfer()),
                       icon: const Icon(Icons.chevron_left),
                       iconSize: AppDimension.iconSize33,
                       color: Color(0xFF143B58),
                     ),
                     Text(
-                      "Payment Complete",
+                      "TeleBirr Transfer",
                       style: TextStyle(
                           color: Color(0xFF143B58),
                           fontWeight: FontWeight.w400,
@@ -92,7 +92,7 @@ class _PaymentCompletedState extends State<PaymentCompleted> {
                             left: AppDimension.width40,
                             right: AppDimension.width40),
                         child: Text(
-                          "1299 ETB Birr Payed Successfully!",
+                          "500 ETB Birr Transfered Successfully!",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontSize: AppDimension.font28,
@@ -111,7 +111,7 @@ class _PaymentCompletedState extends State<PaymentCompleted> {
                       child: Column(
                         children: [
                           Text(
-                            'to Ethiotelecom-5247',
+                            'to Abebe Bikila-5247',
                             style: TextStyle(
                               color: Color(0xFF0047BA),
                               fontSize: AppDimension.font16,
@@ -199,7 +199,7 @@ class _PaymentCompletedState extends State<PaymentCompleted> {
                     SizedBox(
                       height: AppDimension.height50,
                     ),
-                    SizedBox(
+                    Container(
                       height: AppDimension.height56,
                       width: AppDimension.width150,
                       child: ElevatedButton(
@@ -213,7 +213,7 @@ class _PaymentCompletedState extends State<PaymentCompleted> {
                               color: Color(0xFF0047BA),
                               width: AppDimension.width1,
                             )),
-                        onPressed: ()=>Get.toNamed(RouteHelper.getBillingPageSummary()),
+                        onPressed: () => Get.toNamed(RouteHelper.tellBirrTransfer),
                         child: Text(
                           "Go Back",
                           style: TextStyle(
@@ -231,7 +231,6 @@ class _PaymentCompletedState extends State<PaymentCompleted> {
           ),
         ),
       ),
-      // bottomNavigationBar: ReUsableBottomNavBar(),
     );
   }
 }

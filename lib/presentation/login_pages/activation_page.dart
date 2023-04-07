@@ -17,7 +17,6 @@ class _ActivationPageState extends State<ActivationPage> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       body: Stack(
         children: [
@@ -55,10 +54,9 @@ class _ActivationPageState extends State<ActivationPage> {
                         fontSize: AppDimension.font28,
                         fontFamily: "AxiformaRegular",
                         color: const Color(0xFF0047BA),
-
                       ),
+                      textAlign: TextAlign.center,
                     ),
-
                   ),
                   SizedBox(
                     height: AppDimension.height22,
@@ -69,7 +67,6 @@ class _ActivationPageState extends State<ActivationPage> {
                         fontFamily: "AxiFormaLight",
                         fontSize: AppDimension.font16,
                         color: Color(0xFF96989A),
-
                       ),
                     ),),
                     SizedBox(
@@ -88,9 +85,10 @@ class _ActivationPageState extends State<ActivationPage> {
                             ),
                           ),
                           hintText: '',
-                          labelText: '',
-                          contentPadding: EdgeInsets.zero,
+                        labelText: '',
+                        contentPadding: EdgeInsets.zero,
                         ),
+                        
                       ),
                     ),
 
@@ -98,13 +96,10 @@ class _ActivationPageState extends State<ActivationPage> {
                   SizedBox(
                     height: AppDimension.height136,
                   ),
-
                   LoginButton(
                     routeName: PinSetUpPage(),
                   )
-
                 ],
-
               ),
             ),
           ),
