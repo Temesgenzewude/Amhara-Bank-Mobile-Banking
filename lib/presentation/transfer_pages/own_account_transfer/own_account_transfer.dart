@@ -1,7 +1,9 @@
 import 'package:amhara_bank_mobile_banking/presentation/services/reusabele_bottom_navigation_bar.dart';
 import 'package:amhara_bank_mobile_banking/presentation/transfer_pages/reusable_alert_box.dart';
+import 'package:amhara_bank_mobile_banking/routes/route_helper.dart';
 import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class OwnAccountTransfer extends StatefulWidget {
   OwnAccountTransfer({super.key});
@@ -34,7 +36,7 @@ class _OwnAccountTransferState extends State<OwnAccountTransfer> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () => Get.toNamed(RouteHelper.transferAccountPage),
                   icon: const Icon(Icons.chevron_left),
                   iconSize: AppDimension.iconSize33,
                   color: Color(0xFF143B58),
@@ -158,6 +160,10 @@ class _OwnAccountTransferState extends State<OwnAccountTransfer> {
                                     borderRadius: BorderRadius.circular(
                                         AppDimension.radius25)),
                                 child: TextField(
+                                  style: TextStyle(
+                                    fontSize: AppDimension.font15,
+                                    fontFamily: "AxiformaRegular",
+                                  ),
                                   keyboardType: TextInputType.number,
                                   controller: accountnumberController,
                                   decoration: const InputDecoration(
@@ -201,6 +207,10 @@ class _OwnAccountTransferState extends State<OwnAccountTransfer> {
                                     borderRadius: BorderRadius.circular(
                                         AppDimension.radius24)),
                                 child: TextField(
+                                  style: TextStyle(
+                                    fontSize: AppDimension.font15,
+                                    fontFamily: "AxiformaRegular",
+                                  ),
                                   keyboardType: TextInputType.number,
                                   controller: amountContoller,
                                   decoration: const InputDecoration(
@@ -248,7 +258,6 @@ class _OwnAccountTransferState extends State<OwnAccountTransfer> {
           ],
         ),
       ),
-      bottomNavigationBar: ReUsableBottomNavBar(),
     );
   }
 }

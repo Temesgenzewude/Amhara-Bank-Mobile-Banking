@@ -17,7 +17,6 @@ class _ActivationPageState extends State<ActivationPage> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       body: Stack(
         children: [
@@ -55,10 +54,9 @@ class _ActivationPageState extends State<ActivationPage> {
                         fontSize: AppDimension.font28,
                         fontFamily: "AxiformaRegular",
                         color: const Color(0xFF0047BA),
-
                       ),
+                      textAlign: TextAlign.center,
                     ),
-
                   ),
                   SizedBox(
                     height: AppDimension.height22,
@@ -69,42 +67,42 @@ class _ActivationPageState extends State<ActivationPage> {
                         fontFamily: "AxiFormaLight",
                         fontSize: AppDimension.font16,
                         color: Color(0xFF96989A),
-
                       ),
+                      textAlign: TextAlign.center,
                     ),
-                    SizedBox(
-                      height: AppDimension.height69,
-                    ),
-                    SizedBox(
-                      width: AppDimension.width238,
-                      child: TextField(
-                        keyboardType: TextInputType.number,
-                        controller: activationController,
-                        decoration: InputDecoration(
-                          border: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Color(0XFF0047BA),
-                              width: AppDimension.width1,
-                            ),
+                  ),
+                  SizedBox(
+                    height: AppDimension.height69,
+                  ),
+                  SizedBox(
+                    width: AppDimension.width238,
+                    child: TextField(
+                      style: TextStyle(
+                        fontSize: AppDimension.font15,
+                        fontFamily: "AxiformaLight",
+                      ),
+                      keyboardType: TextInputType.number,
+                      controller: activationController,
+                      decoration: InputDecoration(
+                        border: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0XFF0047BA),
+                            width: AppDimension.width1,
                           ),
-                          hintText: '',
-                          labelText: '',
-                          contentPadding: EdgeInsets.zero,
                         ),
+                        hintText: '',
+                        labelText: '',
+                        contentPadding: EdgeInsets.zero,
                       ),
                     ),
-
                   ),
                   SizedBox(
                     height: AppDimension.height136,
                   ),
-
                   LoginButton(
                     routeName: PinSetUpPage(),
                   )
-
                 ],
-
               ),
             ),
           ),

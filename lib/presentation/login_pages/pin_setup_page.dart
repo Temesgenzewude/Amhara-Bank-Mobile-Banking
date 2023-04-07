@@ -1,4 +1,3 @@
-
 import 'package:amhara_bank_mobile_banking/presentation/login_pages/login_button.dart';
 import 'package:amhara_bank_mobile_banking/presentation/login_pages/login_page.dart';
 import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
@@ -8,7 +7,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 class PinSetUpPage extends StatefulWidget {
   PinSetUpPage({super.key});
 
-
   @override
   State<PinSetUpPage> createState() => _PinSetUpPageState();
 }
@@ -17,24 +15,20 @@ class _PinSetUpPageState extends State<PinSetUpPage> {
   TextEditingController newPinController = TextEditingController();
   TextEditingController confirmPinController = TextEditingController();
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: [
           Container(
-
             width: AppDimension.screenWidth,
-              height: AppDimension.screenHeight,
+            height: AppDimension.screenHeight,
             child: SvgPicture.asset(
               'assets/images/Patterns.svg',
-
               fit: BoxFit.cover,
             ),
           ),
           Container(
-   
             child: Padding(
               padding: EdgeInsets.only(
                   left: AppDimension.width81, right: AppDimension.width77),
@@ -79,6 +73,10 @@ class _PinSetUpPageState extends State<PinSetUpPage> {
                     ),
                     SizedBox(
                       child: TextField(
+                        style: TextStyle(
+                          fontSize: AppDimension.font15,
+                          fontFamily: "AxiformaLight",
+                        ),
                         controller: newPinController,
                         keyboardType: TextInputType.number,
                         decoration: InputDecoration(
@@ -100,13 +98,17 @@ class _PinSetUpPageState extends State<PinSetUpPage> {
                     ),
                     SizedBox(
                       child: TextField(
+                        style: TextStyle(
+                          fontSize: AppDimension.font15,
+                          fontFamily: "AxiformaLight",
+                        ),
                         controller: confirmPinController,
                         keyboardType: TextInputType.number,
                         decoration: InputDecoration(
                           hintText: 'Confirm PIN',
-
-                          hintStyle: TextStyle(fontSize: AppDimension.font14,),
-
+                          hintStyle: TextStyle(
+                            fontSize: AppDimension.font14,
+                          ),
                           labelText: '',
                           contentPadding: EdgeInsets.zero,
                           border: UnderlineInputBorder(
@@ -134,4 +136,3 @@ class _PinSetUpPageState extends State<PinSetUpPage> {
     );
   }
 }
-

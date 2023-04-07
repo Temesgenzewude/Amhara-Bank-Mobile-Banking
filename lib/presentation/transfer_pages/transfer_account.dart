@@ -1,6 +1,8 @@
 import 'package:amhara_bank_mobile_banking/presentation/services/reusabele_bottom_navigation_bar.dart';
+import 'package:amhara_bank_mobile_banking/routes/route_helper.dart';
 import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../services/services_home_page.dart';
 
@@ -21,7 +23,9 @@ class TransferAccount extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () =>Get.toNamed(RouteHelper.servicesPage),
+                
+                  
                   icon: const Icon(Icons.chevron_left),
                   iconSize: AppDimension.iconSize33,
                   color: Color(0xFF143B58),
@@ -58,7 +62,8 @@ class TransferAccount extends StatelessWidget {
                               fontFamily: 'AxiFormaRegular'),
                         ),
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () =>
+                              Get.toNamed(RouteHelper.getTransferPage()),
                           child: Container(
                             height: AppDimension.contHeight64,
                             width: AppDimension.width341,
@@ -89,7 +94,8 @@ class TransferAccount extends StatelessWidget {
                           ),
                         ),
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () =>
+                              Get.toNamed(RouteHelper.getTransferPage()),
                           child: Container(
                             height: AppDimension.contHeight64,
                             width: AppDimension.width341,
@@ -120,7 +126,8 @@ class TransferAccount extends StatelessWidget {
                           ),
                         ),
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () =>
+                              Get.toNamed(RouteHelper.getTransferPage()),
                           child: Container(
                             height: AppDimension.contHeight64,
                             width: AppDimension.width341,
@@ -151,7 +158,8 @@ class TransferAccount extends StatelessWidget {
                           ),
                         ),
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () =>
+                              Get.toNamed(RouteHelper.getTransferPage()),
                           child: Container(
                             height: AppDimension.contHeight64,
                             width: AppDimension.width341,
@@ -182,7 +190,8 @@ class TransferAccount extends StatelessWidget {
                           ),
                         ),
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () =>
+                              Get.toNamed(RouteHelper.getTellBirrTransfer()),
                           child: Container(
                             height: AppDimension.contHeight64,
                             width: AppDimension.width341,
@@ -221,7 +230,6 @@ class TransferAccount extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: ReUsableBottomNavBar(),
     );
   }
 }
