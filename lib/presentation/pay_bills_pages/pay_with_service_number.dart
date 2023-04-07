@@ -1,7 +1,9 @@
 import 'package:amhara_bank_mobile_banking/presentation/services/reusabele_bottom_navigation_bar.dart';
 import 'package:amhara_bank_mobile_banking/presentation/transfer_pages/reusable_alert_box.dart';
+import 'package:amhara_bank_mobile_banking/routes/route_helper.dart';
 import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class PayWithServiceNumber extends StatefulWidget {
   PayWithServiceNumber({super.key});
@@ -34,7 +36,8 @@ class _PayWithServiceNumberState extends State<PayWithServiceNumber> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () =>
+                      Get.toNamed(RouteHelper.getEthioTellPayBills()),
                   icon: const Icon(Icons.chevron_left),
                   iconSize: AppDimension.iconSize33,
                   color: Color(0xFF143B58),
@@ -188,9 +191,8 @@ class _PayWithServiceNumberState extends State<PayWithServiceNumber> {
                                 borderRadius: BorderRadius.circular(
                                     AppDimension.radius30),
                               )),
-                          onPressed: () => showDialog(
-                              context: context,
-                              builder: (_) => ReusableAlertBox()),
+                          onPressed: () =>
+                              Get.toNamed(RouteHelper.getBillingPageSummary()),
                           child: Text(
                             'Continue',
                             style: TextStyle(
@@ -209,7 +211,6 @@ class _PayWithServiceNumberState extends State<PayWithServiceNumber> {
           ],
         ),
       ),
-      bottomNavigationBar: ReUsableBottomNavBar(),
     );
   }
 }

@@ -77,6 +77,10 @@ class _ActivationPageState extends State<ActivationPage> {
                   SizedBox(
                     width: AppDimension.width238,
                     child: TextField(
+                      style: TextStyle(
+                        fontSize: AppDimension.font15,
+                        fontFamily: "AxiformaLight",
+                      ),
                       keyboardType: TextInputType.number,
                       controller: activationController,
                       decoration: InputDecoration(
@@ -95,11 +99,9 @@ class _ActivationPageState extends State<ActivationPage> {
                   SizedBox(
                     height: AppDimension.height136,
                   ),
-
                   LoginButton(
                     routeName: PinSetUpPage(),
                   )
-
                 ],
               ),
             ),

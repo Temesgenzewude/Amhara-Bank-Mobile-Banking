@@ -65,9 +65,11 @@ class _LoginPageState extends State<LoginPage> {
                     child: Text(
                       'Enter PIN',
                       style: TextStyle(
-                          fontFamily: "AxiFormaLight",
-                          fontSize: AppDimension.font16,
-                          color: Color(0xFF96989A)),
+                        fontFamily: "AxiFormaLight",
+                        fontSize: AppDimension.font16,
+                        color: Color(0xFF96989A),
+                      ),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                   SizedBox(
@@ -76,7 +78,10 @@ class _LoginPageState extends State<LoginPage> {
                   SizedBox(
                     width: AppDimension.width160,
                     child: PinCodeFields(
-                      textStyle: TextStyle(fontFamily: "AxiFormaLight"),
+                      textStyle: TextStyle(
+                        fontSize: AppDimension.font15,
+                        fontFamily: "AxiformaLightr",
+                      ),
                       length: 4,
                       fieldWidth: AppDimension.width30,
                       margin: EdgeInsets.all(AppDimension.width12),

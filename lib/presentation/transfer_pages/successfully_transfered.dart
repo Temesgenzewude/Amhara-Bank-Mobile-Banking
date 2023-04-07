@@ -1,6 +1,8 @@
 import 'package:amhara_bank_mobile_banking/presentation/services/reusabele_bottom_navigation_bar.dart';
+import 'package:amhara_bank_mobile_banking/routes/route_helper.dart';
 import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SuccessfullyTransfered extends StatefulWidget {
   const SuccessfullyTransfered({super.key});
@@ -26,7 +28,7 @@ class _SuccessfullyTransferedState extends State<SuccessfullyTransfered> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     IconButton(
-                      onPressed: () {},
+                      onPressed: ()=>Get.toNamed(RouteHelper.transferPage),
                       icon: const Icon(Icons.chevron_left),
                       iconSize: AppDimension.iconSize33,
                       color: Color(0xFF143B58),
@@ -211,7 +213,7 @@ class _SuccessfullyTransferedState extends State<SuccessfullyTransfered> {
                               color: Color(0xFF0047BA),
                               width: AppDimension.width1,
                             )),
-                        onPressed: () {},
+                        onPressed: ()=>Get.toNamed(RouteHelper.transferPage),
                         child: Text(
                           "Go Back",
                           style: TextStyle(
@@ -229,7 +231,6 @@ class _SuccessfullyTransferedState extends State<SuccessfullyTransfered> {
           ),
         ),
       ),
-      bottomNavigationBar: ReUsableBottomNavBar(),
     );
   }
 }

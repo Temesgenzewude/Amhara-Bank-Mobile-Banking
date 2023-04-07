@@ -37,7 +37,10 @@ class _profileState extends State<profile> {
                   "Profile",
                   style: TextStyle(
                       fontSize: AppDimension.height25,
-                      color: Color(0xFF143B58)),
+                      color: Color(0xFF143B58),
+                      fontFamily: "AxiformaSemiBold",
+                      
+                      ),
                 ),
               ),
             ),
@@ -75,7 +78,10 @@ class _profileState extends State<profile> {
                             ),
                             Text(
                               "Language",
-                              style: TextStyle(fontSize: AppDimension.font16),
+                              style: TextStyle(
+                                fontSize: AppDimension.font16,
+                                fontFamily: "AxiFormaRegular"
+                                ),
                             )
                           ]),
                       Icon(Icons.chevron_right, size: AppDimension.height25)
@@ -111,7 +117,7 @@ class _profileState extends State<profile> {
                           children: [
                             Padding(
                               padding:
-                                  EdgeInsets.only(right: AppDimension.width15),
+                                  EdgeInsets.only(right: AppDimension.width20),
                               child: SvgPicture.asset(
                                 "assets/images/lock.svg",
                                 width: AppDimension.width20,
@@ -119,7 +125,10 @@ class _profileState extends State<profile> {
                               ),
                             ),
                             Text("Change Pin",
-                                style: TextStyle(fontSize: AppDimension.font16))
+                                style: TextStyle(
+                                  fontSize: AppDimension.font16,
+                                  fontFamily: "AxiFormaRegular"
+                                  ))
                           ]),
                       Icon(Icons.chevron_right, size: AppDimension.height25)
 
@@ -152,13 +161,17 @@ class _profileState extends State<profile> {
 
                       Row(children: [
                         Padding(
-                          padding: const EdgeInsets.only(right: 25.0),
+                          padding: const EdgeInsets.only(right: 15.0),
                           child: SvgPicture.asset("assets/images/people.svg",
                               width: AppDimension.width20,
                               height: AppDimension.height20),
                         ),
                         Text("Share Holder Detail",
-                            style: TextStyle(fontSize: AppDimension.font16))
+                            style: TextStyle(
+                              fontSize: AppDimension.font16,
+                              fontFamily: "AxiFormaRegular"
+                              
+                              ))
                       ]),
                       Icon(Icons.chevron_right, size: AppDimension.height25)
 
@@ -197,7 +210,10 @@ class _profileState extends State<profile> {
                               height: AppDimension.height20),
                         ),
                         Text("Unsubscribe",
-                            style: TextStyle(fontSize: AppDimension.font16))
+                            style: TextStyle(
+                              fontSize: AppDimension.font16,
+                              fontFamily: "AxiFormaRegular"
+                              ))
                       ]),
                       Icon(Icons.chevron_right, size: AppDimension.height25)
 
@@ -239,7 +255,10 @@ class _profileState extends State<profile> {
                               height: AppDimension.height20),
                         ),
                         Text("FAQ",
-                            style: TextStyle(fontSize: AppDimension.font16))
+                            style: TextStyle(
+                              fontSize: AppDimension.font16,
+                              fontFamily: "AxiFormaRegular"
+                              ))
                       ]),
                       Icon(Icons.chevron_right, size: AppDimension.height25)
 
@@ -279,7 +298,10 @@ class _profileState extends State<profile> {
                               height: AppDimension.height20),
                         ),
                         Text("About",
-                            style: TextStyle(fontSize: AppDimension.font16))
+                            style: TextStyle(
+                              fontSize: AppDimension.font16,
+                              fontFamily: "AxiFormaRegular"
+                              ))
                       ]),
                       Icon(Icons.chevron_right, size: AppDimension.height25)
 
@@ -317,7 +339,10 @@ class _profileState extends State<profile> {
                       ),
                     ),
                     Text("Logout",
-                        style: TextStyle(fontSize: AppDimension.font16))
+                        style: TextStyle(
+                          fontSize: AppDimension.font16,
+                          fontFamily: "AxiFormaRegular"
+                          ))
                   ],
                 ),
                 onTap: () {
@@ -340,7 +365,10 @@ class _profileState extends State<profile> {
                                   'Confirm',
                                   style: TextStyle(
                                       color: Color(0xFf143B58),
-                                      fontSize: AppDimension.font24),
+                                      fontSize: AppDimension.font24,
+                                      fontFamily: "AxiFormaSemiBold"
+                                      ),
+                                      
                                 ),
                               ),
                               SizedBox(
@@ -373,7 +401,10 @@ class _profileState extends State<profile> {
                                 Text(
                                   'Are you sure you want to Logout ?',
                                   style:
-                                      TextStyle(fontSize: AppDimension.font20),
+                                      TextStyle(
+                                        fontSize: AppDimension.font20,
+                                        fontFamily: "AxiFormaRegular"
+                                        ),
                                   textAlign: TextAlign.center,
                                 ),
                               ],
@@ -401,7 +432,7 @@ class _profileState extends State<profile> {
                                     "Cancel",
                                     style: TextStyle(
                                         color: Color(0xFF005EA6),
-                                        fontSize: AppDimension.font16),
+                                        fontSize: AppDimension.font16,fontFamily: "AxiFormaRegular"),
                                   ),
                                 ),
                                 ElevatedButton(
@@ -417,7 +448,7 @@ class _profileState extends State<profile> {
                                   child: Text(
                                     "Confirm",
                                     style: TextStyle(
-                                        fontSize: AppDimension.font16),
+                                        fontSize: AppDimension.font16,fontFamily: "AxiFormaRegular"),
                                   ),
                                 )
                               ],

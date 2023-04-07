@@ -41,11 +41,13 @@ class _ReUsableBottomNavBarState extends State<ReUsableBottomNavBar> {
         onTap: _handleBottomNavTap,
         items: [
           BottomNavigationBarItem(
+            
               icon: Icon(Icons.home_outlined), label: "Home"),
           BottomNavigationBarItem(
               icon: Icon(Icons.account_balance_outlined), label: "Accounts"),
           BottomNavigationBarItem(
               icon: Icon(Icons.person_outlined), label: "Profile"),
+              
         ],
       );
   }

@@ -1,7 +1,9 @@
 import 'package:amhara_bank_mobile_banking/presentation/services/reusabele_bottom_navigation_bar.dart';
 import 'package:amhara_bank_mobile_banking/presentation/transfer_pages/reusable_alert_box.dart';
+import 'package:amhara_bank_mobile_banking/routes/route_helper.dart';
 import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class TelebirrAccountTransfer extends StatefulWidget {
   TelebirrAccountTransfer({super.key});
@@ -35,7 +37,7 @@ class _TelebirrAccountTransferState extends State<TelebirrAccountTransfer> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () => Get.toNamed(RouteHelper.transferAccountPage),
                   icon: const Icon(Icons.chevron_left),
                   iconSize: AppDimension.iconSize33,
                   color: Color(0xFF143B58),
@@ -159,6 +161,10 @@ class _TelebirrAccountTransferState extends State<TelebirrAccountTransfer> {
                                     borderRadius: BorderRadius.circular(
                                         AppDimension.radius25)),
                                 child: TextField(
+                                  style: TextStyle(
+                                    fontSize: AppDimension.font15,
+                                    fontFamily: "AxiformaRegular",
+                                  ),
                                   keyboardType: TextInputType.number,
                                   controller: accountnumberController,
                                   decoration: const InputDecoration(
@@ -202,6 +208,10 @@ class _TelebirrAccountTransferState extends State<TelebirrAccountTransfer> {
                                     borderRadius: BorderRadius.circular(
                                         AppDimension.radius24)),
                                 child: TextField(
+                                  style: TextStyle(
+                                    fontSize: AppDimension.font15,
+                                    fontFamily: "AxiformaRegular",
+                                  ),
                                   keyboardType: TextInputType.number,
                                   controller: amountContoller,
                                   decoration: const InputDecoration(
@@ -230,8 +240,163 @@ class _TelebirrAccountTransferState extends State<TelebirrAccountTransfer> {
                                     AppDimension.radius30),
                               )),
                           onPressed: () => showDialog(
-                              context: context,
-                              builder: (_) => ReusableAlertBox()),
+                            context: context,
+                            builder: (_) => AlertDialog(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.all(
+                                      Radius.circular(AppDimension.radius40))),
+                              title: Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  SizedBox(
+                                    width: AppDimension.width26,
+                                  ),
+                                  Text(
+                                    'Confirm',
+                                    style: TextStyle(
+                                        color: Color(0xFf143B58),
+                                        fontSize: AppDimension.font24,
+                                        fontFamily: 'AxiFormaRegular'),
+                                  ),
+                                  SizedBox(
+                                    width: AppDimension.width40,
+                                  ),
+                                  SizedBox(
+                                    width: AppDimension.width24,
+                                    height: AppDimension.height30,
+                                    child: GestureDetector(
+                                      onTap: () => Get.back(),
+                                      child: Icon(
+                                        Icons.close_outlined,
+                                        size: AppDimension.iconSize24,
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                              content: SizedBox(
+                                width: AppDimension.width352,
+                                height: AppDimension.contHeight120 +
+                                    AppDimension.height40,
+                                child: Column(
+                                  children: [
+                                    SizedBox(
+                                      height: AppDimension.height40,
+                                    ),
+                                    RichText(
+                                      textAlign: TextAlign.center,
+                                      text: TextSpan(
+                                        children: <TextSpan>[
+                                          TextSpan(
+                                            text:
+                                                'Are you sure to transfer 500 ETB from ',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                color: Color(0xFF143B58),
+                                                fontSize: AppDimension.font16,
+                                                fontFamily: 'AxiFormaRegular'),
+                                          ),
+                                          TextSpan(
+                                            text: 'Acount number ',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                color: Color(0xFF143B58),
+                                                fontSize: AppDimension.font16,
+                                                fontFamily: 'AxiFormaRegular'),
+                                          ),
+                                          TextSpan(
+                                            text: '889345458934 ',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                color: Color(0xFF143B58),
+                                                fontSize: AppDimension.font16,
+                                                fontFamily: 'AxiFormaMedium'),
+                                          ),
+                                          TextSpan(
+                                            text: 'to ',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                color: Color(0xFF143B58),
+                                                fontSize: AppDimension.font16,
+                                                fontFamily: 'AxiFormaRegular'),
+                                          ),
+                                          TextSpan(
+                                            text: '90000324279283?',
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              color: Color(0xFF143B58),
+                                              fontSize: AppDimension.font16,
+                                              fontFamily: 'AxiFormaMedium',
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              actions: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: [
+                                    SizedBox(
+                                      height: AppDimension.height47,
+                                      width: AppDimension.width110,
+                                      child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            backgroundColor: Colors.white,
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(
+                                                      AppDimension.radius25),
+                                            ),
+                                            side: BorderSide(
+                                                color: Color(0xFF005EA6),
+                                                width: AppDimension.width1)),
+                                        onPressed: () => Get.back(),
+                                        child: Text(
+                                          "Cancel",
+                                          style: TextStyle(
+                                              color: Color(0xFF005EA6),
+                                              fontSize: AppDimension.font16,
+                                              fontFamily: "AxiFormaRegular"),
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: AppDimension.height47,
+                                      width: AppDimension.width110,
+                                      child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          backgroundColor: Color(0xFF005EA6),
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.circular(
+                                              AppDimension.radius40,
+                                            ),
+                                          ),
+                                        ),
+                                        onPressed: () => Get.toNamed(
+                                            RouteHelper.getTellBirrSuccess()),
+                                        child: Text(
+                                          "Confirm",
+                                          style: TextStyle(
+                                              fontSize: AppDimension.font16,
+                                              fontWeight: FontWeight.w400,
+                                              fontFamily: "AxiFormaRegular"),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: AppDimension.height45,
+                                )
+                              ],
+                            ),
+                          ),
                           child: Text(
                             'Continue',
                             style: TextStyle(
@@ -249,7 +414,6 @@ class _TelebirrAccountTransferState extends State<TelebirrAccountTransfer> {
           ],
         ),
       ),
-      bottomNavigationBar: ReUsableBottomNavBar(),
     );
   }
 }
