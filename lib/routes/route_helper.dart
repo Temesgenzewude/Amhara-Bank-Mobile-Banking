@@ -139,6 +139,7 @@ class RouteHelper {
     ),
     GetPage(
       name: servicesPage,
+      
       page: () {
         return ServiceHomePage();
       },

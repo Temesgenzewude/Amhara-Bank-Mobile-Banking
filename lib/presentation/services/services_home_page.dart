@@ -66,30 +66,31 @@ class _ServiceHomePageState extends State<ServiceHomePage> {
         backgroundColor: Colors.white,
         selectedLabelStyle: TextStyle(
             color: Color(0xFF0047BA),
-            fontSize: AppDimension.font10 + AppDimension.height8,
-            fontFamily: "PoppinsRegular"),
+            fontSize: AppDimension.font10 + AppDimension.height2,
+            fontFamily: "PoppinsMedium"),
         unselectedLabelStyle: TextStyle(
             color: Color(0xFF969696),
-            fontSize: AppDimension.font10 + AppDimension.height8,
+            fontSize: AppDimension.font10 + AppDimension.height2,
             fontFamily: "PoppinsRegular"),
         onTap: _handleBottomNavTap,
         items: [
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.home_outlined,
-                size: AppDimension.iconSize30,
+                size: AppDimension.iconSize24,
+
               ),
               label: "Home"),
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.account_balance_outlined,
-                size: AppDimension.iconSize30,
+                size: AppDimension.iconSize24,
               ),
               label: "Accounts"),
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.account_box_outlined,
-                size: AppDimension.iconSize30,
+                size: AppDimension.iconSize24,
               ),
               label: "Profile"),
         ],

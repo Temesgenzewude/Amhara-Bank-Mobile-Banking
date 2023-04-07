@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 
 class ServicesPageContainer extends StatelessWidget {
   const ServicesPageContainer(
+
       {Key? key, required this.image, required this.text1, required this.text2})
       : super(key: key);
 
@@ -14,8 +15,8 @@ class ServicesPageContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: AppDimension.height45*2,
-      width: AppDimension.contWid50 * 3 + AppDimension.width10,
+      height: AppDimension.contHeight80,
+      width: AppDimension.contWid150+ AppDimension.width10,
       padding: EdgeInsets.only(
         left: AppDimension.width5,
         right: AppDimension.width5,
@@ -28,16 +29,17 @@ class ServicesPageContainer extends StatelessWidget {
       child: Row(children: [
         SvgPicture.asset(
           image,
-          height: AppDimension.height30 *2 + AppDimension.height10,
+          height: AppDimension.height30 *2 + AppDimension.height4,
+          width: AppDimension.contWid50+AppDimension.width4,
           
           
           // width: AppDimension.width25 * 2 + AppDimension.width4,
         ),
         Container(
-          height: AppDimension.contHeight40 + AppDimension.height30,
-          width: AppDimension.contHeight100,
+          height: AppDimension.contHeight40+ AppDimension.height10,
+          width: AppDimension.contWid80+AppDimension.width4,
           padding: EdgeInsets.only(
-              top: AppDimension.height10, bottom: AppDimension.height10),
+              top: AppDimension.height2, bottom: AppDimension.height2),
           child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [

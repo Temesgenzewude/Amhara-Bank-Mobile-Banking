@@ -27,9 +27,11 @@ class _AccountPageImageContainerState extends State<AccountPageImageContainer> {
         left: AppDimension.width20 + AppDimension.width4,
         right: AppDimension.width20 + AppDimension.width4,
       ),
-      height: AppDimension.contHeight100 + AppDimension.contHeight100,
+      height: AppDimension.contHeight150 +
+          AppDimension.height10 +
+          AppDimension.height2,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(AppDimension.radius30),
+        borderRadius: BorderRadius.circular(AppDimension.radius20),
         color: Color(0xFF0047BA),
       ),
       child: Stack(
@@ -38,11 +40,11 @@ class _AccountPageImageContainerState extends State<AccountPageImageContainer> {
               left: 0,
               top: 0,
               bottom: 0,
-              right: AppDimension.contWid150,
+              right: AppDimension.contWid150 + AppDimension.width10,
               child: Container(
                 clipBehavior: Clip.hardEdge,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(AppDimension.radius30)),
+                    borderRadius: BorderRadius.circular(AppDimension.radius20)),
                 child: SvgPicture.asset("assets/images/account/zigzag.svg",
                     fit: BoxFit.cover),
               )),
@@ -52,7 +54,9 @@ class _AccountPageImageContainerState extends State<AccountPageImageContainer> {
                 right: AppDimension.width30,
                 top: AppDimension.height30,
                 bottom: AppDimension.height10),
-            height: AppDimension.contHeight100 + AppDimension.contHeight100,
+            height: AppDimension.contHeight150 +
+                AppDimension.height10 +
+                AppDimension.height2,
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Row(
@@ -95,7 +99,7 @@ class _AccountPageImageContainerState extends State<AccountPageImageContainer> {
                 style: TextStyle(
                   color: Color(0xFFAAC2D4),
                   fontFamily: "AxiFormaRegular",
-                  fontSize: AppDimension.font10+ AppDimension.font2,
+                  fontSize: AppDimension.font10 + AppDimension.font2,
                 ),
               ),
               SizedBox(
@@ -124,7 +128,7 @@ class _AccountPageImageContainerState extends State<AccountPageImageContainer> {
                         style: TextStyle(
                           color: Colors.white,
                           fontFamily: "AxiFormaRegular",
-                          fontSize: AppDimension.font10+ AppDimension.font2,
+                          fontSize: AppDimension.font10 + AppDimension.font2,
                         ),
                       ),
                     ],
