@@ -1,9 +1,7 @@
 import 'dart:async';
 
+import 'package:amhara_bank_mobile_banking/presentation/account_pages/account_home_page.dart';
 import 'package:amhara_bank_mobile_banking/presentation/profile.dart';
-
-import 'package:amhara_bank_mobile_banking/presentation/services/reusabele_bottom_navigation_bar.dart';
-
 import 'package:amhara_bank_mobile_banking/presentation/services/services_page.dart';
 import 'package:amhara_bank_mobile_banking/presentation/widgets/services/qr_code_scanner_floating_action_button.dart';
 import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
@@ -21,17 +19,14 @@ class ServiceHomePage extends StatefulWidget {
 class _ServiceHomePageState extends State<ServiceHomePage> {
   int _selectedIndex = 0;
   int _timeLeft = 10;
+  
 
   List _pages = [
     ServicePage(),
-    Container(
-      child: Center(
-        child: Text(
-          "Account",
-        ),
-      ),
-    ),
+    
+    AccountHomePage(),
     profile(),
+    
   ];
 
   void _startCountDownTimer() {
@@ -62,6 +57,7 @@ class _ServiceHomePageState extends State<ServiceHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
@@ -70,26 +66,39 @@ class _ServiceHomePageState extends State<ServiceHomePage> {
         unselectedItemColor: Color(0xFF969696),
         backgroundColor: Colors.white,
         selectedLabelStyle: TextStyle(
-          color: Color(0xFF0047BA),
-          fontSize: AppDimension.font10 + AppDimension.height2,
-        ),
+
+            color: Color(0xFF0047BA),
+            fontSize: AppDimension.font10 + AppDimension.height2,
+            fontFamily: "PoppinsMedium"),
         unselectedLabelStyle: TextStyle(
-          color: Color(0xFF969696),
-          fontSize: AppDimension.font10 + AppDimension.height2,
-          
-        ),
+            color: Color(0xFF969696),
+            fontSize: AppDimension.font10 + AppDimension.height2,
+            fontFamily: "PoppinsRegular"),
         onTap: _handleBottomNavTap,
         items: [
           BottomNavigationBarItem(
-            
-              icon: Icon(Icons.home_outlined), label: "Home"),
+              icon: Icon(
+                Icons.home_outlined,
+                size: AppDimension.iconSize24,
+
+              ),
+              label: "Home"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.account_balance_outlined), label: "Accounts"),
+              icon: Icon(
+                Icons.account_balance_outlined,
+                size: AppDimension.iconSize24,
+              ),
+              label: "Accounts"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.person_outlined), label: "Profile"),
-              
+              icon: Icon(
+                Icons.account_box_outlined,
+                size: AppDimension.iconSize24,
+              ),
+              label: "Profile"),
+
         ],
       ),
+
       floatingActionButton: _timeLeft > 0
           ? QRCodeScannerButtonWithText()
           : QRCodeScannerFloatingActionButton(),

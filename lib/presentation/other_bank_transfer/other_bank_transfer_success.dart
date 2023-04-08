@@ -17,10 +17,12 @@ class _OtherBankSuccessfullyTransferredState extends State<OtherBankSuccessfully
     return Scaffold(
       body: Column(
         children: [
+
            SizedBox(
               height: AppDimension.contHeight40,
             ),
             Row(
+
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 IconButton(
