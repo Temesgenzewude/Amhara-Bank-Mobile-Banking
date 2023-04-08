@@ -61,10 +61,12 @@ class _ServiceHomePageState extends State<ServiceHomePage> {
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
+        
         selectedItemColor: Color(0xFF005EA6),
         unselectedItemColor: Color(0xFF969696),
         backgroundColor: Colors.white,
         selectedLabelStyle: TextStyle(
+
             color: Color(0xFF0047BA),
             fontSize: AppDimension.font10 + AppDimension.height2,
             fontFamily: "PoppinsMedium"),
@@ -93,6 +95,7 @@ class _ServiceHomePageState extends State<ServiceHomePage> {
                 size: AppDimension.iconSize24,
               ),
               label: "Profile"),
+
         ],
       ),
 

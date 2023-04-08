@@ -53,7 +53,7 @@ class _BuyAirTimeState extends State<BuyAirTime> {
                   "Buy Airtime",
                   style: TextStyle(
                     color: Color(0xFF143B58),
-                    fontFamily: "AxiformaRegular",
+                    fontFamily: "AxiFormaRegular",
                     fontSize: AppDimension.font24,
                   ),
                 ),
@@ -391,7 +391,6 @@ class _BuyAirTimeState extends State<BuyAirTime> {
           ],
         ),
       ),
-      bottomNavigationBar: ReUsableBottomNavBar(),
     );
   }
 }

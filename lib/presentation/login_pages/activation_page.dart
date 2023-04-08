@@ -68,34 +68,31 @@ class _ActivationPageState extends State<ActivationPage> {
                         fontSize: AppDimension.font16,
                         color: Color(0xFF96989A),
                       ),
-                      textAlign: TextAlign.center,
+                    ),),
+                    SizedBox(
+                      height: AppDimension.height69,
                     ),
-                  ),
-                  SizedBox(
-                    height: AppDimension.height69,
-                  ),
-                  SizedBox(
-                    width: AppDimension.width238,
-                    child: TextField(
-                      style: TextStyle(
-                        fontSize: AppDimension.font15,
-                        fontFamily: "AxiformaLight",
-                      ),
-                      keyboardType: TextInputType.number,
-                      controller: activationController,
-                      decoration: InputDecoration(
-                        border: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Color(0XFF0047BA),
-                            width: AppDimension.width1,
+                    SizedBox(
+                      width: AppDimension.width238,
+                      child: TextField(
+                        keyboardType: TextInputType.number,
+                        controller: activationController,
+                        decoration: InputDecoration(
+                          border: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(0XFF0047BA),
+                              width: AppDimension.width1,
+                            ),
                           ),
-                        ),
-                        hintText: '',
+                          hintText: '',
                         labelText: '',
                         contentPadding: EdgeInsets.zero,
+                        ),
+                        
                       ),
                     ),
-                  ),
+
+                  
                   SizedBox(
                     height: AppDimension.height136,
                   ),

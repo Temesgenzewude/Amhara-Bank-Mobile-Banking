@@ -455,7 +455,7 @@ class _OtherBankTrasfer2State extends State<OtherBankTrasfer2> {
           ],
         ),
       ),
-      bottomNavigationBar: ReUsableBottomNavBar(),
+      // bottomNavigationBar: ReUsableBottomNavBar(),
     );
   }
 }

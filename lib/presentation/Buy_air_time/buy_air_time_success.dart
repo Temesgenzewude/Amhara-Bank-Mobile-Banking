@@ -20,16 +20,14 @@ class _BuyAirtimeSuccessfullyTransferredState
       body: Column(
         children: [
           SizedBox(
-            height: AppDimension.height40 - AppDimension.height5,
-          ),
-          SizedBox(
-            height: AppDimension.height57 + AppDimension.height20,
-            child: Row(
+              height: AppDimension.contHeight40,
+            ),
+            Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 IconButton(
                   onPressed: () {
-                    Get.toNamed(RouteHelper.getBuyAirtimePage());
+                    Get.toNamed(RouteHelper.getServicesPage());
                   },
                   icon: const Icon(Icons.chevron_left),
                   iconSize: AppDimension.iconSize33,
@@ -39,16 +37,15 @@ class _BuyAirtimeSuccessfullyTransferredState
                   "Buy Airtime",
                   style: TextStyle(
                     color: Color(0xFF143B58),
-                    fontSize: AppDimension.font24,
                     fontFamily: "AxiFormaRegular",
+                    fontSize: AppDimension.font24,
                   ),
                 ),
               ],
             ),
-          ),
-          Divider(
-            thickness: AppDimension.width1,
-          ),
+            Divider(
+              thickness: AppDimension.width1,
+            ),
           SizedBox(
             height: AppDimension.height35,
           ),
@@ -225,7 +222,7 @@ class _BuyAirtimeSuccessfullyTransferredState
           )
         ],
       ),
-      bottomNavigationBar: ReUsableBottomNavBar(),
+      // bottomNavigationBar: ReUsableBottomNavBar(),
     );
   }
 }

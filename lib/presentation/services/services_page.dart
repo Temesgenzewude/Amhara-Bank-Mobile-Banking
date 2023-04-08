@@ -58,10 +58,10 @@ class _ServicePageState extends State<ServicePage> {
             ),
           ),
           Divider(
-            thickness: 1,
+            thickness: 2,
             color: Color(0xFFDBD9D9),
             indent: 0,
-            // height: AppDimension.height20,
+
           ),
           Container(
             margin: EdgeInsets.only(
@@ -212,7 +212,7 @@ class _ServicePageState extends State<ServicePage> {
 
                     Divider(
                       thickness: 1,
-                      height: AppDimension.height20,
+                      height: AppDimension.height5,
                       color: Color(0xFFDBD9D9),
                     ),
                     SizedBox(
@@ -238,9 +238,11 @@ class _ServicePageState extends State<ServicePage> {
                           ),
                           itemBuilder: (_, index, realIndex) {
                             return Container(
+
                               height: AppDimension.contHeight150 +
                                   AppDimension.contHeight30 +
                                   AppDimension.height4,
+
                               decoration: BoxDecoration(
                                   gradient: LinearGradient(
                                     begin: Alignment.topCenter,
@@ -254,7 +256,9 @@ class _ServicePageState extends State<ServicePage> {
                                       AppDimension.radius10),
                                   image: DecorationImage(
                                     fit: BoxFit.cover,
+
                                     image: AssetImage(promoImages[index]),
+                                    
                                   )),
                             );
                           },

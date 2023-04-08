@@ -211,6 +211,7 @@ class _PayWithServiceNumberState extends State<PayWithServiceNumber> {
           ],
         ),
       ),
+      // bottomNavigationBar: ReUsableBottomNavBar(),
     );
   }
 }
