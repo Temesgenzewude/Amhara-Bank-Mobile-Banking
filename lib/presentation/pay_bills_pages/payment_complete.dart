@@ -231,6 +231,7 @@ class _PaymentCompletedState extends State<PaymentCompleted> {
           ),
         ),
       ),
+      // bottomNavigationBar: ReUsableBottomNavBar(),
     );
   }
 }

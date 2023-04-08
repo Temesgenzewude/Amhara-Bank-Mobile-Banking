@@ -28,38 +28,32 @@ class _OtherBankTransfer1State extends State<OtherBankTransfer1> {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: EdgeInsets.only(
-                  left: AppDimension.width20,
-                  top: AppDimension.height31 + AppDimension.height15),
-              child: Row(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(right: AppDimension.width5),
-                    child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getServicesPage());
-                        },
-                        child: Icon(Icons.chevron_left,
-                            size: AppDimension.height40)),
-                  ),
-                  Text(
-                    "Other Bank Transfer",
-                    style: TextStyle(
-                        fontSize: AppDimension.height25,
-                        color: Color(0xFF143B58),
-                        fontFamily: "AxiFormaRegular"),
-                  ),
-                ],
-              ),
+             SizedBox(
+              height: AppDimension.contHeight40,
             ),
-            Padding(
-              padding: EdgeInsets.only(top: AppDimension.height25),
-              child: Container(
-                width: AppDimension.screenWidth,
-                height: AppDimension.height1,
-                color: Color(0xFFDBD9D9),
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                IconButton(
+                  onPressed: () {
+                    Get.toNamed(RouteHelper.getServicesPage());
+                  },
+                  icon: const Icon(Icons.chevron_left),
+                  iconSize: AppDimension.iconSize33,
+                  color: Color(0xFF143B58),
+                ),
+                Text(
+                  "Other Bank Transfer",
+                  style: TextStyle(
+                      color: Color(0xFF143B58),
+                      fontWeight: FontWeight.w400,
+                      fontSize: AppDimension.font24,
+                      fontFamily: "AxiFormaRegular"),
+                ),
+              ],
+            ),
+            Divider(
+              thickness: AppDimension.width1,
             ),
             Padding(
               padding: EdgeInsets.only(
@@ -1492,6 +1486,7 @@ class _OtherBankTransfer1State extends State<OtherBankTransfer1> {
             ),
           ],
         ),
-        bottomNavigationBar: ReUsableBottomNavBar());
+        // bottomNavigationBar: ReUsableBottomNavBar()
+        );
   }
 }

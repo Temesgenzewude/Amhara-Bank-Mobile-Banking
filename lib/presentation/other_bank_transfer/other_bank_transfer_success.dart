@@ -17,12 +17,10 @@ class _OtherBankSuccessfullyTransferredState extends State<OtherBankSuccessfully
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(
-            height: AppDimension.height40-AppDimension.height5,
-          ),
-          SizedBox(
-            height: AppDimension.height57+AppDimension.height20,
-            child: Row(
+           SizedBox(
+              height: AppDimension.contHeight40,
+            ),
+            Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 IconButton(
@@ -36,17 +34,16 @@ class _OtherBankSuccessfullyTransferredState extends State<OtherBankSuccessfully
                 Text(
                   "Other Bank Transfer",
                   style: TextStyle(
-                    color: Color(0xFF143B58),
-                    fontSize: AppDimension.font24,
-                    fontFamily: "AxiFormaRegular",
-                  ),
+                      color: Color(0xFF143B58),
+                      fontWeight: FontWeight.w400,
+                      fontSize: AppDimension.font24,
+                      fontFamily: "AxiFormaRegular"),
                 ),
               ],
             ),
-          ),
-          Divider(
-            thickness: AppDimension.width1,
-          ),
+            Divider(
+              thickness: AppDimension.width1,
+            ),
           SizedBox(
             height: AppDimension.height35,
           ),
@@ -222,7 +219,7 @@ class _OtherBankSuccessfullyTransferredState extends State<OtherBankSuccessfully
           )
         ],
       ),
-      bottomNavigationBar: ReUsableBottomNavBar(),
+      // bottomNavigationBar: ReUsableBottomNavBar(),
     );
   }
 }
