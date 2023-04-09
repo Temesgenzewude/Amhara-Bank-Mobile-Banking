@@ -1,13 +1,8 @@
-import 'package:amhara_bank_mobile_banking/presentation/onboarding_pages/manage_account.dart';
-import 'package:amhara_bank_mobile_banking/presentation/onboarding_pages/pay_your_bills.dart';
-import 'package:amhara_bank_mobile_banking/presentation/onboarding_pages/top_up_air_time.dart';
-import 'package:amhara_bank_mobile_banking/presentation/services/reusabele_bottom_navigation_bar.dart';
 import 'package:amhara_bank_mobile_banking/routes/route_helper.dart';
 import 'package:amhara_bank_mobile_banking/utils/app_dimensions.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
 import 'package:get/get.dart';
 
 class OtherBankTransfer1 extends StatefulWidget {
@@ -29,6 +24,7 @@ class _OtherBankTransfer1State extends State<OtherBankTransfer1> {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+
              SizedBox(
               height: AppDimension.contHeight40,
             ),
@@ -57,7 +53,7 @@ class _OtherBankTransfer1State extends State<OtherBankTransfer1> {
               thickness: AppDimension.width1,
 
             ),
-          ),
+          
           Padding(
             padding: EdgeInsets.only(
                 left: AppDimension.width25,
@@ -1486,8 +1482,10 @@ class _OtherBankTransfer1State extends State<OtherBankTransfer1> {
               ),
             ),
 
-          ],
+          
         ),
+          ]),
+        
         // bottomNavigationBar: ReUsableBottomNavBar()
         );
 
