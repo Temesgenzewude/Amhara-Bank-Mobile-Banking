@@ -24,38 +24,41 @@ class _OtherBankTransfer1State extends State<OtherBankTransfer1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-        backgroundColor: Color(0xFFFFFFFF),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-             SizedBox(
-              height: AppDimension.contHeight40,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
+      backgroundColor: Color(0xFFFFFFFF),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: EdgeInsets.only(
+                left: AppDimension.width20,
+                top: AppDimension.height31 + AppDimension.height15),
+            child: Row(
               children: [
-                IconButton(
-                  onPressed: () {
-                    Get.toNamed(RouteHelper.getServicesPage());
-                  },
-                  icon: const Icon(Icons.chevron_left),
-                  iconSize: AppDimension.iconSize33,
-                  color: Color(0xFF143B58),
+                Padding(
+                  padding: EdgeInsets.only(right: AppDimension.width5),
+                  child: GestureDetector(
+                      onTap: () {
+                        Get.toNamed(RouteHelper.getServicesPage());
+                      },
+                      child: Icon(Icons.chevron_left,
+                          size: AppDimension.height40)),
                 ),
                 Text(
                   "Other Bank Transfer",
                   style: TextStyle(
+                      fontSize: AppDimension.height25,
                       color: Color(0xFF143B58),
-                      fontWeight: FontWeight.w400,
-                      fontSize: AppDimension.font24,
                       fontFamily: "AxiFormaRegular"),
                 ),
               ],
             ),
-            Divider(
-              thickness: AppDimension.width1,
-
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: AppDimension.height25),
+            child: Container(
+              width: AppDimension.screenWidth,
+              height: AppDimension.height1,
+              color: Color(0xFFDBD9D9),
             ),
           ),
           Padding(
@@ -77,1419 +80,188 @@ class _OtherBankTransfer1State extends State<OtherBankTransfer1> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/commercial_bank_of_ethiopia.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Commercial Bank of Ethiopia",
-                                    style: TextStyle(
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5,
-                                        fontFamily: "AxiFormaRegular"),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/commercial_bank_of_ethiopia.png",
+                      bankName: "Commercial Bank of Ethiopia",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/awash_bank.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Awash Internation Bank",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/awash_bank.png",
+                      bankName: "Awash Internation Bank",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/dashen_bank.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Dashen Bank",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/dashen_bank.png",
+                      bankName: "Dashen Bank",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/Abyssiniya_Bank.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Bank Of Abyssinia",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/Abyssiniya_Bank.png",
+                      bankName: "Bank Of Abyssinia",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/wegagen_bank.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Wegagen Bank",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/wegagen_bank.png",
+                      bankName: "Wegagen Bank",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/Hibret_BankBank.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Hibret Bank",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/wegagen_bank.png",
+                      bankName: "Wegagen Bank",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/Nib_International_Bank.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Nib Internaional Bank",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/Hibret_BankBank.png",
+                      bankName: "Hibret Bank",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/Abay Bank.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Abay Bank",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/Nib_International_Bank.png",
+                      bankName: "Nib Internaional Bank",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/Addis International Bank.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Addis International Bank",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/Abay Bank.png",
+                      bankName: "Abay Bank",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/Berhan_Bank.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Berhan Bank",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/Addis International Bank.png",
+                      bankName: "Addis International Bank",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/Bunna Bak.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Buna Bank",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/Berhan_Bank.png",
+                      bankName: "Berhan Bank",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/COOP.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Cooperative Bank of Oromia",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/Bunna Bak.png",
+                      bankName: "Buna Bank",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/Zemen Bank.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Zemen Bank",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/COOP.png",
+                      bankName: "Cooperative Bank of Oromia",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/Enat_Bank.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Enat Bank",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                   const OtherBankTransferContainer(
+                      bankLogo: "assets/images/Zemen Bank.png",
+                      bankName: "Zemen Bank",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/Tsehay Bank.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Tshehay Bank",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/Enat_Bank.png",
+                      bankName: "Enat Bank",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/Goh Betoch Bank.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Goh Betoch Bank",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/Tsehay Bank.png",
+                      bankName: "Tshehay Bank",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/ZamZam Bank.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Zam Zam Bank",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/Goh Betoch Bank.png",
+                      bankName: "Goh Betoch Bank",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/Hijira Bank.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Hijra Bank",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                     const OtherBankTransferContainer(
+                      bankLogo: "assets/images/ZamZam Bank.png",
+                      bankName: "Zam Zam Bank",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/Oromia Bank.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Oromia Bank",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/Hijira Bank.png",
+                      bankName: "Hijra Bank",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/Debub Global Bank.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Debub Global Bank",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/Oromia Bank.png",
+                      bankName: "Oromia Bank",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/Ahadu Bank.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Ahadu Bank",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/Debub Global Bank.png",
+                      bankName: "Debub Global Bank",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/Anbessa International Bank.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Lion International Bank",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/Ahadu Bank.png",
+                      bankName: "Ahadu Bank",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/Somali Micro Finance Institution.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Somali Micro  Finance Institution",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/Anbessa International Bank.png",
+                      bankName: "Lion International Bank",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/Rays Micro Finance Institution.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Rays Micro Finance Institution",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/Somali Micro Finance Institution.png",
+                      bankName: "Somali Micro  Finance Institution",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/Kaafi Micro Finance Institution.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Kaafi Micro Finance Institution",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/Rays Micro Finance Institution.png",
+                      bankName: "Rays Micro Finance Institution",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/Kacha.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Kacha",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/Kaafi Micro Finance Institution.png",
+                      bankName: "Kaafi Micro Finance Institution",
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: AppDimension.height20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Get.toNamed(RouteHelper.getOtherBankTransfer2());
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xFFE5F2FC),
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(AppDimension.radius10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: AppDimension.width15,
-                                    vertical: AppDimension.height15),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: AppDimension.width10),
-                                    child: Image.asset(
-                                      "assets/images/One Micro Finance.png",
-                                      height: AppDimension.height30 +
-                                          AppDimension.height5,
-                                      width: AppDimension.width30 +
-                                          AppDimension.width5,
-                                    ),
-                                  ),
-                                  Text(
-                                    "One Micro Finance",
-                                    style: TextStyle(
-                                        fontFamily: "AxiFormaRegular",
-                                        fontSize: AppDimension.height10 +
-                                            AppDimension.height5),
-                                  )
-                                ]),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    right: AppDimension.width10),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  size: AppDimension.height20,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/Kacha.png",
+                      bankName: "Kacha",
                     ),
+                    const OtherBankTransferContainer(
+                      bankLogo: "assets/images/One Micro Finance.png",
+                      bankName: "One Micro Finance",
+                    ),
+                    
                   ],
                 ),
               ),
             ),
+          ),
+        ],
+      ),
+    );
+  }
+}
 
-          ],
+class OtherBankTransferContainer extends StatelessWidget {
+  const OtherBankTransferContainer({
+    Key? key,
+    required this.bankName,
+    required this.bankLogo,
+  }) : super(key: key);
+
+  final String bankName;
+  final String bankLogo;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(top: AppDimension.height20),
+      child: GestureDetector(
+        onTap: () {
+          Get.toNamed(RouteHelper.getOtherBankTransfer2());
+        },
+        child: Container(
+          decoration: BoxDecoration(
+              color: Color(0xFFE5F2FC),
+              borderRadius:
+                  BorderRadius.all(Radius.circular(AppDimension.radius10))),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(
+                    horizontal: AppDimension.width15,
+                    vertical: AppDimension.height15),
+                child: Row(children: [
+                  Padding(
+                    padding: EdgeInsets.only(right: AppDimension.width10),
+                    child: Image.asset(
+                      bankLogo,
+                      height: AppDimension.height30 + AppDimension.height5,
+                      width: AppDimension.width30 + AppDimension.width5,
+                    ),
+                  ),
+                  Text(
+                    bankName,
+                    style: TextStyle(
+                        fontSize: AppDimension.height10 + AppDimension.height5,
+                        fontFamily: "AxiFormaRegular"),
+                  )
+                ]),
+              ),
+              Padding(
+                padding: EdgeInsets.only(right: AppDimension.width10),
+                child: Icon(
+                  Icons.chevron_right,
+                  size: AppDimension.height20,
+                ),
+              )
+            ],
+          ),
         ),
-        // bottomNavigationBar: ReUsableBottomNavBar()
-        );
-
+      ),
+    );
   }
 }

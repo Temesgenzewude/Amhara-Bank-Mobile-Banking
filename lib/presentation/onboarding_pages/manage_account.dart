@@ -21,7 +21,7 @@ class ManageAccountPage extends StatelessWidget {
           ),
           SizedBox(
             width: AppDimension.width287,
-            height: AppDimension.height100,
+            height: AppDimension.height123+AppDimension.height20,
             child: Text(
               "Manage Your Accounts",
               style: TextStyle(
@@ -33,7 +33,7 @@ class ManageAccountPage extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: AppDimension.height81,
+            height: AppDimension.height50,
           ),
           SizedBox(
             height: AppDimension.height45 + AppDimension.height5,
