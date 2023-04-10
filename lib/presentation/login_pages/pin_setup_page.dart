@@ -18,6 +18,7 @@ class _PinSetUpPageState extends State<PinSetUpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Stack(
         children: [
           Container(
