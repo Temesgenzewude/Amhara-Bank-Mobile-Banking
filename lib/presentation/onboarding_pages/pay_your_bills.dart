@@ -20,7 +20,7 @@ class PayYourBillsPage extends StatelessWidget {
             width: AppDimension.width287 -
                 AppDimension.width10 -
                 2 * AppDimension.width1,
-            height: AppDimension.height94,
+            height: AppDimension.height123+AppDimension.height20,
             child: Text(
               "Pay Your Bills",
               style: TextStyle(
@@ -32,7 +32,7 @@ class PayYourBillsPage extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: AppDimension.height81,
+            height: AppDimension.height50,
           ),
           SizedBox(
             height: AppDimension.height45 + AppDimension.height5,

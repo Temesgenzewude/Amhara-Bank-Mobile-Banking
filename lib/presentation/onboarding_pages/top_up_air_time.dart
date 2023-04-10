@@ -41,13 +41,12 @@ class _TopUpAirtimePageState extends State<TopUpAirtimePage> {
             SvgPicture.asset("assets/images/onboarding_airtime.svg",
                 height: AppDimension.height250, width: AppDimension.height250),
             SizedBox(
-              height: AppDimension.height20,
+              height: AppDimension.height22,
             ),
             SizedBox(
               width: AppDimension.width287 -
-                  AppDimension.width10 -
-                  2 * AppDimension.width1,
-              height: AppDimension.height100,
+                  AppDimension.width10 - 2 * AppDimension.width1,
+              height: AppDimension.height123+AppDimension.height20,
               child: Text(
                 "Top-up Air time",
                 style: TextStyle(
@@ -59,7 +58,7 @@ class _TopUpAirtimePageState extends State<TopUpAirtimePage> {
               ),
             ),
             SizedBox(
-              height: AppDimension.height81,
+              height: AppDimension.height50,
             ),
             SizedBox(
               height: AppDimension.height45 + AppDimension.width5,
