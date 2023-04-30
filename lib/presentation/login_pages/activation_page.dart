@@ -69,6 +69,7 @@ class _ActivationPageState extends State<ActivationPage> {
                         fontSize: AppDimension.font16,
                         color: Color(0xFF96989A),
                       ),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                   SizedBox(

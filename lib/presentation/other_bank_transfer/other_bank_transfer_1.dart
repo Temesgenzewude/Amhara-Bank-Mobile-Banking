@@ -24,39 +24,36 @@ class _OtherBankTransfer1State extends State<OtherBankTransfer1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-        backgroundColor: Color(0xFFFFFFFF),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-             SizedBox(
-              height: AppDimension.contHeight40,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                IconButton(
-                  onPressed: () {
-                    Get.toNamed(RouteHelper.getServicesPage());
-                  },
-                  icon: const Icon(Icons.chevron_left),
-                  iconSize: AppDimension.iconSize33,
-                  color: Color(0xFF143B58),
-                ),
-                Text(
-                  "Other Bank Transfer",
-                  style: TextStyle(
-                      color: Color(0xFF143B58),
-                      fontWeight: FontWeight.w400,
-                      fontSize: AppDimension.font24,
-                      fontFamily: "AxiFormaRegular"),
-                ),
-              ],
-            ),
-            Divider(
-              thickness: AppDimension.width1,
-
-            ),
+      backgroundColor: Color(0xFFFFFFFF),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(
+            height: AppDimension.contHeight40,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              IconButton(
+                onPressed: () {
+                  Get.toNamed(RouteHelper.getServicesPage());
+                },
+                icon: const Icon(Icons.chevron_left),
+                iconSize: AppDimension.iconSize33,
+                color: Color(0xFF143B58),
+              ),
+              Text(
+                "Other Bank Transfer",
+                style: TextStyle(
+                    color: Color(0xFF143B58),
+                    fontWeight: FontWeight.w400,
+                    fontSize: AppDimension.font24,
+                    fontFamily: "AxiFormaRegular"),
+              ),
+            ],
+          ),
+          Divider(
+            thickness: AppDimension.width1,
           ),
           Padding(
             padding: EdgeInsets.only(
@@ -1485,11 +1482,10 @@ class _OtherBankTransfer1State extends State<OtherBankTransfer1> {
                 ),
               ),
             ),
-
-          ],
-        ),
-        // bottomNavigationBar: ReUsableBottomNavBar()
-        );
-
+          ),
+        ],
+      ),
+      // bottomNavigationBar: ReUsableBottomNavBar()
+    );
   }
 }
