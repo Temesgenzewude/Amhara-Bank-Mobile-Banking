@@ -11,15 +11,16 @@ class QRCodeScannerButtonWithText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: AppDimension.width10),
-      height: AppDimension.contHeight50,
-      width: AppDimension.contWid130 + AppDimension.width30+ AppDimension.width5,
+      height: AppDimension.contHeight50 + AppDimension.height6,
+      width: AppDimension.contWid100 * 2 + AppDimension.width20,
+      
       decoration: BoxDecoration(
         color: Color(0xFF0D6DC4),
-        borderRadius: BorderRadius.circular(AppDimension.height25),
+        borderRadius:
+            BorderRadius.circular(AppDimension.height25 + AppDimension.height3),
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
@@ -27,10 +28,7 @@ class QRCodeScannerButtonWithText extends StatelessWidget {
             style: TextStyle(
                 color: Colors.white,
                 fontFamily: "PoppinsRegular",
-                fontSize: AppDimension.font16),
-          ),
-          SizedBox(
-            width: AppDimension.width5,
+                fontSize: AppDimension.font14),
           ),
           QRCodeScannerFloatingActionButton(),
         ],

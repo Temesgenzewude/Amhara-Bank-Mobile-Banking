@@ -29,7 +29,8 @@ class AccountHomePage extends StatelessWidget {
               ),
             ),
             Divider(
-              thickness: 1,
+              thickness: AppDimension.height1,
+
               color: Color(0xFFDBD9D9),
               // height: AppDimension.height20,
             ),

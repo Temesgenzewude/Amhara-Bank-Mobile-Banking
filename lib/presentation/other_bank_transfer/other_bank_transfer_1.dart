@@ -78,6 +78,7 @@ class _OtherBankTransfer1State extends State<OtherBankTransfer1> {
                       child: GestureDetector(
                         onTap: () {
                           Get.toNamed(RouteHelper.getOtherBankTransfer2());
+                          
                         },
                         child: Container(
                           decoration: BoxDecoration(

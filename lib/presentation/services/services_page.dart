@@ -58,10 +58,9 @@ class _ServicePageState extends State<ServicePage> {
             ),
           ),
           Divider(
-            thickness: 2,
+            thickness: AppDimension.height1,
             color: Color(0xFFDBD9D9),
             indent: 0,
-
           ),
           Container(
             margin: EdgeInsets.only(
@@ -101,7 +100,6 @@ class _ServicePageState extends State<ServicePage> {
                       height: AppDimension.contHeight70 + AppDimension.height8,
                       padding: EdgeInsets.only(
                         left: AppDimension.width10,
-
                         right: AppDimension.width10,
                         top: AppDimension.height10,
                       ),
@@ -238,11 +236,9 @@ class _ServicePageState extends State<ServicePage> {
                           ),
                           itemBuilder: (_, index, realIndex) {
                             return Container(
-
                               height: AppDimension.contHeight150 +
                                   AppDimension.contHeight30 +
                                   AppDimension.height4,
-
                               decoration: BoxDecoration(
                                   gradient: LinearGradient(
                                     begin: Alignment.topCenter,
@@ -256,9 +252,7 @@ class _ServicePageState extends State<ServicePage> {
                                       AppDimension.radius10),
                                   image: DecorationImage(
                                     fit: BoxFit.cover,
-
                                     image: AssetImage(promoImages[index]),
-                                    
                                   )),
                             );
                           },
@@ -280,6 +274,7 @@ class _ServicePageState extends State<ServicePage> {
                         ),
                         Positioned(
                           top: AppDimension.contHeight150 +
+                          
                               AppDimension.height10,
                           left: AppDimension.width25 * 5 + AppDimension.width10,
                           child: Center(

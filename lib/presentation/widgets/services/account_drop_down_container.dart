@@ -6,6 +6,7 @@ import '../../../utils/app_dimensions.dart';
 class AccountDropDownContainer extends StatelessWidget {
   const AccountDropDownContainer({
 
+
     Key? key,
   }) : super(key: key);
 
@@ -13,8 +14,8 @@ class AccountDropDownContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(
-          top: AppDimension.height5,
-          bottom: AppDimension.height5,
+          top: AppDimension.height2,
+          bottom: AppDimension.height2,
           right: AppDimension.width5,
           left: AppDimension.width5),
       decoration: BoxDecoration(
@@ -35,9 +36,9 @@ class AccountDropDownContainer extends StatelessWidget {
         ),
         Divider(
           
-          thickness: 0,
+          thickness: AppDimension.height1/2,
           color: Color(0xFF143B58),
-          height: 0.2,
+         
         ),
         Text(
           "Abebe Bekila - 254830",

@@ -19,14 +19,11 @@ class ServiceHomePage extends StatefulWidget {
 class _ServiceHomePageState extends State<ServiceHomePage> {
   int _selectedIndex = 0;
   int _timeLeft = 10;
-  
 
   List _pages = [
     ServicePage(),
-    
     AccountHomePage(),
     profile(),
-    
   ];
 
   void _startCountDownTimer() {
@@ -53,20 +50,26 @@ class _ServiceHomePageState extends State<ServiceHomePage> {
     super.initState();
   }
 
+  bool _showScanHereTextForFAB() {
+    return ((_timeLeft > 0) & (_selectedIndex == 0));
+  }
+
+  bool _showOnlyQRScanFAB() {
+    return ((_timeLeft == 0) & (_selectedIndex == 0));
+  }
+  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
-        
         selectedItemColor: Color(0xFF005EA6),
         unselectedItemColor: Color(0xFF969696),
         backgroundColor: Colors.white,
         selectedLabelStyle: TextStyle(
-
             color: Color(0xFF0047BA),
             fontSize: AppDimension.font10 + AppDimension.height2,
             fontFamily: "PoppinsMedium"),
@@ -80,7 +83,6 @@ class _ServiceHomePageState extends State<ServiceHomePage> {
               icon: Icon(
                 Icons.home_outlined,
                 size: AppDimension.iconSize24,
-
               ),
               label: "Home"),
           BottomNavigationBarItem(
@@ -95,13 +97,14 @@ class _ServiceHomePageState extends State<ServiceHomePage> {
                 size: AppDimension.iconSize24,
               ),
               label: "Profile"),
-
         ],
       ),
-
-      floatingActionButton: _timeLeft > 0
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      floatingActionButton: _showScanHereTextForFAB()
           ? QRCodeScannerButtonWithText()
-          : QRCodeScannerFloatingActionButton(),
+          : _showOnlyQRScanFAB()
+              ? QRCodeScannerFloatingActionButton()
+              : Container(),
     );
   }
 }
